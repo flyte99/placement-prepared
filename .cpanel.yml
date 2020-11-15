@@ -1,5 +1,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/zn011920/public_html/
-    - npm run build
-    - /bin/cp -frd /build $DEPLOYPATH
+    - /bin/cp -R build $DEPLOYPATH
