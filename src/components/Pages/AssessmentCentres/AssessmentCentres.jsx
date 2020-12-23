@@ -8,7 +8,9 @@ class AssessmentCentres extends Component {
 
     render() {
         return (
-            <h1>Assessment Centres</h1>
+            <div className={'main'}>
+                <h1>Assessment Centres</h1>
+            </div>
         )
     }
 }
