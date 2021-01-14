@@ -1,13 +1,23 @@
 {
-  "name": "e-learning-system",
+  "name": "preparing-for-placement",
   "homepage": ".",
   "version": "0.1.0",
   "private": true,
+  "description": "eLearning System to Prepare Computer Science Students for Industry",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://csgitlab.reading.ac.uk/zn011920/e-learning-system.git"
+  },
+  "author": "zn011920",
+  "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "command": "0.0.5",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",

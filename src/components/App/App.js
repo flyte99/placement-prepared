@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 import './App.css'
@@ -11,19 +11,21 @@ import AssessmentCentres from '../Pages/AssessmentCentres/AssessmentCentres'
 import Interviews from '../Pages/Interviews/Interviews'
 
 
-function App() {
-    return (
-        <Router>
-            <Sidebar/>
-            <Switch>
-                <Route path='/' exact component={Home}/>
-                <Route path='/cvs_and_cover_letters' component={CV}/>
-                <Route path='/testing' component={Testing}/>
-                <Route path='/assessment_centres' component={AssessmentCentres}/>
-                <Route path='/interviews' component={Interviews}/>
-            </Switch>
-        </Router>
-    );
+class App extends Component {
+    render() {
+        return (
+            <Router>
+                <Sidebar/>
+                <Switch>
+                    <Route path='/' exact component={() => <Home isSidebarOpen/>}/>
+                    <Route path='/cvs_and_cover_letters' component={() => <CV/>}/>
+                    <Route path='/testing' component={() => <Testing/>}/>
+                    <Route path='/assessment_centres' component={() => <AssessmentCentres/>}/>
+                    <Route path='/interviews' component={() => <Interviews/>}/>
+                </Switch>
+            </Router>
+        )
+    }
 }
 
 export default App;

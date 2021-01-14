@@ -2,4 +2,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/zn011920/public_html/
     - /bin/rm -Rf $DEPLOYPATH/build
-    - /bin/cp -R build .htaccess $DEPLOYPATH
+    - /bin/cp -R build .htaccess src/api $DEPLOYPATH
