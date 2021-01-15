@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import './Sidebar.css'
+import axios from "axios";
+import {API_PATH} from "../App/App";
 
 class Sidebar extends Component {
     constructor(props) {
@@ -19,7 +21,7 @@ class Sidebar extends Component {
                     icon: <i className='fas fa-mail-bulk'/>,
                 },
                 {
-                    title: 'Testing',
+                    title: 'Recruitment Testing',
                     path: '/testing',
                     icon: <i className='fas fa-envelope-open-text'/>,
                 },
@@ -31,12 +33,12 @@ class Sidebar extends Component {
                 {
                     title: 'Interviews',
                     path: '/interviews',
-                    icon: <i className='fas fa-comments'/>,
+                    icon: <i className="fas fa-handshake"/>,
                 },
                 {
-                    title: 'Agile Development Methods',
-                    path: '/agile_development',
-                    icon: <i className="fas fa-recycle"/>,
+                    title: 'Industry Skills',
+                    path: '/industry_skills',
+                    icon: <i className="fas fa-industry"/>,
                 },
                 {
                     title: 'Resources',
@@ -48,6 +50,18 @@ class Sidebar extends Component {
     }
 
     render() {
+        // let pages;
+        //
+        // axios({
+        //     method: 'GET',
+        //     url: `${API_PATH}/get_sidebar_items.php`,
+        //     headers: {'content-type': 'application/json'}
+        // })
+        //     .then(results=> {
+        //         pages = results;
+        //     })
+        //     .catch(error => this.setState({error:error.message}))
+
         return (
             <div className='side-menu' style={{width: this.state.sidebar ? 250 : 80}}>
                 <ul onClick={() => this.setState({sidebar: !this.state.sidebar})}>
