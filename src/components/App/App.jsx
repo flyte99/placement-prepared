@@ -5,7 +5,6 @@ import './App.css'
 
 import Sidebar from '../Sidebar/Sidebar'
 import Home from '../Pages/HomePage/HomePage'
-import LearningPage from "../Pages/LearningPage/LearningPage";
 import TopicPage from "../Pages/TopicPage/TopicPage";
 
 export const API_PATH = 'https://zn011920.webs.act.reading.ac.uk/api';
@@ -17,12 +16,10 @@ class App extends Component {
             {title: 'Recruitment Testing', path: '/testing'},
             {title: 'Assessment Centres', path: '/assessment_centres'},
             {title: 'Interviews', path: '/interviews'},
-            {title: 'Industry Skills', path: '/industry_skills'}
-        ]
-
-        const learningPages = [
+            {title: 'Industry Skills', path: '/industry_skills'},
             {title: 'Writing a CV', path: '/cvs_and_cover_letters/cv'},
             {title: 'Cover Letters', path: '/cvs_and_cover_letters/cover-letter'},
+            {title: 'LinkedIn', path: '/cvs_and_cover_letters/LinkedIn'},
             {title: 'Psychometric Testing', path: '/testing/psychometric'},
             {title: 'Scenario-Based Testing', path: '/testing/scenario-based'},
             {title: 'Group Exercises', path: '/assessment_centres/group_exercises'},
@@ -44,10 +41,6 @@ class App extends Component {
                     <Route path='/' exact component={() => <Home/>}/>
                     {topicPages.map((topicPage) => (
                         <Route path={`${topicPage.path}`} exact component={() => <TopicPage title={topicPage.title}/>}/>
-                    ))}
-                    {learningPages.map((learningPage) => (
-                        <Route path={`${learningPage.path}`}
-                               exact component={() => <LearningPage title={learningPage.title}/>}/>
                     ))}
                 </Switch>
             </Router>

@@ -63,7 +63,7 @@ class Sidebar extends Component {
         //     .catch(error => this.setState({error:error.message}))
 
         return (
-            <div className='side-menu' style={{width: this.state.sidebar ? 250 : 80}}>
+            <div className='side-menu' style={{width: this.state.sidebar ? 280 : 80}}>
                 <ul onClick={() => this.setState({sidebar: !this.state.sidebar})}>
                     <li className='sidebar-toggle'>
                         <Link to='#' className='menu-icon'>
