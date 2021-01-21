@@ -9,6 +9,7 @@ import CodeBlock from "../../PageSections/CodeBlock";
 import ImageBlock from "../../PageSections/ImageBlock";
 import VideoBlock from "../../PageSections/VideoBlock";
 import QuizBlock from "../../PageSections/QuizBlock";
+import ScrumBoard from "../../ScrumBoard/ScrumBoard";
 
 class TopicPage extends Component {
     constructor(props) {
@@ -65,6 +66,8 @@ class TopicPage extends Component {
                 return <VideoBlock material={section.material}/>;
             case 'quiz':
                 return <QuizBlock questions={section.material}/>
+            case 'scrum-board':
+                return <ScrumBoard/>
             default:
                 return <div>{section.material}</div>
         }

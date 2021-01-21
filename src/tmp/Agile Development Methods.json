@@ -45,10 +45,6 @@
       "heading": "",
       "material": "A Scrum master is responsible for ensuring the Scrum process is followed and channelling communications from users and the rest of the organization to minimise distractions for the development team. Products are broken down into sets of manageable and understandable chunks that are assigned to team members to complete before the end of the sprint. These chunks can be known as tickets which form part of a sprint board, where the whole team have visibility of everything that is being worked on. As progress is made, the state of a ticket is changed to reflect what has been done such as moving from \"In Progress\" to \"Testing\". Sprint boards are reviewed in short daily meetings (often called Stand-ups), where each member of the team describes what they achieved since the last meeting and what is planned for the following day. These meetings allow for adaptions to be made when problems arise and more collaboration between team members."
     },
-    {
-      "type": "code",
-      "heading": "Example Sprint Board",
-      "material": ""
-    }
+    {"type": "scrum-board"}
   ]
 }
