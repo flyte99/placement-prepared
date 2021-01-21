@@ -1,4 +1,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/zn011920/public_html/
-    - /bin/cp -R build/static build/asset-manifest.json build/favicon.ico build/index.html .htaccess src/api $DEPLOYPATH
+    - /bin/rm -Rf $DEPLOYPATH/build
+    - /bin/cp -R build .htaccess src/api $DEPLOYPATH

@@ -1,9 +1,3 @@
-Header add Strict-Transport-Security "max-age=15768000"
-Header edit Set-Cookie ^(.*)$ "$1;HttpOnly;Secure;SameSite=Strict"
-Header set Content-Security-Policy "default-src 'self';"
-Header always append X-Frame-Options DENY
-Header set X-XSS-Protection "1: mode=block"
-
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
