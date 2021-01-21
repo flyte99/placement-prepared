@@ -1,0 +1,34 @@
+{
+  "title": "Industry Skills",
+  "path": "/industry_skills",
+  "icon": "fas fa-industry",
+  "subpages": [
+    {
+      "title": "Agile Development Methods",
+      "path": "/industry_skills/agile_development",
+      "summary": "Used in software development cycles to aid productivity by collaboration and constant reassessment"
+    },
+    {
+      "title": "git",
+      "path": "/industry_skills/git",
+      "summary": "git is a popular version control system used for tracking changes in repositories"
+    },
+    {
+      "title": "MySQL",
+      "path": "/industry_skills/mysql",
+      "summary": "MySQL is a relational database management system"
+    },
+    {
+      "title": "Unit Testing",
+      "path": "/industry_skills/unit_testing",
+      "summary": "A testing method where individual units of source code are tested to determine whether they are fit for use"
+    }
+  ],
+  "content": [
+    {
+      "type": "text",
+      "display": "",
+      "material": "The guides provided aim to give practical insight over the variety of topics to better prepare individuals for working in industry"
+    }
+  ]
+}

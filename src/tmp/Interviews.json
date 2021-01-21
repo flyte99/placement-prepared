@@ -1,0 +1,29 @@
+{
+  "title": "Interviews",
+  "path": "/interviews",
+  "icon": "fas fa-handshake",
+  "subpages": [
+    {
+      "title": "Telephone Interviews",
+      "path": "/interviews/telephone",
+      "summary": "Typically focused on the competencies that the recruiter is looking for and used to determine which applicants to invite to a face-to-face interview"
+    },
+    {
+      "title": "Face-to-Face Interviews",
+      "path": "/interviews/face-to-face",
+      "summary": "Face-to-Face interviews involve the employer explaining the job and asking some questions"
+    },
+    {
+      "title": "Panel Interviews",
+      "path": "/interviews/panel",
+      "summary": "These interviews are conducted by a group of interviewers, who take turns to ask questions"
+    },
+    {
+      "title": "Video Interviews",
+      "path": "/interviews/video",
+      "summary": "Applicants are presented with questions and asked to record their response, often within a time limit"
+    }
+  ],
+  "content": [
+  ]
+}

@@ -22,6 +22,13 @@ class TopicPage extends Component {
 
     componentDidMount() {
         // TODO: get page info from MYSQL
+
+        let data = require(`../../../tmp/${this.state.title}.json`);
+
+        this.setState({
+            subpages: data.subpages,
+            content: data.content
+        })
     }
 
     header = (subpages) => {
@@ -51,13 +58,13 @@ class TopicPage extends Component {
             case 'text':
                 return <TextBlock content={section}/>
             case 'code':
-                return <CodeBlock material={section.material}/>
+                return <CodeBlock content={section}/>
             case 'image':
-                return <ImageBlock material={section.material}/>
+                return <ImageBlock content={section}/>
             case 'video':
                 return <VideoBlock material={section.material}/>;
             case 'quiz':
-                return <QuizBlock material={section.material}/>
+                return <QuizBlock questions={section.material}/>
             default:
                 return <div>{section.material}</div>
         }
@@ -65,9 +72,9 @@ class TopicPage extends Component {
 
     render() {
         return (
-            <div className={'main'}>
-                {subpages ? this.header(subpages) : <h2>{this.state.title}</h2>}
-                {content.map((section) => (this.body(section)))}
+            <div className='main'>
+                {this.state.subpages ? this.header(this.state.subpages) : <h2>{this.state.title}</h2>}
+                {this.state.content.map((section) => (this.body(section)))}
             </div>
         )
     }

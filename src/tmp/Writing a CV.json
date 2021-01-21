@@ -1,0 +1,27 @@
+{
+  "title": "Writing a CV",
+  "path": "/cvs_and_cover_letters/cv",
+  "subpages": [],
+  "content": [
+    {
+      "type": "video",
+      "material": "https://youtu.be/_fP43gcBywU"
+    },
+    {
+      "type": "text",
+      "display": "list",
+      "heading": "Things to Include",
+      "material": [
+        "Name - use your name as the heading, include the name you like to be known as if this is different from your official name.  Use capital letters for the first letter of your first name and surname",
+        "Contact details – you can include your full address, or if you prefer, your location e.g. Reading. Include your contact phone number and a professional looking email address, which includes your name.  You can add a link to your LinkedIn account if it is up to date or creative portfolio/website link.",
+        "Education – Start with your current course and include the full course title and date you started to present and university e.g. September 2019-Present BSc Computer Science with Industrial Year, University of Reading and include results if required.  Many internship, placements and graduate roles require certain grades"
+      ]
+    },
+    {
+      "type": "text",
+      "display":"",
+      "heading": "Style",
+      "material": ""
+    }
+  ]
+}

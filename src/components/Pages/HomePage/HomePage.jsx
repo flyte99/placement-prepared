@@ -14,14 +14,15 @@ class HomePage extends Component {
                     title: 'CVs and Cover Letters', path: '/cvs_and_cover_letters',
                     subpages: [
                         {title: 'Writing a CV', path: '/cvs_and_cover_letters/cv'},
-                        {title: 'Cover Letters', path: '/cvs_and_cover_letters/cover-letter'}
+                        {title: 'Cover Letters', path: '/cvs_and_cover_letters/cover-letter'},
+                        {title: 'LinkedIn', path: '/cvs_and_cover_letters/LinkedIn'},
                     ],
                 },
                 {
-                    title: 'Recruitment Testing', path: '/testing',
+                    title: 'Psychometric Tests', path: '/psychometric_tests',
                     subpages: [
-                        {title: 'Psychometric Testing', path: '/testing/psychometric'},
-                        {title: 'Scenario-Based Testing', path: '/testing/scenario-based'}
+                        {title: 'Situational Judgement', path: '/psychometric_tests/situational_judgement'},
+                        {title: 'Personality Assessments', path: '/psychometric_tests/personality'}
                     ],
                 },
                 {
@@ -35,15 +36,19 @@ class HomePage extends Component {
                 {
                     title: 'Interviews', path: '/interviews',
                     subpages: [
-                        {title: '', path: '/'},
-                        {title: '', path: '/'}
+                        {title: 'Telephone Interviews', path: '/interviews/telephone'},
+                        {title: 'Face-to-Face Interviews', path: '/interviews/face-to-face'},
+                        {title: 'Panel Interviews', path: '/interviews/panel'},
+                        {title: 'Video Interviews', path: '/interviews/video'},
                     ],
                 },
                 {
                     title: 'Industry Skills', path: '/industry_skills',
                     subpages: [
                         {title: 'Agile Development Methods', path: '/industry_skills/agile_development'},
-                        {title: 'git', path: '/industry_skills/git'}
+                        {title: 'git', path: '/industry_skills/git'},
+                        {title: 'MySQL', path: '/industry_skills/mysql'},
+                        {title: 'Unit Testing', path: '/industry_skills/unit_testing'},
                     ],
                 },
                 {

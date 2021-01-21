@@ -1,0 +1,19 @@
+{
+  "title": "Psychometric Tests",
+  "path": "/psychometric_tests",
+  "icon": "fas fa-chalkboard-teacher",
+  "subpages": [
+    {
+      "title": "Situational Judgement",
+      "path": "/psychometric_tests/situational_judgement",
+      "summary": "Situational judgement tests assess how an applicant would behave in a variety of work-based situations"
+    },
+    {
+      "title": "Personality Assessments",
+      "path": "/psychometric_tests/personality",
+      "summary": "Personality assessments examine how likely an applicant is to fit into the role and company culture"
+    }
+  ],
+  "content": [
+  ]
+}

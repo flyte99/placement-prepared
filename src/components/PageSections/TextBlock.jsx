@@ -2,13 +2,9 @@ import React, {Component} from 'react';
 import './PageSections.css'
 
 class TextBlock extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     handleList = (list) => {
         return (
-            <ul>
+            <ul style={{marginLeft: 20}}>
                 {list.map((item => (<li>{item}</li>)))}
             </ul>
         )
@@ -17,17 +13,22 @@ class TextBlock extends Component {
     render() {
         const {display, heading, material} = this.props.content;
 
+        let block;
+
         switch (display) {
             case 'list':
-                return (
-                    <div>
-                        <h4>{heading}</h4>
-                        {this.handleList(material)}
-                    </div>
-                )
+                block = this.handleList(material);
+                break;
             default:
-                return <div>{material}</div>
+                block = material;
         }
+
+        return (
+            <div>
+                <h4>{heading}</h4>
+                {block}
+            </div>
+        )
     }
 }
 

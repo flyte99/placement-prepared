@@ -1,0 +1,24 @@
+{
+  "title": "Assessment Centres",
+  "path": "/assessment_centres",
+  "icon": "fas fa-briefcase",
+  "subpages": [
+    {
+      "title": "Group Exercises",
+      "path": "/assessment_centres/group_exercises",
+      "summary": "Applicants are placed into groups and expected to solve a problem by working together and agreeing on a solution within a set time limit"
+    },
+    {
+      "title": "Technical Assessments",
+      "path": "/assessment_centres/technical_assessments",
+      "summary": "Technical assessments are used to test an applicant's technical knowledge by solving problems or completing tasks"
+    },
+    {
+      "title": "Presentations",
+      "path": "/assessment_centres/presentations",
+      "summary": "Recruiters can ask applicants to prepare presentations individually or as a group"
+    }
+  ],
+  "content": [
+  ]
+}

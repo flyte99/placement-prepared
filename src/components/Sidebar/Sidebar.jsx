@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import './Sidebar.css'
-import axios from "axios";
-import {API_PATH} from "../App/App";
 
 class Sidebar extends Component {
     constructor(props) {
@@ -21,9 +19,9 @@ class Sidebar extends Component {
                     icon: <i className='fas fa-mail-bulk'/>,
                 },
                 {
-                    title: 'Recruitment Testing',
-                    path: '/testing',
-                    icon: <i className='fas fa-envelope-open-text'/>,
+                    title: 'Psychometric Tests',
+                    path: '/psychometric_tests',
+                    icon: <i className='fas fa-chalkboard-teacher'/>,
                 },
                 {
                     title: 'Assessment Centres',
