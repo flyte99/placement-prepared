@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {ListGroup, ListGroupItem, Row} from 'reactstrap';
+import {CardTitle, ListGroup, ListGroupItem, Row} from 'reactstrap';
 import {Link} from 'react-router-dom';
 import Card from 'react-bootstrap/Card'
 
@@ -11,7 +11,9 @@ class HomePage extends Component {
         this.state = {
             cards: [
                 {
-                    title: 'CVs and Cover Letters', path: '/cvs_and_cover_letters',
+                    title: 'CVs and Cover Letters',
+                    path: '/cvs_and_cover_letters',
+                    icon: <i className='fas fa-mail-bulk'/>,
                     subpages: [
                         {title: 'Writing a CV', path: '/cvs_and_cover_letters/cv'},
                         {title: 'Cover Letters', path: '/cvs_and_cover_letters/cover-letter'},
@@ -19,14 +21,18 @@ class HomePage extends Component {
                     ],
                 },
                 {
-                    title: 'Psychometric Tests', path: '/psychometric_tests',
+                    title: 'Psychometric Tests',
+                    path: '/psychometric_tests',
+                    icon: <i className='fas fa-chalkboard-teacher'/>,
                     subpages: [
                         {title: 'Situational Judgement', path: '/psychometric_tests/situational_judgement'},
                         {title: 'Personality Assessments', path: '/psychometric_tests/personality'}
                     ],
                 },
                 {
-                    title: 'Assessment Centres', path: '/assessment_centres',
+                    title: 'Assessment Centres',
+                    path: '/assessment_centres',
+                    icon: <i className='fas fa-briefcase'/>,
                     subpages: [
                         {title: 'Group Exercises', path: '/assessment_centres/group_exercises'},
                         {title: 'Technical Assessments', path: '/assessment_centres/technical_assessments'},
@@ -34,7 +40,9 @@ class HomePage extends Component {
                     ],
                 },
                 {
-                    title: 'Interviews', path: '/interviews',
+                    title: 'Interviews',
+                    path: '/interviews',
+                    icon: <i className="fas fa-handshake"/>,
                     subpages: [
                         {title: 'Telephone Interviews', path: '/interviews/telephone'},
                         {title: 'Face-to-Face Interviews', path: '/interviews/face-to-face'},
@@ -43,7 +51,9 @@ class HomePage extends Component {
                     ],
                 },
                 {
-                    title: 'Industry Skills', path: '/industry_skills',
+                    title: 'Industry Skills',
+                    path: '/industry_skills',
+                    icon: <i className="fas fa-industry"/>,
                     subpages: [
                         {title: 'Agile Development Methods', path: '/industry_skills/agile_development'},
                         {title: 'git', path: '/industry_skills/git'},
@@ -52,9 +62,11 @@ class HomePage extends Component {
                     ],
                 },
                 {
-                    title: 'Resources', path: '/resources',
+                    title: 'Resources',
+                    path: '/resources',
+                    icon: <i className="fas fa-universal-access"/>,
                     subpages: [
-                        {title: 'University Resources', path: '/university_resources'},
+                        {title: 'University Resources', path: 'https://www.reading.ac.uk/essentials/Careers'},
                         {title: 'External Resources', path: '/external_resources'},
                         {title: 'Podcasts', path: '/podcasts'}
                     ],
@@ -68,19 +80,24 @@ class HomePage extends Component {
     }
 
     getPageCard = (card) => {
-        const {title, path, subpages} = card
+        const {title, path, icon, subpages} = card
+        const external_links = ['University Resources']
 
         return (
             <div>
-                <Card style={{width: 280}}>
+                <Card>
                     <Card.Body>
-                        <Card.Title>{title}</Card.Title>
+                        <Card.Title>{title}{icon}</Card.Title>
                     </Card.Body>
                     <ListGroup>
                         {subpages.map((page) => (
-                            <Link to={page.path}>
-                                <ListGroupItem>{page.title}</ListGroupItem>
-                            </Link>
+                            external_links.includes(page.title) ?
+                                <a target='_blank' href={page.path}>
+                                    <ListGroupItem>{page.title}</ListGroupItem>
+                                </a> :
+                                <Link to={page.path}>
+                                    <ListGroupItem>{page.title}</ListGroupItem>
+                                </Link>
                         ))}
                     </ListGroup>
                     <Card.Footer>
@@ -95,7 +112,7 @@ class HomePage extends Component {
 
     render() {
         return (
-            <div className={'main'}>
+            <div className='main'>
                 <Row>
                     {this.state.cards.map((card) => (
                         this.getPageCard(card)

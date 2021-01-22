@@ -1,5 +1,16 @@
 .card{
     margin: 25px 50px 75px;
+    width: 280px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.card-title.h5 {
+    display: flex;
+    justify-content: space-between;
 }
 
 .card:hover{

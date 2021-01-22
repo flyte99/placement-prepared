@@ -62,10 +62,11 @@ class Sidebar extends Component {
 
         return (
             <div className='side-menu' style={{width: this.state.sidebar ? 280 : 80}}>
-                <ul onClick={() => this.setState({sidebar: !this.state.sidebar})}>
+                <ul>
                     <li className='sidebar-toggle'>
                         <Link to='#' className='menu-icon'>
-                            <i className={this.state.sidebar ? 'fas fa-times' : 'fas fa-bars'}/>
+                            <i className={this.state.sidebar ? 'fas fa-times' : 'fas fa-bars'}
+                               onClick={() => this.setState({sidebar: !this.state.sidebar})}/>
                         </Link>
                     </li>
                     {this.state.pages.map((item, index) => (

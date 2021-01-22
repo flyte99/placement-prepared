@@ -19,5 +19,50 @@
       "summary": "LinkedIn is an employment-orientated social media that many companies are now using to recruit employees."
     }
   ],
-  "content": []
+  "content": [
+    {
+      "type": "text",
+      "display": "",
+      "heading": "",
+      "material": "The first stage of any job application is to send your CV to an employer or recruiter. This is often accompanied by a CV, however, some organizations have online application portals, which simply ask for your details and a CV. LinkedIn is a great tool for finding opportunities but also for recruiters to headhunt applicants."
+    },
+    {
+      "type": "text",
+      "display": "links",
+      "heading": "Finding Job Opportunities",
+      "section_description": "Organizations will post roles they are hiring for on their websites and on recruitment websites such as the following",
+      "material": [
+        {
+          "resource": "TARGET Jobs",
+          "path": "https://targetjobs.co.uk/career-sectors/it-and-technology/",
+          "image": "target-jobs.png"
+        },
+        {
+          "resource": "Rate My Placement",
+          "path": "https://www.ratemyplacement.co.uk/",
+          "image": "ratemyplacement.jpg"
+        },
+        {
+          "resource": "Gradcracker",
+          "path": "https://www.gradcracker.com/search/computing-technology/jobs/",
+          "image": "gradcracker.jpg"
+        },
+        {
+          "resource": "Prospects",
+          "path": "https://www.prospects.ac.uk/",
+          "image": "prospects.png"
+        },
+        {
+          "resource": "Glassdoor",
+          "path": "https://www.glassdoor.co.uk/",
+          "image": "glassdoor.png"
+        },
+        {
+          "resource": "Work in Startups",
+          "path": "https://workinstartups.com/",
+          "image": "work-in-startups.jpg"
+        }
+      ]
+    }
+  ]
 }
