@@ -12,27 +12,6 @@ class TextBlock extends Component {
         )
     }
 
-    handleLinks = (links) => {
-        return (
-            <div className='links'>
-                {
-                    links.map((link) => {
-                        const image = require(`../../img/${link.image}`).default
-
-                        return (
-                            <a target='_blank' href={link.path}>
-                                <Figure>
-                                    <Figure.Image height={130} width={130} src={image} alt={`${link.resource}`}/>
-                                    <Figure.Caption>{link.resource}</Figure.Caption>
-                                </Figure>
-                            </a>
-                        )
-                    })
-                }
-            </div>
-        )
-    }
-
     handleCarousel = (material) => {
         return (
             <Carousel>
@@ -49,9 +28,6 @@ class TextBlock extends Component {
         switch (display) {
             case 'list':
                 block = this.handleList(material);
-                break;
-            case 'links':
-                block = this.handleLinks(material);
                 break;
             case 'carousel':
                 block = this.handleCarousel(material);

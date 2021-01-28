@@ -55,7 +55,7 @@ class HomePage extends Component {
                     icon: <i className="fas fa-industry"/>,
                     subpages: [
                         {title: 'Agile Development Methods', path: '/industry_skills/agile_development'},
-                        {title: 'git', path: '/industry_skills/git'},
+                        {title: 'Git', path: '/industry_skills/git'},
                         {title: 'MySQL', path: '/industry_skills/mysql'},
                         {title: 'Unit Testing', path: '/industry_skills/unit_testing'},
                     ],

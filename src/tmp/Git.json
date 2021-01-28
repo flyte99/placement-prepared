@@ -1,0 +1,47 @@
+{
+  "title": "Git",
+  "path": "/industry_skills/git",
+  "subpages": [],
+  "content": [
+    {
+      "type": "text",
+      "heading": "Basics",
+      "material": "Git is one of the most popular SCM (Source Code Management) tools, that keeps a history of changes to files so you can undo changes or work on a local branch and then merge the results into the main repository. Many IDEs (Integrated Development Environments) are integrated with Git providing a UI (User Interface) but understanding how to use Git from the command line prepares you for all situations. Git has an intermediate area where commits can be formatted and reviewed before completing the commit, which is called the \"staging area\" or \"index\"."
+    },
+    {
+      "type": "image",
+      "height": 500,
+      "width": 400,
+      "material": "git-staging-area.png",
+      "caption": "Git Staging Area"
+    },
+    {
+      "type": "text",
+      "display": "list",
+      "heading": "Workflows",
+      "section_description": "Git supports several different workflows due to its branching system",
+      "material": [
+        "Subversion-Style Workflow - A centralized workflow is very common, and consists of developers pushing changes to the same server (shared repository). Git will not allow you to push if someone has pushed since the last time you fetched",
+        "Integration Manager Workflow - Developers clone from the \"blessed\" repository and push to their own independent repositories. They then ask the integrator to pull in their changes. This is the type of development model often seen with open source or GitHub repositories",
+        "Dictator and Lieutenants Workflow - Some people (\"lieutenants\") are in charge of a specific subsystem of the project and they merge in all changes related to that subsystem. Another integrator (the \"dictator\") can pull changes from only their lieutenants and then push to the \"blessed\" repository that everyone then clones from again"
+      ]
+    },
+    {
+      "type": "image",
+      "height": 400,
+      "width": 400,
+      "material": [
+        {"image": "centralized-git-workflow.png", "caption": "Subversion-Style Workflow"},
+        {"image": "integration-git-workflow.png", "caption": "Integration Manager Workflow"},
+        {"image": "development-git-workflow.png", "caption": "Dictator and Lieutenants Workflow"}
+      ]
+    },
+    {
+      "type": "code",
+      "display": "embed",
+      "heading": "Learn Git Branching",
+      "section_description": "https://learngitbranching.js.org is an interactive web page is quite good - but be aware that, for instance, when really using Git you can't just  \"commit\" without \"add\"ing content first.",
+      "material": "https://learngitbranching.js.org"
+    }
+  ]
+}

@@ -7,7 +7,7 @@ import Sidebar from '../Sidebar/Sidebar'
 import Home from '../Pages/HomePage/HomePage'
 import TopicPage from '../Pages/TopicPage/TopicPage';
 
-export const API_PATH = 'https://zn011920.webs.act.reading.ac.uk/api';
+// export const API_PATH = 'https://zn011920.webs.act.reading.ac.uk/api';
 
 class App extends Component {
     render() {
@@ -33,7 +33,7 @@ class App extends Component {
 
             {title: 'Industry Skills', path: '/industry_skills'},
             {title: 'Agile Development Methods', path: '/industry_skills/agile_development'},
-            {title: 'git', path: '/industry_skills/git'},
+            {title: 'Git', path: '/industry_skills/git'},
             {title: 'MySQL', path: '/industry_skills/mysql'},
             {title: 'Unit Testing', path: '/industry_skills/unit_testing'},
         ]

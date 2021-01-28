@@ -32,13 +32,12 @@ class TopicPage extends Component {
         })
     }
 
-    header = (subpages) => {
+    getSubpages = (subpages) => {
         return (
             <div>
-                <h2>{this.state.title}</h2>
                 <Row>
                     {subpages.map((page) => (
-                        <Card>
+                        <Card className='subpage-card'>
                             <CardBody>
                                 <Link to={page.path}>
                                     <CardTitle>
@@ -76,7 +75,8 @@ class TopicPage extends Component {
     render() {
         return (
             <div className='main'>
-                {this.state.subpages ? this.header(this.state.subpages) : <h2>{this.state.title}</h2>}
+                <h2>{this.state.title}</h2>
+                {this.getSubpages(this.state.subpages)}
                 {this.state.content.map((section) => (this.body(section)))}
             </div>
         )
