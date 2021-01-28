@@ -8,7 +8,7 @@ class ImageBlock extends Component {
         const {width, height, caption} = this.props.content
 
         return (
-            <Figure style={{display: 'block', alignItems:'center', textAlign: 'center'}}>
+            <Figure className='large-img'>
                 <Figure.Image height={height} width={width} src={image} alt={`${width}x${height}`}/>
                 <Figure.Caption>{caption}</Figure.Caption>
             </Figure>

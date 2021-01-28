@@ -7,7 +7,7 @@ import './PageSections.css'
 class VideoBlock extends Component {
     render() {
         return (
-            <div style={{display: 'flex', justifyContent: 'center'}}>
+            <div className='embedded-video'>
                 <ReactPlayer url={this.props.material}/>
             </div>
         )

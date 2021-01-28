@@ -36,12 +36,12 @@ class TopicPage extends Component {
         return (
             <div>
                 <h2>{this.state.title}</h2>
-                <Row style={{display: 'flex', justifyContent: 'center'}}>
+                <Row>
                     {subpages.map((page) => (
-                        <Card style={{width: 250}}>
+                        <Card>
                             <CardBody>
                                 <Link to={page.path}>
-                                    <CardTitle style={{textAlign: 'center'}}>
+                                    <CardTitle>
                                         {page.title}
                                     </CardTitle>
                                 </Link>

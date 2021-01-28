@@ -1,0 +1,36 @@
+.embedded-video {
+    display: flex;
+    justify-content: center
+}
+
+.large-img {
+    display: block;
+    align-items: center;
+    text-align: center
+}
+
+.bullet-points {
+    margin-left: 20px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 34px 0
+}
+
+.carousel.slide {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    height: 300px;
+    width: 650px;
+    background: #060b26;
+}
+
+.carousel-item {
+    text-align: center;
+    align-items: center;
+    font-size: xx-large;
+    color: #FFFFFF;
+}
