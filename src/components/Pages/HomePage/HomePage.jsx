@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {CardTitle, ListGroup, ListGroupItem, Row} from 'reactstrap';
+import {ListGroup, ListGroupItem, Row} from 'reactstrap';
 import {Link} from 'react-router-dom';
 import Card from 'react-bootstrap/Card'
 
@@ -46,7 +46,6 @@ class HomePage extends Component {
                     subpages: [
                         {title: 'Telephone Interviews', path: '/interviews/telephone'},
                         {title: 'Face-to-Face Interviews', path: '/interviews/face-to-face'},
-                        {title: 'Panel Interviews', path: '/interviews/panel'},
                         {title: 'Video Interviews', path: '/interviews/video'},
                     ],
                 },
@@ -61,16 +60,16 @@ class HomePage extends Component {
                         {title: 'Unit Testing', path: '/industry_skills/unit_testing'},
                     ],
                 },
-                {
-                    title: 'Resources',
-                    path: '/resources',
-                    icon: <i className="fas fa-universal-access"/>,
-                    subpages: [
-                        {title: 'University Resources', path: 'https://www.reading.ac.uk/essentials/Careers'},
-                        {title: 'External Resources', path: '/external_resources'},
-                        {title: 'Podcasts', path: '/podcasts'}
-                    ],
-                }
+                // { TODO: Add resources after cards
+                //     title: 'Resources',
+                //     path: '/resources',
+                //     icon: <i className="fas fa-universal-access"/>,
+                //     subpages: [
+                //         {title: 'University Resources', path: 'https://www.reading.ac.uk/essentials/Careers'},
+                //         {title: 'External Resources', path: '/external_resources'},
+                //         {title: 'Podcasts', path: '/podcasts'}
+                //     ],
+                // }
             ]
         }
     }
@@ -79,9 +78,8 @@ class HomePage extends Component {
         // TODO: get info for pages from MYSQL
     }
 
-    getPageCard = (card) => {
+    generateCard = (card) => {
         const {title, path, icon, subpages} = card
-        const external_links = ['University Resources']
 
         return (
             <div>
@@ -91,13 +89,9 @@ class HomePage extends Component {
                     </Card.Body>
                     <ListGroup>
                         {subpages.map((page) => (
-                            external_links.includes(page.title) ?
-                                <a target='_blank' href={page.path}>
-                                    <ListGroupItem>{page.title}</ListGroupItem>
-                                </a> :
-                                <Link to={page.path}>
-                                    <ListGroupItem>{page.title}</ListGroupItem>
-                                </Link>
+                            <Link to={page.path}>
+                                <ListGroupItem>{page.title}</ListGroupItem>
+                            </Link>
                         ))}
                     </ListGroup>
                     <Card.Footer>
@@ -110,14 +104,35 @@ class HomePage extends Component {
         )
     }
 
+    resourcesSection = () => {
+        return(
+            <div>
+                <h4>Resources</h4>
+                <br/>
+            </div>
+        )
+    }
+
+    podcastSection = () => {
+        // https://www.graduatejobpodcast.com/
+        return(
+            <div>
+                <h4>Podcasts</h4>
+                <br/>
+            </div>
+        )
+    }
+
     render() {
         return (
             <div className='main'>
                 <Row>
                     {this.state.cards.map((card) => (
-                        this.getPageCard(card)
+                        this.generateCard(card)
                     ))}
                 </Row>
+                {this.resourcesSection()}
+                {this.podcastSection()}
             </div>
         )
     }

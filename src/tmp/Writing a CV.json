@@ -19,9 +19,7 @@
     },
     {
       "type": "text",
-      "display":"",
-      "heading": "Style",
-      "material": ""
+      "heading": "Style"
     }
   ]
 }

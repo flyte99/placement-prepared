@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import './PageSections.css'
 import Figure from "react-bootstrap/Figure";
+import {Carousel} from "react-bootstrap";
 
 class TextBlock extends Component {
     handleList = (list) => {
         return (
-            <ul style={{marginLeft: 20}}>
+            <ul className='bullet-points'>
                 {list.map((item => (<li>{item}</li>)))}
             </ul>
         )
@@ -13,7 +14,7 @@ class TextBlock extends Component {
 
     handleLinks = (links) => {
         return (
-            <div style={{display: 'flex', justifyContent: 'space-between', margin: '30px 34px 0px'}}>
+            <div className='links'>
                 {
                     links.map((link) => {
                         const image = require(`../../img/${link.image}`).default
@@ -32,6 +33,14 @@ class TextBlock extends Component {
         )
     }
 
+    handleCarousel = (material) => {
+        return (
+            <Carousel>
+                {material.map((item => (<Carousel.Item>{item}</Carousel.Item>)))}
+            </Carousel>
+        )
+    }
+
     render() {
         const {display, heading, section_description, material} = this.props.content;
 
@@ -44,13 +53,16 @@ class TextBlock extends Component {
             case 'links':
                 block = this.handleLinks(material);
                 break;
+            case 'carousel':
+                block = this.handleCarousel(material);
+                break;
             default:
                 block = material;
         }
 
         return (
             <div>
-                <br/>
+                {heading ? <br/> : null}
                 <h4>{heading}</h4>
                 {section_description}
                 {block}

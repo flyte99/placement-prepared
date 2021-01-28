@@ -29,7 +29,6 @@ class App extends Component {
             {title: 'Interviews', path: '/interviews'},
             {title: 'Telephone Interviews', path: '/interviews/telephone'},
             {title: 'Face-to-Face Interviews', path: '/interviews/face-to-face'},
-            {title: 'Panel Interviews', path: '/interviews/panel'},
             {title: 'Video Interviews', path: '/interviews/video'},
 
             {title: 'Industry Skills', path: '/industry_skills'},

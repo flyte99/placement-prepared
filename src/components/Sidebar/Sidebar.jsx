@@ -37,11 +37,6 @@ class Sidebar extends Component {
                     title: 'Industry Skills',
                     path: '/industry_skills',
                     icon: <i className="fas fa-industry"/>,
-                },
-                {
-                    title: 'Resources',
-                    path: '/resources',
-                    icon: <i className="fas fa-universal-access"/>,
                 }
             ]
         };

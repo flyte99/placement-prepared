@@ -22,15 +22,13 @@
   "content": [
     {
       "type": "text",
-      "display": "",
-      "heading": "",
-      "material": "The first stage of any job application is to send your CV to an employer or recruiter. This is often accompanied by a CV, however, some organizations have online application portals, which simply ask for your details and a CV. LinkedIn is a great tool for finding opportunities but also for recruiters to headhunt applicants."
+      "material": "The first stage of any job application is to send your CV to an employer or recruiter. This is often accompanied by a CV, however, some organisations have online application portals, which simply ask for your details and a CV. LinkedIn is a great tool for finding opportunities but also for recruiters to headhunt applicants."
     },
     {
       "type": "text",
       "display": "links",
       "heading": "Finding Job Opportunities",
-      "section_description": "Organizations will post roles they are hiring for on their websites and on recruitment websites such as the following",
+      "section_description": "organisations will post roles they are hiring for on their websites and on recruitment websites such as the following",
       "material": [
         {
           "resource": "TARGET Jobs",
@@ -48,6 +46,11 @@
           "image": "gradcracker.jpg"
         },
         {
+          "resource": "Indeed",
+          "path": "https://www.indeed.co.uk/",
+          "image": "indeed.jpg"
+        },
+        {
           "resource": "Prospects",
           "path": "https://www.prospects.ac.uk/",
           "image": "prospects.png"
@@ -63,6 +66,10 @@
           "image": "work-in-startups.jpg"
         }
       ]
+    },
+    {
+      "type": "video",
+      "material": "https://youtu.be/NTIBXS7pbBs"
     }
   ]
 }
