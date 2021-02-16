@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import './PageSections.css';
 
 class CodeBlock extends Component {
-    getEmbeddedWebsite = (material) => {
+    getEmbeddedWebsite = (heading, material) => {
         return (
-            <iframe src={material} style={{border: '0px #FFFFFF none', height: 700, width: '100%',}}
+            <iframe title={heading} src={material} style={{border: '0px #FFFFFF none', height: 700, width: '100%',}}
                     scrolling='no' frameBorder='1' marginHeight='0px'/>
 
         )
@@ -17,7 +17,7 @@ class CodeBlock extends Component {
 
         switch (display) {
             case 'embed':
-                block = this.getEmbeddedWebsite(material);
+                block = this.getEmbeddedWebsite(heading, material);
                 break;
             default:
                 block = material;

@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
-    align-items: end;
+    align-items: flex-end;
     margin: 30px 34px 0
 }
 
@@ -28,6 +28,7 @@
     height: 300px;
     width: 650px;
     background: #060b26;
+    border-radius: 10px;
 }
 
 .carousel-item {

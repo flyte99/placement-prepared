@@ -16,7 +16,7 @@ class ImageBlock extends Component {
             const image = require(`../../img/${material}`).default
 
             return (
-                <a target='_blank' href={path}>
+                <a target='_blank' rel='noreferrer' href={path}>
                     <Figure className='large-img'>
                         <Figure.Image height={height} width={width} src={image} alt={`${width}x${height}`}/>
                         <Figure.Caption>{caption}</Figure.Caption>
@@ -32,7 +32,7 @@ class ImageBlock extends Component {
                             const image = require(`../../img/${item.image}`).default
 
                             return (
-                                <a target='_blank' href={item.path}>
+                                <a target='_blank' rel='noreferrer' href={item.path}>
                                     <Figure>
                                         <Figure.Image height={height} width={width} src={image}
                                                       alt={`${width}x${height}`}/>

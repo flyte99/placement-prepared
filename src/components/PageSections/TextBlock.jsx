@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './PageSections.css'
-import Figure from "react-bootstrap/Figure";
 import {Carousel} from "react-bootstrap";
 
 class TextBlock extends Component {
