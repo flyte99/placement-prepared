@@ -15,11 +15,11 @@
       "material": [
         "Name and Headline - In one line, explain your current role (or where you are studying), what you are interested in and what you are hoping to find",
         "Profile and Background photos - Aim for approachable, relaxed and friendly profile pictures while avoiding plain white backgrounds and maintaining professionalism. Cover/Background photos can also be set and should reflect your interests, passions and/or ambitions",
-        "About - Explain who you are, briefly mention what your current job or degree involves (such as your specialisation or the projects you are most proud of) and provide a bit about your background. There’s also space to attach media (such as images, videos, presentations, links to blog posts and online portfolios) to showcase the work that you have been involved in",
+        "About - Explain who you are, briefly mention what your current job or degree involves (such as your specialisation or the projects you are most proud of) and provide a bit about your background. There\"s also space to attach media (such as images, videos, presentations, links to blog posts and online portfolios) to showcase the work that you have been involved in",
         "Experience - List previous examples of your work experience, including the job title, name of employer/organisation, length of time spent in each role and a brief description of responsibilities. Mentioning specific details of achievements is always impressive",
         "Education - List the details of major qualifications in reverse chronological order. Include specific modules and dissertation title for your degree to differentiate yourself from other students and graduates",
-        "Skills and Accomplishments - List your key skills, proficiencies and traits focusing on five to ten key skills you think are especially worth highlighting. This might include languages you can speak, skills particularly important to the sector you’re interested in, and certifications you’ve achieved or are working towards. Your connections on LinkedIn can ‘endorse’ specific skills although it is not vital to have these endorsements",
-        "Recommendations - Here people you have worked with can write a few sentences advocating for you and your capabilities. If you have connected with a colleague from a part-time job or other form of work experience, you can ‘Request a recommendation’ from them"
+        "Skills and Accomplishments - List your key skills, proficiencies and traits focusing on five to ten key skills you think are especially worth highlighting. This might include languages you can speak, skills particularly important to the sector you\"re interested in, and certifications you\"ve achieved or are working towards. Your connections on LinkedIn can \"endorse\" specific skills although it is not vital to have these endorsements",
+        "Recommendations - Here people you have worked with can write a few sentences advocating for you and your capabilities. If you have connected with a colleague from a part-time job or other form of work experience, you can \"Request a recommendation\" from them"
       ]
     },
     {
@@ -30,17 +30,17 @@
       "type": "text",
       "display": "list",
       "heading": "Making Connections",
-      "section_description": "The core of LinkedIn is building up your ‘connections’ but LinkedIn only allows you to send invites to people who it considers to already be ‘in your network’. This includes connections of connections (called ‘2nd degree connections’), connection suggestions based on academic or employment history, contacts imported from your email address book and people who are in the same LinkedIn groups as you.",
+      "section_description": "The core of LinkedIn is building up your \"connections\" but LinkedIn only allows you to send invites to people who it considers to already be \"in your network\". This includes connections of connections (called \"2nd degree connections\"), connection suggestions based on academic or employment history, contacts imported from your email address book and people who are in the same LinkedIn groups as you.",
       "material": [
-        "Personalise your connection request - When sending a connection request, select the option to ‘Add a note’ especially if it's someone you don't know well personally",
-        "Join Groups - Groups are places where like-minded professionals can share resources and have discussions. Look out for groups related to the sector, job role or employer that you’re interested in and join them to further expand your network",
-        "Connect during offline networking events - If you’re attending a careers fair or a networking event, and you feel it is appropriate, you can ask people whether you can connect with them on LinkedIn"
+        "Personalise your connection request - When sending a connection request, select the option to \"Add a note\" especially if it's someone you don't know well personally",
+        "Join Groups - Groups are places where like-minded professionals can share resources and have discussions. Look out for groups related to the sector, job role or employer that you're interested in and join them to further expand your network",
+        "Connect during offline networking events - If you're attending a careers fair or a networking event, and you feel it is appropriate, you can ask people whether you can connect with them on LinkedIn"
       ]
     },
     {
       "type": "text",
       "heading": "Finding Opportunities",
-      "material": "Employers advertise their job vacancies on LinkedIn and you often have the ability to apply for the opportunity directly using your LinkedIn account. There is a specific ‘Job’ tab within LinkedIn where jobs can be filtered by the title, skill, company and location. Recruiters may also use LinkedIn to headhunt candidates and there are tools that when utilised well can show recruiters that you are interested in being hired. On your LinkedIn profile there is an option to put that you are open to ‘finding a job’ where you can show recruiters you are looking for work in a particular industry and/or location. These opportunities can be filtered further by putting a start date and the type of job (e.g. full-time, part-time, internship, etc.) "
+      "material": "Employers advertise their job vacancies on LinkedIn and you often have the ability to apply for the opportunity directly using your LinkedIn account. There is a specific \"Job\" tab within LinkedIn where jobs can be filtered by the title, skill, company and location. Recruiters may also use LinkedIn to headhunt candidates and there are tools that when utilised well can show recruiters that you are interested in being hired. On your LinkedIn profile there is an option to put that you are open to \"finding a job\" where you can show recruiters you are looking for work in a particular industry and/or location. These opportunities can be filtered further by putting a start date and the type of job (e.g. full-time, part-time, internship, etc.) "
     },
     {
       "type": "text",
@@ -49,12 +49,23 @@
       "material": [
         "Change you LinkedIn URl - Having a more search-friendly or snappy online identity can be part of your personal brand",
         "Constantly update your profile so it becomes a growing record of your working life",
-        "Don’t just include the jobs and work experience that are directly relevant to the sector and/or job you are interested in. Part-time roles, volunteering positions and positions of responsibility from extracurricular activities are all worth putting on your LinkedIn profile",
+        "Don't just include the jobs and work experience that are directly relevant to the sector and/or job you are interested in. Part-time roles, volunteering positions and positions of responsibility from extracurricular activities are all worth putting on your LinkedIn profile",
         "You can download your profile as a PDF and use it as a broad CV",
         "Be Professional - Treat all of your activity on LinkedIn as if you were interacting with a potential employer at a networking event",
         "Start posting and being an active presence to grow your personal brand"
       ]
+    },
+    {
+      "type": "image",
+      "height": 130,
+      "width": 130,
+      "material": [
+        {
+          "caption": "Create your LinkedIn account now",
+          "path": "https://www.linkedin.com/",
+          "image": "linkedin.png"
+        }
+      ]
     }
-
   ]
 }

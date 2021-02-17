@@ -2,6 +2,7 @@
   "title": "Interviews",
   "path": "/interviews",
   "icon": "fas fa-handshake",
+  "page_summary": "For a competitive opportunity with a large number of applicants such as a placement year or graduate scheme, it is common for employers to  use more than one interview stage. This often starts with a telephone or asynchronous video interview, and then asking successful applicants to take one (or more) face-to-face interviews. Interviews can also occur during an assessment centre or after one where the top applicants have been narrowed down as the final stage of the recruitment process. This depends on the organisation.",
   "subpages": [
     {
       "title": "Telephone Interviews",
@@ -20,10 +21,6 @@
     }
   ],
   "content": [
-    {
-      "type": "text",
-      "material": "For a competitive opportunity with a large number of applicants such as a placement year or graduate scheme, it is common for employers to  use more than one interview stage. This often starts with a telephone or asynchronous video interview, and then asking successful applicants to take one (or more) face-to-face interviews. Interviews can also occur during an assessment centre or after one where the top applicants have been narrowed down as the final stage of the recruitment process. This depends on the organisation."
-    },
     {
       "type": "text",
       "display": "list",

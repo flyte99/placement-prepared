@@ -42,6 +42,18 @@
       "heading": "Learn Git Branching",
       "section_description": "https://learngitbranching.js.org is an interactive web page is quite good - but be aware that, for instance, when really using Git you can't just  \"commit\" without \"add\"ing content first.",
       "material": "https://learngitbranching.js.org"
+    },
+    {
+      "type": "image",
+      "height": 130,
+      "width": 130,
+      "material": [
+        {
+          "caption": "Download Git to get started",
+          "path": "https://git-scm.com/downloads",
+          "image": "git.png"
+        }
+      ]
     }
   ]
 }

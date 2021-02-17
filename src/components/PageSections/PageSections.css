@@ -3,9 +3,16 @@
     justify-content: center
 }
 
+.embedded-webpage {
+    border: 0 #FFFFFF none;
+    height: 700px;
+    width: 100%;
+    margin-top: 0;
+}
+
 .img-block {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-align: center;
     align-items: flex-end;
     margin: 30px 34px 0

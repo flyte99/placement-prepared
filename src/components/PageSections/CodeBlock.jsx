@@ -4,9 +4,7 @@ import './PageSections.css';
 class CodeBlock extends Component {
     getEmbeddedWebsite = (heading, material) => {
         return (
-            <iframe title={heading} src={material} style={{border: '0px #FFFFFF none', height: 700, width: '100%',}}
-                    scrolling='no' frameBorder='1' marginHeight='0px'/>
-
+            <iframe className='embedded-webpage' title={heading} src={material} scrolling='no' frameBorder='1'/>
         )
     }
 

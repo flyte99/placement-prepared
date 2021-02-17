@@ -16,6 +16,7 @@ class TopicPage extends Component {
         super(props);
         this.state = {
             title: this.props.title,
+            page_summary: "",
             subpages: [],
             content: []
         };
@@ -27,6 +28,7 @@ class TopicPage extends Component {
         let data = require(`../../../tmp/${this.state.title}.json`);
 
         this.setState({
+            page_summary: data.page_summary,
             subpages: data.subpages,
             content: data.content
         })
@@ -76,6 +78,7 @@ class TopicPage extends Component {
         return (
             <div className='main'>
                 <h2>{this.state.title}</h2>
+                {this.state.page_summary}
                 {this.getSubpages(this.state.subpages)}
                 {this.state.content.map((section) => (this.body(section)))}
             </div>

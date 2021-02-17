@@ -2,6 +2,7 @@
   "title": "Assessment Centres",
   "path": "/assessment_centres",
   "icon": "fas fa-briefcase",
+  "page_summary": "Assessment Centres involve a combination of assessed tasks and activities that test an applicant's suitability for the job. They are typically one of the final stages in the recruitment process where employers observe a group of applicants and how they perform together and individually. Assessment Centres can last from a few hours to a few days and it is important to remember that between tasks, such as during meals and gaps in the schedule, observations continue. This is a chance to show interpersonal skills by asking questions to employees along with other candidates who could end up being colleagues.",
   "subpages": [
     {
       "title": "Group Exercises",
@@ -20,10 +21,6 @@
     }
   ],
   "content": [
-    {
-      "type": "text",
-      "material": "Assessment Centres involve a combination of assessed tasks and activities that test an applicant's suitability for the job. They are typically one of the final stages in the recruitment process where employers observe a group of applicants and how they perform together and individually. Assessment Centres can last from a few hours to a few days and it is important to remember that between tasks, such as during meals and gaps in the schedule, observations continue. This is a chance to show interpersonal skills by asking questions to employees along with other candidates who could end up being colleagues."
-    },
     {
       "type": "text",
       "heading": "Preparation",

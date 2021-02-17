@@ -2,6 +2,7 @@
   "title": "Industry Skills",
   "path": "/industry_skills",
   "icon": "fas fa-industry",
+  "page_summary": "The guides below aim to give practical insight over the variety of topics to better prepare individuals for working in industry",
   "subpages": [
     {
       "title": "Agile Development Methods",
@@ -24,10 +25,5 @@
       "summary": "A testing method where individual units of source code are tested to determine whether they are fit for use"
     }
   ],
-  "content": [
-    {
-      "type": "text",
-      "material": "The guides provided aim to give practical insight over the variety of topics to better prepare individuals for working in industry"
-    }
-  ]
+  "content": []
 }
