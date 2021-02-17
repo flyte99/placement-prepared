@@ -3,9 +3,13 @@ import './PageSections.css'
 
 class QuizBlock extends Component {
     render() {
+        const {heading, material} = this.props.content;
+
         return (
             <div>
-                {this.props.material}
+                <br/>
+                <h4>{heading}</h4>
+                {material}
             </div>
         )
     }

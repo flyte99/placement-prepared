@@ -66,7 +66,7 @@ class TopicPage extends Component {
             case 'video':
                 return <VideoBlock material={section.material}/>;
             case 'quiz':
-                return <QuizBlock questions={section.material}/>
+                return <QuizBlock content={section}/>
             case 'scrum-board':
                 return <ScrumBoard/>
             default:
