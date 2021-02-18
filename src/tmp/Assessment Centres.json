@@ -10,9 +10,9 @@
       "summary": "Applicants are placed into groups and expected to solve a problem by working together and agreeing on a solution within a set time limit"
     },
     {
-      "title": "Technical Assessments",
-      "path": "/assessment_centres/technical_assessments",
-      "summary": "Technical assessments are used to test an applicant's technical knowledge by solving problems or completing tasks"
+      "title": "Virtual Assessment Centres",
+      "path": "/assessment_centres/virtual",
+      "summary": "During the coronavirus pandemic, some graduate employers moved to running virtual or digital assessment centres instead"
     },
     {
       "title": "Presentations",
@@ -25,6 +25,15 @@
       "type": "text",
       "heading": "Preparation",
       "material": "Before an assessment centre applicants are sent information by the potential employer, such as the schedule, dress code and location. Research into the company (and competitors), industry, role and details of the opportunity on offer is vital preparation before an Assessment Centre as it will help in interviews, presentations and conversations throughout the day."
+    },
+    {
+      "type": "text",
+      "heading": "Technical Assessments",
+      "material": "Technical assessments are used to test an applicant's technical knowledge by solving problems or completing tasks. Technical assessments will vary between organisations from commenting on a range of scenarios or hypothetical situations of increasing complexity to brain teasers. Recruiters may also ask candidates to work on a short design exercise or code analysis activity. The aim of these assessments is to show recruiters that you can react to unfamiliar situations while keeping calm and giving your best solution to the problem. Similar to other aspects of the recruitment process, the answer you give is not important so don't worry about getting it \"right\" because knowledge can be taught whereas the recruiter is assessing how you think."
+    },
+    {
+      "type": "video",
+      "material": "https://youtu.be/DIR_rxusO8Q"
     }
   ]
 }

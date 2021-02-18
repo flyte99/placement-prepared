@@ -23,7 +23,7 @@ class App extends Component {
 
             {title: 'Assessment Centres', path: '/assessment_centres'},
             {title: 'Group Exercises', path: '/assessment_centres/group_exercises'},
-            {title: 'Technical Assessments', path: '/assessment_centres/technical_assessments'},
+            {title: "Virtual Assessment Centres", path: "/assessment_centres/virtual"},
             {title: 'Presentations', path: '/assessment_centres/presentations'},
 
             {title: 'Interviews', path: '/interviews'},

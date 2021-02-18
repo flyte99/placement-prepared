@@ -35,7 +35,7 @@ class HomePage extends Component {
                     icon: <i className='fas fa-briefcase'/>,
                     subpages: [
                         {title: 'Group Exercises', path: '/assessment_centres/group_exercises'},
-                        {title: 'Technical Assessments', path: '/assessment_centres/technical_assessments'},
+                        {title: "Virtual Assessment Centres", path: "/assessment_centres/virtual"},
                         {title: 'Presentations', path: '/assessment_centres/presentations'},
                     ],
                 },
