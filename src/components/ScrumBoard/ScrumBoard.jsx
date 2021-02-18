@@ -120,12 +120,10 @@ class ScrumBoard extends Component {
                         return (
                             <Flippy>
                                 <FrontSide>
-                                    <div
-                                        key={column.stage}
-                                        className='scrum-column'
-                                        onDragEnter={(e) => {
-                                            this.handleOnDragEnter(e, column.stage);
-                                        }}
+                                    <div key={column.stage} className='scrum-column'
+                                         onDragEnter={(e) => {
+                                             this.handleOnDragEnter(e, column.stage);
+                                         }}
                                     >
                                         <h5>{column.stage}. {column.name} ({scrumCards.length})</h5>
                                         {this.generateScrumCards(scrumCards)}
@@ -133,10 +131,7 @@ class ScrumBoard extends Component {
                                     </div>
                                 </FrontSide>
                                 <BackSide>
-                                    <div
-                                        key={column.stage}
-                                        className='scrum-column'
-                                    >
+                                    <div key={column.stage} className='scrum-column'>
                                         <h5>{column.stage}. {column.name} ({scrumCards.length})</h5>
                                         {column.description}
                                         <br/>

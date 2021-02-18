@@ -22,6 +22,10 @@
   ],
   "content": [
     {
+      "type": "video",
+      "material": "https://youtu.be/l0OBCtzk_oM"
+    },
+    {
       "type": "text",
       "display": "list",
       "heading": "Managing Interview Nerves",

@@ -23,7 +23,7 @@ class TopicPage extends Component {
     }
 
     componentDidMount() {
-        // TODO: get page info from MYSQL
+        // TODO: get page info from MySQL
 
         let data = require(`../../../tmp/${this.state.title}.json`);
 
@@ -64,7 +64,7 @@ class TopicPage extends Component {
             case 'image':
                 return <ImageBlock content={section}/>
             case 'video':
-                return <VideoBlock material={section.material}/>;
+                return <VideoBlock content={section}/>;
             case 'quiz':
                 return <QuizBlock content={section}/>
             case 'scrum-board':

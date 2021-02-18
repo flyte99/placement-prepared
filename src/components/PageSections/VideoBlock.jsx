@@ -6,9 +6,14 @@ import './PageSections.css'
 
 class VideoBlock extends Component {
     render() {
+        const {heading, section_description, material} = this.props.content
+
         return (
-            <div className='embedded-video'>
-                <ReactPlayer url={this.props.material}/>
+            <div>
+                {heading ? <br/> : null}
+                <h4>{heading}</h4>
+                {section_description}
+                <div className='embedded-video'><ReactPlayer url={material}/></div>
             </div>
         )
     }
