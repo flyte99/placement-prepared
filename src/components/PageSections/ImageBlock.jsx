@@ -36,7 +36,7 @@ class ImageBlock extends Component {
                                     <Figure>
                                         <Figure.Image height={height} width={width} src={image}
                                                       alt={`${width}x${height}`}/>
-                                        <Figure.Caption>{item.caption}</Figure.Caption>
+                                        <Figure.Caption>{item.caption}<br/>{item.sub_caption}</Figure.Caption>
                                     </Figure>
                                 </a>
                             )
