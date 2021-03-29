@@ -97,7 +97,7 @@ class ScrumBoard extends Component {
                         this.handleOnDragEnd(e, project);
                     }}
                 >
-                    <h5>{project.name}</h5>
+                    <h5 className='scrum-h5'>{project.name}</h5>
                     <div>{project.description}<br/></div>
                     <div className='time-frame'>{project.timeframe}</div>
                 </div>
@@ -125,14 +125,14 @@ class ScrumBoard extends Component {
                                              this.handleOnDragEnter(e, column.stage);
                                          }}
                                     >
-                                        <h5>{column.stage}. {column.name} ({scrumCards.length})</h5>
+                                        <h5 className='scrum-h5'>{column.stage}. {column.name} ({scrumCards.length})</h5>
                                         {this.generateScrumCards(scrumCards)}
                                         <br/>
                                     </div>
                                 </FrontSide>
                                 <BackSide>
                                     <div key={column.stage} className='scrum-column'>
-                                        <h5>{column.stage}. {column.name} ({scrumCards.length})</h5>
+                                        <h5 className='scrum-h5'>{column.stage}. {column.name} ({scrumCards.length})</h5>
                                         {column.description}
                                         <br/>
                                     </div>

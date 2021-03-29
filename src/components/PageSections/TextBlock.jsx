@@ -11,6 +11,19 @@ class TextBlock extends Component {
         )
     }
 
+    handleSections = (list) => {
+        return (
+            <div>
+                {list.map((item => (
+                    <div className='tab'>
+                        <h5>{item.subheading}</h5>
+                        <p>{item.text}</p>
+                    </div>
+                    )))}
+            </div>
+        )
+    }
+
     handleCarousel = (material) => {
         return (
             <Carousel>
@@ -27,6 +40,9 @@ class TextBlock extends Component {
         switch (display) {
             case 'list':
                 block = this.handleList(material);
+                break;
+            case 'sections':
+                block = this.handleSections(material);
                 break;
             case 'carousel':
                 block = this.handleCarousel(material);
