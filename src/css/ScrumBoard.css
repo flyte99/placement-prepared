@@ -1,0 +1,62 @@
+.scrum-board {
+    margin: auto;
+    background-color: #5664d2;
+    padding: 30px 34px 30px;
+    border-radius: 10px;
+}
+
+.flippy-scrum-board.flippy-container {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    min-height: 600px;
+}
+
+.flippy-scrum-board.flippy-front, .flippy-scrum-board.flippy-back {
+    padding: 0;
+    width: 175px;
+}
+
+.scrum-column {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 0;
+    width: 175px;
+    min-height: 600px;
+    background-color: #f0eeee;
+    border-radius: 4px;
+}
+
+.scrum-card {
+    background-color: #f9f7f7;
+    padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.time-frame {
+    vertical-align: middle;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 5px;
+    width: 65px;
+    height: 25px;
+    background-color: #8a8a8a;
+    border-radius: 4px;
+}
+
+.centre-scrum-text {
+    text-align: center;
+}
+
+.centre-column-text {
+    padding-top: 150px;
+    text-align: center;
+}

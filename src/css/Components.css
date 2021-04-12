@@ -1,0 +1,30 @@
+.grid-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.bullet-points {
+    margin-left: 20px;
+}
+
+.center-grid-container {
+    justify-content: center;
+}
+
+.competency-grid {
+    margin-top: 10px;
+    justify-content: space-evenly;
+}
+
+.embedded-video {
+    margin: 40px;
+    display: flex;
+    justify-content: center
+}

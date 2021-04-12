@@ -1,0 +1,70 @@
+.img-block {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: flex-end;
+    margin: 30px 34px 0
+}
+
+.img-grid {
+    height: 200px;
+}
+
+.img-caption {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.tool-img-caption {
+    width: 130px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.mbti-img {
+    display: flex;
+    justify-content: center;
+    margin-right: 375px;
+    height: 75px;
+}
+
+.shortlist-img {
+    display: flex;
+    justify-content: center;
+    margin-right: 320px;
+    height: 170px;
+}
+
+.star-img {
+    display: flex;
+    justify-content: center;
+    margin-right: 500px;
+    height: 280px;
+}
+
+.dev-img {
+    display: flex;
+    justify-content: center;
+    margin-right: 425px;
+    height: 300px;
+}
+
+.scrum-img {
+    display: flex;
+    justify-content: center;
+    margin-right: 525px;
+    height: 200px;
+}
+
+.git-staging-img{
+    display: flex;
+    justify-content: center;
+    margin-right: 360px;
+    height: 230px;
+}
+
+.link-img {
+    display: flex;
+    justify-content: center;
+    height: 130px;
+}
