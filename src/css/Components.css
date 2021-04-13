@@ -1,7 +1,13 @@
-.grid-item{
+.grid-item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.git-workflows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel {

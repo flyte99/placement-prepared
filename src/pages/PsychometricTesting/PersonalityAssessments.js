@@ -1,13 +1,10 @@
-import { Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
-import Image from 'material-ui-image';
+import { Avatar, Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
 import Flippy, { BackSide, FrontSide } from 'react-flippy';
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
-
-const image = require('/static/images/resources/myers-briggs.svg').default;
 
 const PersonalityAssessments = () => {
   const pageTitle = 'Personality Assessments';
@@ -65,9 +62,14 @@ const PersonalityAssessments = () => {
             </Grid>
           </CardContent>
           <CardContent sx={{ height: 130 }}>
-            <div className="mbti-img">
+            <div className="img-centre">
               <a target="_blank" rel="noreferrer" href="https://www.16personalities.com/free-personality-test">
-                <Image imageStyle={{ width: 350, height: 75 }} src={image} />
+                <Avatar
+                  alt="16Personalities Logo"
+                  style={{ width: 350, height: 75 }}
+                  src="/static/images/resources/myers-briggs.svg"
+                  variant="square"
+                />
               </a>
             </div>
             <Typography className="img-caption">Take the Myers-Briggs Personality test</Typography>

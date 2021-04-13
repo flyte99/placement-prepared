@@ -1,5 +1,4 @@
-import { Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
-import Image from 'material-ui-image';
+import { Avatar, Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Flippy, { BackSide, FrontSide } from 'react-flippy';
 import { Helmet } from 'react-helmet';
@@ -8,8 +7,6 @@ import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
-
-const image = require('/static/images/material/star-technique.png').default;
 
 const FaceToFaceInterviews = () => {
   const pageTitle = 'Face-to-Face Interviews';
@@ -94,13 +91,18 @@ const FaceToFaceInterviews = () => {
         </Card>
       </Box>
       <Box sx={{ m: 5 }}>
-        <div className="star-img">
+        <div className="img-centre">
           <a
             target="_blank"
             rel="noreferrer"
             href="https://www.thecvwriter.co.uk/applying-the-star-technique-in-an-interview/"
           >
-            <Image imageStyle={{ width: 500, height: 280 }} src={image} />
+            <Avatar
+              alt="STAR Technique"
+              style={{ width: 500, height: 280 }}
+              src="/static/images/material/star-technique.png"
+              variant="square"
+            />
           </a>
         </div>
         <Typography className="img-caption">The STAR method and it’s application from www.thecvwriter.co.uk

@@ -1,14 +1,8 @@
-import { Box, Card, CardContent, CardHeader, Divider, Grid, Typography } from '@material-ui/core';
-import Image from 'material-ui-image';
+import { Avatar, Box, Card, CardContent, CardHeader, Divider, Grid, Typography } from '@material-ui/core';
 import Flippy, { BackSide, FrontSide } from 'react-flippy';
 import { Helmet } from 'react-helmet';
 import 'src/css/Images.css';
-
-const stagingImg = require('/static/images/material/git-staging-area.png').default;
-const centralizedWorkflowImg = require('/static/images/material/centralized-git-workflow.png').default;
-const integrationWorkflowImg = require('/static/images/material/integration-git-workflow.png').default;
-const devWorkflowImg = require('/static/images/material/development-git-workflow.png').default;
-const gitImg = require('/static/images/resources/git.png').default;
+import 'src/css/Components.css';
 
 const Git = () => {
   const pageTitle = 'Git';
@@ -16,17 +10,20 @@ const Git = () => {
     {
       title: 'Subversion-Style Workflow',
       description: 'A centralized workflow is very common, and consists of developers pushing changes to the same server (shared repository). Git will not allow you to push if someone has pushed since the last time you fetched',
-      image: centralizedWorkflowImg
+      image: '/static/images/material/centralized-git-workflow.png',
+      height: 226
     },
     {
       title: 'Integration Manager Workflow',
       description: 'Developers clone from the "blessed" repository and push to their own independent repositories. They then ask the integrator to pull in their changes. This is the type of development model often seen with open source or GitHub repositories',
-      image: integrationWorkflowImg
+      image: '/static/images/material/integration-git-workflow.png',
+      height: 181
     },
     {
       title: 'Dictator and Lieutenants Workflow',
       description: 'Some people ("lieutenants") are in charge of a specific subsystem of the project and they merge in all changes related to that subsystem. Another integrator (the "dictator") can pull changes from only their lieutenants and then push to the "blessed" repository that everyone then clones from again',
-      image: devWorkflowImg
+      image: '/static/images/material/development-git-workflow.png',
+      height: 243
     }
   ];
 
@@ -46,7 +43,14 @@ const Git = () => {
               which is called the &quot;staging area&ldquo; or &quot;index&ldquo;.
             </Typography>
             <Box sx={{ m: 2 }}>
-              <div className="git-staging-img"><Image imageStyle={{ width: 400, height: 230 }} src={stagingImg} /></div>
+              <div className="img-centre">
+                <Avatar
+                  alt="Git Staging Area"
+                  style={{ width: 400, height: 230 }}
+                  src="/static/images/material/git-staging-area.png"
+                  variant="square"
+                />
+              </div>
               <Typography className="img-caption">Git Staging Area</Typography>
             </Box>
           </CardContent>
@@ -65,9 +69,16 @@ const Git = () => {
                     <CardHeader title={card.title} />
                     <Divider />
                     <CardContent>
-                      <Flippy>
-                        <FrontSide><Typography>{card.description}</Typography></FrontSide>
-                        <BackSide><Image src={card.image} /></BackSide>
+                      <Flippy style={{ height: 300 }}>
+                        <FrontSide className="git-workflows"><Typography>{card.description}</Typography></FrontSide>
+                        <BackSide className="git-workflows">
+                          <Avatar
+                            alt={card.title}
+                            style={{ width: 450, height: card.height }}
+                            src={card.image}
+                            variant="square"
+                          />
+                        </BackSide>
                       </Flippy>
                     </CardContent>
                   </Card>
@@ -78,9 +89,14 @@ const Git = () => {
         </Card>
       </Box>
       <Box sx={{ m: 5 }}>
-        <div className="link-img">
+        <div className="img-centre">
           <a target="_blank" rel="noreferrer" href="https://git-scm.com/downloads">
-            <Image style={{ width: 130, height: 130 }} src={gitImg} />
+            <Avatar
+              alt="Git Logo"
+              style={{ width: 130, height: 130 }}
+              src="/static/images/resources/git.png"
+              variant="square"
+            />
           </a>
         </div>
         <Typography className="img-caption">Download Git to get started</Typography>

@@ -1,14 +1,7 @@
-import { Box, Card, CardContent, Typography } from '@material-ui/core';
-import Image from 'material-ui-image';
+import { Avatar, Box, Card, CardContent, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import 'src/css/Images.css';
 import SubpageCards from '../../components/SubpageCards';
-
-const aptTestLogo = require('/static/images/resources/practice-aptitude-tests.svg').default;
-const testPartnershipLogo = require('/static/images/resources/test-partnership.png').default;
-const assessDayLogo = require('/static/images/resources/assessment-day.svg').default;
-const jobTestPrepLogo = require('/static/images/resources/job-test-prep.webp').default;
-const jobTestSuccessLogo = require('/static/images/resources/job-test-success.png').default;
 
 const PsychometricTesting = () => {
   const pageTitle = 'Psychometric Tests';
@@ -25,16 +18,37 @@ const PsychometricTesting = () => {
     }
   ];
 
-  const imgs = [
-    { caption: 'Practice Aptitude Tests', path: 'https://www.practiceaptitudetests.com/', image: aptTestLogo },
+  const resources = [
+    {
+      caption: 'Practice Aptitude Tests',
+      path: 'https://www.practiceaptitudetests.com/',
+      image: '/static/images/resources/practice-aptitude-tests.svg',
+      width: 230
+    },
     {
       caption: 'Test Partnership',
       path: 'https://www.testpartnership.com/psychometric-test.html',
-      image: testPartnershipLogo
+      image: '/static/images/resources/test-partnership.png',
+      width: 170
     },
-    { caption: 'Assessment Day', path: 'https://www.assessmentday.co.uk/', image: assessDayLogo },
-    { caption: 'Job Test Prep', path: 'https://www.jobtestprep.co.uk/', image: jobTestPrepLogo },
-    { caption: 'Job Test Success', path: 'https://www.jobtestsuccess.com/', image: jobTestSuccessLogo }
+    {
+      caption: 'Assessment Day',
+      path: 'https://www.assessmentday.co.uk/',
+      image: '/static/images/resources/assessment-day.svg',
+      width: 220
+    },
+    {
+      caption: 'Job Test Prep',
+      path: 'https://www.jobtestprep.co.uk/',
+      image: '/static/images/resources/job-test-prep.webp',
+      width: 230
+    },
+    {
+      caption: 'Job Test Success',
+      path: 'https://www.jobtestsuccess.com/',
+      image: '/static/images/resources/job-test-success.png',
+      width: 150
+    }
   ];
 
   const testPoints = [
@@ -79,10 +93,15 @@ const PsychometricTesting = () => {
           <CardContent>
             <Typography color="textPrimary" variant="h2">Online Practice Tests</Typography><br />
             <div className="img-block">
-              {imgs.map((item) => (
+              {resources.map((item) => (
                 <div>
                   <a target="_blank" rel="noreferrer" href={item.path}>
-                    <Image imageStyle={{ height: item.image.height, width: item.image.width }} src={item.image} />
+                    <Avatar
+                      alt={item.caption}
+                      style={{ width: item.width, height: 45 }}
+                      src={item.image}
+                      variant="square"
+                    />
                   </a>
                   <Box><Typography>{item.caption}</Typography></Box>
                 </div>

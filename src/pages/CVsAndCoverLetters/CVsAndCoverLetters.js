@@ -1,18 +1,9 @@
-import { Box, Card, CardContent, Typography } from '@material-ui/core';
-import Image from 'material-ui-image';
+import { Avatar, Box, Card, CardContent, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import SubpageCards from 'src/components/SubpageCards';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
-
-const targetJobsLogo = require('/static/images/resources/target-jobs.png').default;
-const rateMyPlacementLogo = require('/static/images/resources/ratemyplacement.jpg').default;
-const gradcrackerLogo = require('/static/images/resources/gradcracker.jpg').default;
-const indeedLogo = require('/static/images/resources/indeed.jpg').default;
-const prospectsLogo = require('/static/images/resources/prospects.png').default;
-const glassdoorLogo = require('/static/images/resources/glassdoor.png').default;
-const workInStartupsLogo = require('/static/images/resources/work-in-startups.jpg').default;
 
 const CVsAndCoverLetters = () => {
   const pageTitle = 'CVs and Cover Letters';
@@ -34,18 +25,30 @@ const CVsAndCoverLetters = () => {
     }
   ];
 
-  const imgs = [
-    { caption: 'TARGET Jobs', path: 'https://targetjobs.co.uk/career-sectors/it-and-technology/', image: targetJobsLogo },
-    { caption: 'Rate My Placement', path: 'https://www.ratemyplacement.co.uk/', image: rateMyPlacementLogo },
+  const resources = [
+    {
+      caption: 'TARGET Jobs',
+      path: 'https://targetjobs.co.uk/career-sectors/it-and-technology/',
+      image: '/static/images/resources/target-jobs.png'
+    },
+    {
+      caption: 'Rate My Placement',
+      path: 'https://www.ratemyplacement.co.uk/',
+      image: '/static/images/resources/ratemyplacement.jpg'
+    },
     {
       caption: 'Gradcracker',
       path: 'https://www.gradcracker.com/search/computing-technology/jobs/',
-      image: gradcrackerLogo
+      image: '/static/images/resources/gradcracker.jpg'
     },
-    { caption: 'Indeed', path: 'https://www.indeed.co.uk/', image: indeedLogo },
-    { caption: 'Prospects', path: 'https://www.prospects.ac.uk/', image: prospectsLogo },
-    { caption: 'Glassdoor', path: 'https://www.glassdoor.co.uk/', image: glassdoorLogo },
-    { caption: 'Work in Startups', path: 'https://workinstartups.com/', image: workInStartupsLogo }
+    { caption: 'Indeed', path: 'https://www.indeed.co.uk/', image: '/static/images/resources/indeed.jpg' },
+    { caption: 'Prospects', path: 'https://www.prospects.ac.uk/', image: '/static/images/resources/prospects.png' },
+    { caption: 'Glassdoor', path: 'https://www.glassdoor.co.uk/', image: '/static/images/resources/glassdoor.png' },
+    {
+      caption: 'Work in Startups',
+      path: 'https://workinstartups.com/',
+      image: '/static/images/resources/work-in-startups.jpg'
+    }
   ];
 
   return (
@@ -74,10 +77,10 @@ const CVsAndCoverLetters = () => {
               such as the following:
             </Typography>
             <div className="img-block">
-              {imgs.map((item) => (
+              {resources.map((item) => (
                 <div>
                   <a target="_blank" rel="noreferrer" href={item.path}>
-                    <Image style={{ width: 130, height: 130 }} src={item.image} />
+                    <Avatar alt={item.caption} style={{ width: 130, height: 130 }} src={item.image} variant="square" />
                   </a>
                   <Box sx={{ m: 1 }}>
                     <Typography>{item.caption}</Typography>

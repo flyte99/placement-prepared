@@ -1,10 +1,7 @@
-import { Box, Card, CardContent, Typography } from '@material-ui/core';
-import Image from 'material-ui-image';
+import { Avatar, Box, Card, CardContent, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Images.css';
-
-const image = require('/static/images/resources/shortlistme-logo.png').default;
 
 const VideoInterviews = () => {
   const pageTitle = 'Video Interviews';
@@ -59,9 +56,14 @@ const VideoInterviews = () => {
         </Card>
       </Box>
       <Box sx={{ m: 5 }}>
-        <div className="shortlist-img">
+        <div className="img-centre">
           <a target="_blank" rel="noreferrer" href="https://go.shortlister.com/marketplace/univreading">
-            <Image imageStyle={{ width: 300, height: 170 }} src={image} />
+            <Avatar
+              alt="ShortlistMe Logo"
+              style={{ width: 300, height: 170 }}
+              src="/static/images/resources/shortlistme-logo.png"
+              variant="square"
+            />
           </a>
         </div>
         <Typography className="img-caption">Practice and perfect your interview skills using Shortlist.me</Typography>

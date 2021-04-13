@@ -1,12 +1,9 @@
-import { Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
-import Image from 'material-ui-image';
+import { Avatar, Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
-
-const image = require('/static/images/resources/mysql.jpg').default;
 
 const MySQL = () => {
   const pageTitle = 'MySQL';
@@ -128,9 +125,14 @@ const MySQL = () => {
         </Grid>
       </Box>
       <Box sx={{ m: 5 }}>
-        <div className="link-img">
+        <div className="img-centre">
           <a target="_blank" rel="noreferrer" href="https://www.mysql.com/">
-            <Image style={{ width: 130, height: 130 }} src={image} />
+            <Avatar
+              alt="MySQL Logo"
+              style={{ width: 130, height: 130 }}
+              src="/static/images/resources/mysql.jpg"
+              variant="square"
+            />
           </a>
         </div>
         <Typography className="img-caption">Download MySQL to get started</Typography>

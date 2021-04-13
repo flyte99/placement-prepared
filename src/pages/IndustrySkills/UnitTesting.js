@@ -1,16 +1,9 @@
-import { Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
-import Image from 'material-ui-image';
+import { Avatar, Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
 import Flippy, { BackSide, FrontSide } from 'react-flippy';
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
 import 'src/css/Images.css';
-
-const jUnitLogo = require('/static/images/resources/junit.jpg').default;
-const nUnitLogo = require('/static/images/resources/nunit.png').default;
-const jMockit = require('/static/images/resources/jmockit.JPG').default;
-const emmaLogo = require('/static/images/resources/emma.png').default;
-const phpUnitLogo = require('/static/images/resources/phpunit.svg').default;
 
 const UnitTesting = () => {
   const pageTitle = 'Unit Testing';
@@ -20,11 +13,36 @@ const UnitTesting = () => {
     { front: 'Assert', back: 'Verifies that the action of the method under test behaves as expected' }
   ];
   const testingTools = [
-    { caption: 'Unit testing for Java code', path: 'https://junit.org/junit5/', image: jUnitLogo },
-    { caption: 'Unit testing for code in all .net languages', path: 'https://nunit.org/', image: nUnitLogo },
-    { caption: 'Open source unit testing tool', path: 'https://jmockit.github.io/', image: jMockit },
-    { caption: 'Unit testing for Java code', path: 'http://emma.sourceforge.net/', image: emmaLogo },
-    { caption: 'Unit testing for PHP code ', path: 'https://phpunit.de/', image: phpUnitLogo }
+    {
+      caption: 'Unit testing for Java code',
+      path: 'https://junit.org/junit5/',
+      image: '/static/images/resources/junit.jpg',
+      width: 77
+    },
+    {
+      caption: 'Unit testing for code in all .net languages',
+      path: 'https://nunit.org/',
+      image: '/static/images/resources/nunit.png',
+      width: 107
+    },
+    {
+      caption: 'Open source unit testing tool',
+      path: 'https://jmockit.github.io/',
+      image: '/static/images/resources/jmockit.JPG',
+      width: 180
+    },
+    {
+      caption: 'Unit testing for Java code',
+      path: 'http://emma.sourceforge.net/',
+      image: '/static/images/resources/emma.png',
+      width: 152
+    },
+    {
+      caption: 'Unit testing for PHP code ',
+      path: 'https://phpunit.de/',
+      image: '/static/images/resources/phpunit.svg',
+      width: 175
+    }
   ];
   const bestPractices = [
     'Test cases should be independent - in case of any enhancements or change in requirements, unit test cases should not be affected',
@@ -88,9 +106,14 @@ const UnitTesting = () => {
             <div className="img-block">
               {testingTools.map((item) => (
                 <Box>
-                  <div className="link-img">
+                  <div className="img-centre">
                     <a target="_blank" rel="noreferrer" href={item.path}>
-                      <Image style={{ width: 130, height: 130 }} src={item.image} />
+                      <Avatar
+                        alt={item.caption}
+                        style={{ width: item.width, height: 45 }}
+                        src={item.image}
+                        variant="square"
+                      />
                     </a>
                   </div>
                   <Typography className="tool-img-caption">{item.caption}</Typography>

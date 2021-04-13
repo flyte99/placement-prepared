@@ -1,13 +1,10 @@
-import { Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
-import Image from 'material-ui-image';
+import { Avatar, Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
 import Flippy, { BackSide, FrontSide } from 'react-flippy';
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
-
-const image = require('/static/images/resources/linkedin.png').default;
 
 const LinkedIn = () => {
   const pageTitle = 'LinkedIn';
@@ -123,9 +120,14 @@ const LinkedIn = () => {
         </Card>
       </Box>
       <Box sx={{ m: 5 }}>
-        <div className="link-img">
+        <div className="img-centre">
           <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/">
-            <Image style={{ width: 130, height: 130 }} src={image} />
+            <Avatar
+              alt="LinkedIn Logo"
+              style={{ width: 130, height: 130 }}
+              src="/static/images/resources/linkedin.png"
+              variant="square"
+            />
           </a>
         </div>
         <Typography className="img-caption">Create your LinkedIn account now</Typography>

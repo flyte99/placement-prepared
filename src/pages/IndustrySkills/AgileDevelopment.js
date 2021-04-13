@@ -1,11 +1,7 @@
-import { Box, Card, CardContent, Typography } from '@material-ui/core';
-import Image from 'material-ui-image';
+import { Avatar, Box, Card, CardContent, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import ScrumBoard from 'src/components/ScrumBoard';
 import 'src/css/Images.css';
-
-const developmentImg = require('/static/images/material/development-cycles.png').default;
-const scrumImg = require('/static/images/material/sprint-cycle.png').default;
 
 const AgileDevelopment = () => {
   const pageTitle = 'Agile Development Methods';
@@ -33,7 +29,14 @@ const AgileDevelopment = () => {
               invaluable when new members join the team.
             </Typography>
             <Box sx={{ m: 2 }}>
-              <div className="dev-img"><Image imageStyle={{ width: 400, height: 300 }} src={developmentImg} /></div>
+              <div className="img-centre">
+                <Avatar
+                  alt="Development Cycles"
+                  style={{ width: 400, height: 305 }}
+                  src="/static/images/material/development-cycles.png"
+                  variant="square"
+                />
+              </div>
               <Typography className="img-caption">
                 A comparison between plan-based development cycles and agile development cycles
               </Typography>
@@ -52,7 +55,14 @@ const AgileDevelopment = () => {
               {scrumPhases.map(((phase) => (<li><Typography>{phase}</Typography></li>)))}
             </ul>
             <Box sx={{ m: 2 }}>
-              <div className="scrum-img"><Image imageStyle={{ width: 500, height: 200 }} src={scrumImg} /></div>
+              <div className="img-centre">
+                <Avatar
+                  alt="Scrum Cycle"
+                  style={{ width: 600, height: 240 }}
+                  src="/static/images/material/sprint-cycle.png"
+                  variant="square"
+                />
+              </div>
               <Typography className="img-caption">Stages of a Scrum sprint cycle</Typography>
             </Box>
             <Typography>A Scrum master is responsible for ensuring the Scrum process is followed and channelling
