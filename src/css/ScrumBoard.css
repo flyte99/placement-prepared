@@ -3,6 +3,7 @@
     background-color: #5664d2;
     padding: 30px 34px 30px;
     border-radius: 10px;
+    justify-content: space-evenly;
 }
 
 .flippy-scrum-board.flippy-container {
@@ -15,6 +16,9 @@
 .flippy-scrum-board.flippy-front, .flippy-scrum-board.flippy-back {
     padding: 0;
     width: 175px;
+    min-height: 600px;
+    background-color: #f0eeee;
+    border-radius: 4px;
 }
 
 .scrum-column {
@@ -26,8 +30,6 @@
     padding-top: 0;
     width: 175px;
     min-height: 600px;
-    background-color: #f0eeee;
-    border-radius: 4px;
 }
 
 .scrum-card {
