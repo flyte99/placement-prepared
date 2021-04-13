@@ -7,7 +7,7 @@ import 'src/css/Cards.css';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
 
-const image = require('../../img/linkedin.png').default;
+const image = require('/static/images/resources/linkedin.png').default;
 
 const LinkedIn = () => {
   const pageTitle = 'LinkedIn';
@@ -57,7 +57,7 @@ const LinkedIn = () => {
 
   return (
     <>
-      <Helmet><title>{pageTitle} | Preparing for Placement</title></Helmet>
+      <Helmet><title>{pageTitle} | Placement Prepared</title></Helmet>
       <Box sx={{ m: 3 }}><Typography color="textPrimary" variant="h2">{pageTitle}</Typography></Box>
       <Box className="embedded-video">
         <ReactPlayer url="https://youtu.be/ZVlUwwgOfKw" />

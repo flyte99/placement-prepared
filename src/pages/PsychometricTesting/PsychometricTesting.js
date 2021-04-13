@@ -4,11 +4,11 @@ import { Helmet } from 'react-helmet';
 import 'src/css/Images.css';
 import SubpageCards from '../../components/SubpageCards';
 
-const aptTestLogo = require('src/img/practice-aptitude-tests.svg').default;
-const testPartnershipLogo = require('src/img/test-partnership.png').default;
-const assessDayLogo = require('src/img/assessment-day.svg').default;
-const jobTestPrepLogo = require('src/img/job-test-prep.webp').default;
-const jobTestSuccessLogo = require('src/img/job-test-success.png').default;
+const aptTestLogo = require('/static/images/resources/practice-aptitude-tests.svg').default;
+const testPartnershipLogo = require('/static/images/resources/test-partnership.png').default;
+const assessDayLogo = require('/static/images/resources/assessment-day.svg').default;
+const jobTestPrepLogo = require('/static/images/resources/job-test-prep.webp').default;
+const jobTestSuccessLogo = require('/static/images/resources/job-test-success.png').default;
 
 const PsychometricTesting = () => {
   const pageTitle = 'Psychometric Tests';
@@ -45,7 +45,7 @@ const PsychometricTesting = () => {
 
   return (
     <>
-      <Helmet><title>{pageTitle} | Preparing for Placement</title></Helmet>
+      <Helmet><title>{pageTitle} | Placement Prepared</title></Helmet>
       <Box sx={{ m: 3 }}><Typography color="textPrimary" variant="h2">{pageTitle}</Typography></Box>
       <Box sx={{ m: 5 }}>
         <Card>

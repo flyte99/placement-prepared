@@ -4,11 +4,11 @@ import Flippy, { BackSide, FrontSide } from 'react-flippy';
 import { Helmet } from 'react-helmet';
 import 'src/css/Images.css';
 
-const stagingImg = require('../../img/git-staging-area.png').default;
-const centralizedWorkflowImg = require('../../img/centralized-git-workflow.png').default;
-const integrationWorkflowImg = require('../../img/integration-git-workflow.png').default;
-const devWorkflowImg = require('../../img/development-git-workflow.png').default;
-const gitImg = require('../../img/git.png').default;
+const stagingImg = require('/static/images/material/git-staging-area.png').default;
+const centralizedWorkflowImg = require('/static/images/material/centralized-git-workflow.png').default;
+const integrationWorkflowImg = require('/static/images/material/integration-git-workflow.png').default;
+const devWorkflowImg = require('/static/images/material/development-git-workflow.png').default;
+const gitImg = require('/static/images/resources/git.png').default;
 
 const Git = () => {
   const pageTitle = 'Git';
@@ -32,7 +32,7 @@ const Git = () => {
 
   return (
     <>
-      <Helmet><title>{pageTitle} | Preparing for Placement</title></Helmet>
+      <Helmet><title>{pageTitle} | Placement Prepared</title></Helmet>
       <Box sx={{ m: 3 }}><Typography color="textPrimary" variant="h2">{pageTitle}</Typography></Box>
       <Box sx={{ m: 5 }}>
         <Card>

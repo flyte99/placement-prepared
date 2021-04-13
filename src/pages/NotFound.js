@@ -8,7 +8,7 @@ import {
 const NotFound = () => (
   <>
     <Helmet>
-      <title>404 | Preparing for Placement</title>
+      <title>404 | Placement Prepared</title>
     </Helmet>
     <Box
       sx={{

@@ -6,7 +6,7 @@ import 'src/css/Cards.css';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
 
-const image = require('../../img/mysql.jpg').default;
+const image = require('/static/images/resources/mysql.jpg').default;
 
 const MySQL = () => {
   const pageTitle = 'MySQL';
@@ -39,7 +39,7 @@ const MySQL = () => {
 
   return (
     <>
-      <Helmet><title>{pageTitle} | Preparing for Placement</title></Helmet>
+      <Helmet><title>{pageTitle} | Placement Prepared</title></Helmet>
       <Box sx={{ m: 3 }}><Typography color="textPrimary" variant="h2">{pageTitle}</Typography></Box>
       <Box className="embedded-video"><ReactPlayer url="https://youtu.be/2bW3HuaAUcY" /></Box>
       <Box sx={{ m: 5 }}>

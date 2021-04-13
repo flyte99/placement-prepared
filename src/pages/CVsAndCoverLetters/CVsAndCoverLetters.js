@@ -6,13 +6,13 @@ import SubpageCards from 'src/components/SubpageCards';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
 
-const targetJobsLogo = require('src/img/target-jobs.png').default;
-const rateMyPlacementLogo = require('src/img/ratemyplacement.jpg').default;
-const gradcrackerLogo = require('src/img/gradcracker.jpg').default;
-const indeedLogo = require('src/img/indeed.jpg').default;
-const prospectsLogo = require('src/img/prospects.png').default;
-const glassdoorLogo = require('src/img/glassdoor.png').default;
-const workInStartupsLogo = require('src/img/work-in-startups.jpg').default;
+const targetJobsLogo = require('/static/images/resources/target-jobs.png').default;
+const rateMyPlacementLogo = require('/static/images/resources/ratemyplacement.jpg').default;
+const gradcrackerLogo = require('/static/images/resources/gradcracker.jpg').default;
+const indeedLogo = require('/static/images/resources/indeed.jpg').default;
+const prospectsLogo = require('/static/images/resources/prospects.png').default;
+const glassdoorLogo = require('/static/images/resources/glassdoor.png').default;
+const workInStartupsLogo = require('/static/images/resources/work-in-startups.jpg').default;
 
 const CVsAndCoverLetters = () => {
   const pageTitle = 'CVs and Cover Letters';
@@ -50,7 +50,7 @@ const CVsAndCoverLetters = () => {
 
   return (
     <>
-      <Helmet><title>{pageTitle} | Preparing for Placement</title></Helmet>
+      <Helmet><title>{pageTitle} | Placement Prepared</title></Helmet>
       <Box sx={{ m: 3 }}><Typography color="textPrimary" variant="h2">{pageTitle}</Typography></Box>
       <Box sx={{ m: 5 }}>
         <Card>

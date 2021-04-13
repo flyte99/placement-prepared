@@ -26,7 +26,7 @@ const AssessmentCentres = () => {
 
   return (
     <>
-      <Helmet><title>{pageTitle} | Preparing for Placement</title></Helmet>
+      <Helmet><title>{pageTitle} | Placement Prepared</title></Helmet>
       <Box sx={{ m: 3 }}><Typography color="textPrimary" variant="h2">{pageTitle}</Typography></Box>
       <Box sx={{ m: 5 }}>
         <Grid container className="center-grid-container" spacing={6} wrap="wrap">

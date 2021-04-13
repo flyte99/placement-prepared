@@ -1,35 +1,33 @@
 import { Navigate } from 'react-router-dom';
 import HomeLayout from 'src/components/HomeLayout';
 import MainLayout from 'src/components/MainLayout';
-import Login from 'src/pages/Login';
-import Register from 'src/pages/Register';
-import NotFound from 'src/pages/NotFound';
-import Home from 'src/pages/Home';
 import Account from 'src/pages/Account';
-import Settings from 'src/pages/Settings';
-import CVsAndCoverLetters from 'src/pages/CVsAndCoverLetters/CVsAndCoverLetters';
-import WritingACV from 'src/pages/CVsAndCoverLetters/WritingACV';
-import CoverLetters from 'src/pages/CVsAndCoverLetters/CoverLetters';
-import LinkedIn from 'src/pages/CVsAndCoverLetters/LinkedIn';
-import PsychometricTesting from 'src/pages/PsychometricTesting/PsychometricTesting';
-import SituationalJudgementTests from 'src/pages/PsychometricTesting/SituationalJudgementTests';
-import PersonalityAssessments from 'src/pages/PsychometricTesting/PersonalityAssessments';
 import AssessmentCentres from 'src/pages/AssessmentCentres/AssessmentCentres';
 import GroupExercises from 'src/pages/AssessmentCentres/GroupExercises';
-import VirtualAssessmentCentres from 'src/pages/AssessmentCentres/VirtualAssessmentCentres';
 import Presentations from 'src/pages/AssessmentCentres/Presentations';
-import Interviews from 'src/pages/Interviews/Interviews';
-import TelephoneInterviews from 'src/pages/Interviews/TelephoneInterviews';
-import FaceToFaceInterviews from 'src/pages/Interviews/FaceToFaceInterviews';
-import VideoInterviews from 'src/pages/Interviews/VideoInterviews';
-import IndustrySkills from 'src/pages/IndustrySkills/IndustrySkills';
+import VirtualAssessmentCentres from 'src/pages/AssessmentCentres/VirtualAssessmentCentres';
+import CoverLetters from 'src/pages/CVsAndCoverLetters/CoverLetters';
+import CVsAndCoverLetters from 'src/pages/CVsAndCoverLetters/CVsAndCoverLetters';
+import LinkedIn from 'src/pages/CVsAndCoverLetters/LinkedIn';
+import WritingACV from 'src/pages/CVsAndCoverLetters/WritingACV';
+import Home from 'src/pages/Home';
 import AgileDevelopment from 'src/pages/IndustrySkills/AgileDevelopment';
 import Git from 'src/pages/IndustrySkills/Git';
+import IndustrySkills from 'src/pages/IndustrySkills/IndustrySkills';
 import MySQL from 'src/pages/IndustrySkills/MySQL';
 import UnitTesting from 'src/pages/IndustrySkills/UnitTesting';
+import FaceToFaceInterviews from 'src/pages/Interviews/FaceToFaceInterviews';
+import Interviews from 'src/pages/Interviews/Interviews';
+import TelephoneInterviews from 'src/pages/Interviews/TelephoneInterviews';
+import VideoInterviews from 'src/pages/Interviews/VideoInterviews';
+import Login from 'src/pages/Login';
+import NotFound from 'src/pages/NotFound';
 import Podcasts from 'src/pages/Podcasts';
-import CustomerList from 'src/pages/CustomerList';
-import ProductList from 'src/pages/ProductList';
+import PersonalityAssessments from 'src/pages/PsychometricTesting/PersonalityAssessments';
+import PsychometricTesting from 'src/pages/PsychometricTesting/PsychometricTesting';
+import SituationalJudgementTests from 'src/pages/PsychometricTesting/SituationalJudgementTests';
+import Register from 'src/pages/Register';
+import Settings from 'src/pages/Settings';
 
 const routes = [
   {
@@ -66,9 +64,6 @@ const routes = [
       { path: 'industry_skills/unit_testing', element: <UnitTesting /> },
 
       { path: 'podcasts', element: <Podcasts /> },
-
-      { path: 'customers', element: <CustomerList /> },
-      { path: 'products', element: <ProductList /> },
 
       { path: '*', element: <Navigate to="/404" /> }
     ]

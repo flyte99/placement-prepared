@@ -7,7 +7,7 @@ import 'src/css/Cards.css';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
 
-const image = require('../../img/myers-briggs.svg').default;
+const image = require('/static/images/resources/myers-briggs.svg').default;
 
 const PersonalityAssessments = () => {
   const pageTitle = 'Personality Assessments';
@@ -21,7 +21,7 @@ const PersonalityAssessments = () => {
 
   return (
     <>
-      <Helmet><title>{pageTitle} | Preparing for Placement</title></Helmet>
+      <Helmet><title>{pageTitle} | Placement Prepared</title></Helmet>
       <Box sx={{ m: 3 }}><Typography color="textPrimary" variant="h2">{pageTitle}</Typography></Box>
       <Box sx={{ m: 5 }}>
         <Card>
@@ -35,9 +35,9 @@ const PersonalityAssessments = () => {
         </Card>
       </Box>
       <Box sx={{ m: 5 }}>
-        <Typography color="textPrimary" variant="h3">Myers-Briggs Type Indicator</Typography> <br />
         <Card>
           <CardContent>
+            <Typography color="textPrimary" variant="h3">Myers-Briggs Type Indicator</Typography> <br />
             <Typography>The Myers-Briggs Type Indicator (MBTI) test is a very popular personality assessment that uses a
               series of questions to categorise people into one of 16 different personality types. These personality
               types

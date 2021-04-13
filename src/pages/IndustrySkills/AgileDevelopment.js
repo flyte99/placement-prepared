@@ -4,8 +4,8 @@ import { Helmet } from 'react-helmet';
 import ScrumBoard from 'src/components/ScrumBoard';
 import 'src/css/Images.css';
 
-const developmentImg = require('../../img/development-cycles.png').default;
-const scrumImg = require('../../img/sprint-cycle.png').default;
+const developmentImg = require('/static/images/material/development-cycles.png').default;
+const scrumImg = require('/static/images/material/sprint-cycle.png').default;
 
 const AgileDevelopment = () => {
   const pageTitle = 'Agile Development Methods';
@@ -17,7 +17,7 @@ const AgileDevelopment = () => {
 
   return (
     <>
-      <Helmet><title>{pageTitle} | Preparing for Placement</title></Helmet>
+      <Helmet><title>{pageTitle} | Placement Prepared</title></Helmet>
       <Box sx={{ m: 3 }}><Typography color="textPrimary" variant="h2">{pageTitle}</Typography></Box>
       <Box sx={{ m: 5 }}>
         <Card>

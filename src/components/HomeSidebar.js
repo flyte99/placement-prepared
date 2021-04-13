@@ -6,9 +6,9 @@ import { Briefcase, Codesandbox, FileText, Home, Mic, PenTool, Settings, Users }
 import NavItem from './NavItem';
 
 const user = {
-  avatar: '/static/images/avatars/avatar_6.png',
-  jobTitle: 'Senior Developer',
-  name: 'Katarina Smith'
+  avatar: '', // TODO: fetch user avatar
+  jobTitle: 'University of Reading', // TODO: fetch organisation
+  name: 'Mollie Bourke' // TODO: fetch name
 };
 
 const items = [

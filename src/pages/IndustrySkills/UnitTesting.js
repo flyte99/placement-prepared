@@ -6,11 +6,11 @@ import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
 import 'src/css/Images.css';
 
-const jUnitLogo = require('src/img/junit.jpg').default;
-const nUnitLogo = require('src/img/nunit.png').default;
-const jMockit = require('src/img/jmockit.JPG').default;
-const emmaLogo = require('src/img/emma.png').default;
-const phpUnitLogo = require('src/img/phpunit.svg').default;
+const jUnitLogo = require('/static/images/resources/junit.jpg').default;
+const nUnitLogo = require('/static/images/resources/nunit.png').default;
+const jMockit = require('/static/images/resources/jmockit.JPG').default;
+const emmaLogo = require('/static/images/resources/emma.png').default;
+const phpUnitLogo = require('/static/images/resources/phpunit.svg').default;
 
 const UnitTesting = () => {
   const pageTitle = 'Unit Testing';
@@ -35,7 +35,7 @@ const UnitTesting = () => {
 
   return (
     <>
-      <Helmet><title>{pageTitle} | Preparing for Placement</title></Helmet>
+      <Helmet><title>{pageTitle} | Placement Prepared</title></Helmet>
       <Box sx={{ m: 3 }}><Typography color="textPrimary" variant="h2">{pageTitle}</Typography></Box>
       <Box sx={{ m: 5 }}>
         <Card>

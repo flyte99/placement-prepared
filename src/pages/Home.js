@@ -5,7 +5,7 @@ import TopicCards from 'src/components/home/TopicCards';
 const Home = () => (
   <>
     <Helmet>
-      <title>Home | Preparing for Placement</title>
+      <title>Home | Placement Prepared</title>
     </Helmet>
     <Box
       sx={{
