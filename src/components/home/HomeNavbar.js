@@ -23,31 +23,18 @@ const HomeNavbar = ({ onMobileNavOpen, ...rest }) => {
       {...rest}
     >
       <Toolbar>
-        <RouterLink to="/">
-          <Logo />
-        </RouterLink>
+        <RouterLink to="/"><Logo /></RouterLink>
         <Box sx={{ flexGrow: 1 }} />
         <Hidden lgDown>
           <IconButton color="inherit">
-            <Badge
-              badgeContent={notifications.length}
-              color="primary"
-              variant="dot"
-            >
+            <Badge badgeContent={notifications.length} color="primary" variant="dot">
               <NotificationsIcon />
             </Badge>
           </IconButton>
-          <IconButton color="inherit">
-            <InputIcon />
-          </IconButton>
+          <IconButton color="inherit"><InputIcon /></IconButton>
         </Hidden>
         <Hidden lgUp>
-          <IconButton
-            color="inherit"
-            onClick={onMobileNavOpen}
-          >
-            <MenuIcon />
-          </IconButton>
+          <IconButton color="inherit" onClick={onMobileNavOpen}><MenuIcon /></IconButton>
         </Hidden>
       </Toolbar>
     </AppBar>

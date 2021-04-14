@@ -15,10 +15,7 @@ const Home = () => (
       }}
     >
       <Container maxWidth={false}>
-        <Grid
-          container
-          spacing={3}
-        >
+        <Grid container spacing={3} style={{ justifyContent: 'space-evenly' }}>
           <TopicCards />
         </Grid>
       </Container>
