@@ -4,6 +4,7 @@ import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
+import { v4 as uuid } from 'uuid';
 
 const MySQL = () => {
   const pageTitle = 'MySQL';
@@ -50,7 +51,9 @@ const MySQL = () => {
               a server to perform certain operations on a database such as requesting information, modifying the data or
               defining data types. Some standard rules for writing SQL statements are:
             </Typography>
-            <ul className="bullet-points">{sqlRules.map((rule) => (<li><Typography>{rule}</Typography></li>))}</ul>
+            <ul className="bullet-points">{sqlRules.map((rule) => (
+              <li key={uuid()}><Typography>{rule}</Typography></li>))}
+            </ul>
           </CardContent>
         </Card>
       </Box>
@@ -91,7 +94,7 @@ const MySQL = () => {
             <Typography color="textPrimary" variant="h3">Filtering Data</Typography> <br />
             <Typography>There are many different keywords for filtering data within a MySQL database:</Typography>
             <ul className="bullet-points">
-              {filterKeywords.map((keyword) => (<li><Typography>{keyword}</Typography></li>))}
+              {filterKeywords.map((keyword) => (<li key={uuid()}><Typography>{keyword}</Typography></li>))}
             </ul>
           </CardContent>
         </Card>
@@ -107,7 +110,9 @@ const MySQL = () => {
                   (self-join) or more tables based on values of the common column between the tables. The join clause is
                   used in the SELECT statement after the FROM clause. MySQL supports the following types of join:
                 </Typography>
-                <ul className="bullet-points">{joins.map((join) => (<li><Typography>{join}</Typography></li>))}</ul>
+                <ul className="bullet-points">{joins.map((join) => (
+                  <li key={uuid()}><Typography>{join}</Typography></li>))}
+                </ul>
               </CardContent>
             </Card>
           </Grid>
@@ -117,7 +122,7 @@ const MySQL = () => {
                 <Typography color="textPrimary" variant="h3">Modifying Data</Typography> <br />
                 <Typography>There are several methods of modifying the data within a table:</Typography>
                 <ul className="bullet-points">
-                  {modifyKeywords.map((keyword) => (<li><Typography>{keyword}</Typography></li>))}
+                  {modifyKeywords.map((keyword) => (<li key={uuid()}><Typography>{keyword}</Typography></li>))}
                 </ul>
               </CardContent>
             </Card>

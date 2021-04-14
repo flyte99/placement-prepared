@@ -78,7 +78,7 @@ const CVsAndCoverLetters = () => {
             </Typography>
             <div className="img-block">
               {resources.map((item) => (
-                <div>
+                <div key={item.caption}>
                   <a target="_blank" rel="noreferrer" href={item.path}>
                     <Avatar alt={item.caption} style={{ width: 130, height: 130 }} src={item.image} variant="square" />
                   </a>

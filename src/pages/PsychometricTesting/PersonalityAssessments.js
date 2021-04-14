@@ -42,7 +42,7 @@ const PersonalityAssessments = () => {
             </Typography><br />
             <Grid container className="center-grid-container" spacing={2} wrap="wrap">
               {traitCards.map(((card) => (
-                <Flippy>
+                <Flippy key={card.front}>
                   <FrontSide>
                     <Card>
                       <CardContent>

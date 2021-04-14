@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import { Grid, Typography } from '@material-ui/core';
+import React, { Component } from 'react';
 import Flippy, { BackSide, FrontSide } from 'react-flippy';
 import 'src/css/ScrumBoard.css';
 
@@ -72,18 +72,18 @@ class ScrumBoard extends Component {
   }
 
   generateScrumCards(cards) {
-    return cards.slice(0).map((project) => (
+    return cards.slice(0).map((ticket) => (
       <div
-        key={project.name}
+        key={ticket.name}
         className="scrum-card"
         draggable
         onDragEnd={(e) => {
-          this.handleOnDragEnd(e, project);
+          this.handleOnDragEnd(e, ticket);
         }}
       >
-        <Typography className="centre-scrum-text">{project.name}</Typography>
-        <Typography>{project.description}<br /></Typography>
-        <Typography className="time-frame">{project.timeframe}</Typography>
+        <Typography className="centre-scrum-text">{ticket.name}</Typography>
+        <Typography>{ticket.description}<br /></Typography>
+        <Typography className="time-frame">{ticket.timeframe}</Typography>
       </div>
     ));
   }
@@ -127,10 +127,9 @@ class ScrumBoard extends Component {
         {columns.map((column) => {
           const columnScrumCards = this.state.scrumCards.filter((project) => parseInt(project.ticket_stage, 10) === column.stage);
           return (
-            <Flippy className="flippy-scrum-board">
+            <Flippy key={column.stage} className="flippy-scrum-board">
               <FrontSide className="flippy-scrum-board">
                 <div
-                  key={column.stage}
                   className="scrum-column"
                   onDragEnter={(e) => {
                     this.handleOnDragEnter(e, column.stage);

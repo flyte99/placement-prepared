@@ -2,6 +2,7 @@ import { Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
 import Flippy, { BackSide, FrontSide } from 'react-flippy';
 import { Helmet } from 'react-helmet';
 import 'src/css/Cards.css';
+import { v4 as uuid } from 'uuid';
 
 const SituationalJudgementTests = () => {
   const pageTitle = 'Situational Judgement Tests';
@@ -49,7 +50,9 @@ const SituationalJudgementTests = () => {
               select the most applicable answer. The questions asked about each situation can very but the principle
               remains the same of ensuring you answer it using your personal judgement:
             </Typography>
-            <ul className="bullet-points">{testTypes.map((type) => (<li><Typography>{type}</Typography></li>))}</ul>
+            <ul className="bullet-points">{testTypes.map((type) => (
+              <li key={uuid()}><Typography>{type}</Typography></li>))}
+            </ul>
           </CardContent>
         </Card>
       </Box>
@@ -57,7 +60,7 @@ const SituationalJudgementTests = () => {
         <Typography color="textPrimary" variant="h3">Competencies Recruiters are Looking for</Typography> <br />
         <Grid container className="center-grid-container" spacing={2} wrap="wrap">
           {competencyCards.map(((card) => (
-            <Flippy>
+            <Flippy key={card.front}>
               <FrontSide>
                 <Card>
                   <CardContent><Typography className="competency-card">{card.front}</Typography></CardContent>

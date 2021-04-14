@@ -2,6 +2,7 @@ import { Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Components.css';
+import { v4 as uuid } from 'uuid';
 
 const Presentations = () => {
   const pageTitle = 'Presentations';
@@ -53,7 +54,7 @@ const Presentations = () => {
             </Typography>
             <Grid container className="competency-grid" wrap="wrap">
               {competencies.map(((competency) => (
-                <Card><CardContent><Typography>{competency}</Typography></CardContent></Card>
+                <Card key={uuid()}><CardContent><Typography>{competency}</Typography></CardContent></Card>
               )))}
             </Grid>
           </CardContent>
@@ -64,7 +65,7 @@ const Presentations = () => {
           <CardContent>
             <Typography color="textPrimary" variant="h3">Tips for your Presentation</Typography> <br />
             <ul className="bullet-points">
-              {presentationTips.map((tip) => (<li><Typography>{tip}</Typography></li>))}
+              {presentationTips.map((tip) => (<li key={uuid()}><Typography>{tip}</Typography></li>))}
             </ul>
           </CardContent>
         </Card>
@@ -93,7 +94,7 @@ const Presentations = () => {
               <CardContent>
                 <Typography color="textPrimary" variant="h3">Giving your Presentation</Typography> <br />
                 <ul className="bullet-points">
-                  {presentationPoints.map((point) => (<li><Typography>{point}</Typography></li>))}
+                  {presentationPoints.map((point) => (<li key={uuid()}><Typography>{point}</Typography></li>))}
                 </ul>
               </CardContent>
             </Card>
@@ -111,7 +112,7 @@ const Presentations = () => {
             </Typography>
             <Grid container className="competency-grid" wrap="wrap">
               {assessmentPoints.map((point) => (
-                <Card><CardContent><Typography>{point}</Typography></CardContent></Card>))}
+                <Card key={uuid()}><CardContent><Typography>{point}</Typography></CardContent></Card>))}
             </Grid>
           </CardContent>
         </Card>

@@ -5,6 +5,7 @@ import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
+import { v4 as uuid } from 'uuid';
 
 const LinkedIn = () => {
   const pageTitle = 'LinkedIn';
@@ -64,7 +65,7 @@ const LinkedIn = () => {
         <Typography color="textPrimary" variant="h3">Creating a Profile</Typography> <br />
         <Grid container className="center-grid-container" spacing={2} wrap="wrap">
           {profileFactCards.map(((card) => (
-            <Flippy>
+            <Flippy key={card.front}>
               <FrontSide>
                 <Card><CardContent><Typography className="linkedin-card">{card.front}</Typography></CardContent></Card>
               </FrontSide>
@@ -88,7 +89,7 @@ const LinkedIn = () => {
                   and people who are in the same LinkedIn groups as you.
                 </Typography>
                 <ul className="bullet-points">
-                  {connectionTips.map((tip) => (<li><Typography>{tip}</Typography></li>))}
+                  {connectionTips.map((tip) => (<li key={uuid()}><Typography>{tip}</Typography></li>))}
                 </ul>
               </CardContent>
             </Card>
@@ -115,7 +116,9 @@ const LinkedIn = () => {
         <Card>
           <CardContent>
             <Typography color="textPrimary" variant="h3">Top Tips</Typography> <br />
-            <ul className="bullet-points">{topTips.map((tip) => (<li><Typography>{tip}</Typography></li>))}</ul>
+            <ul className="bullet-points">{topTips.map((tip) => (
+              <li key={uuid()}><Typography>{tip}</Typography></li>))}
+            </ul>
           </CardContent>
         </Card>
       </Box>

@@ -2,6 +2,7 @@ import { Box, Card, CardContent, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Components.css';
+import { v4 as uuid } from 'uuid';
 
 const TelephoneInterviews = () => {
   const pageTitle = 'Telephone Interviews';
@@ -61,7 +62,7 @@ const TelephoneInterviews = () => {
           <CardContent>
             <Typography color="textPrimary" variant="h3">Top Tips</Typography> <br />
             <ul className="bullet-points">
-              {tips.map(((tip) => (<li><Typography>{tip}</Typography></li>)))}
+              {tips.map(((tip) => (<li key={uuid()}><Typography>{tip}</Typography></li>)))}
             </ul>
           </CardContent>
         </Card>

@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
 import 'src/css/Images.css';
+import { v4 as uuid } from 'uuid';
 
 const UnitTesting = () => {
   const pageTitle = 'Unit Testing';
@@ -82,7 +83,7 @@ const UnitTesting = () => {
             </Typography><br />
             <Grid container className="center-grid-container" spacing={2} wrap="wrap">
               {testPattern.map(((card) => (
-                <Flippy>
+                <Flippy key={card.front}>
                   <FrontSide>
                     <Card>
                       <CardContent><Typography className="testing-pattern">{card.front}</Typography></CardContent>
@@ -105,7 +106,7 @@ const UnitTesting = () => {
             <Typography color="textPrimary" variant="h3">Automated Unit Testing Tools</Typography>
             <div className="img-block">
               {testingTools.map((item) => (
-                <Box>
+                <Box key={uuid()}>
                   <div className="img-centre">
                     <a target="_blank" rel="noreferrer" href={item.path}>
                       <Avatar
@@ -128,7 +129,7 @@ const UnitTesting = () => {
           <CardContent>
             <Typography color="textPrimary" variant="h3">Best Practices</Typography> <br />
             <ul className="bullet-points">
-              {bestPractices.map((point) => (<li><Typography>{point}</Typography></li>))}
+              {bestPractices.map((point) => (<li key={uuid()}><Typography>{point}</Typography></li>))}
             </ul>
           </CardContent>
         </Card>

@@ -1,5 +1,6 @@
 import { Box, Card, CardContent, Grid, List, Typography } from '@material-ui/core';
 import 'src/css/Cards.css';
+import { v4 as uuid } from 'uuid';
 import NavItem from '../NavItem';
 
 const TopicCards = () => {
@@ -53,7 +54,7 @@ const TopicCards = () => {
 
   return (
     cards.map((card) => (
-      <Grid item lg={3} sm={6} xl={3} xs={12}>
+      <Grid key={uuid()} item lg={3} sm={6} xl={3} xs={12}>
         <Card className="topic-card" sx={{ height: '100%' }}>
           <CardContent>
             <Grid item>

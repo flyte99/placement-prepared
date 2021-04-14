@@ -2,6 +2,7 @@ import { Avatar, Box, Card, CardContent, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import ScrumBoard from 'src/components/ScrumBoard';
 import 'src/css/Images.css';
+import { v4 as uuid } from 'uuid';
 
 const AgileDevelopment = () => {
   const pageTitle = 'Agile Development Methods';
@@ -52,7 +53,7 @@ const AgileDevelopment = () => {
               agile practices. It can be simplified into three phases:
             </Typography>
             <ul className="bullet-points">
-              {scrumPhases.map(((phase) => (<li><Typography>{phase}</Typography></li>)))}
+              {scrumPhases.map(((phase) => (<li key={uuid()}><Typography>{phase}</Typography></li>)))}
             </ul>
             <Box sx={{ m: 2 }}>
               <div className="img-centre">

@@ -64,7 +64,7 @@ const Git = () => {
             </Typography>
             <Grid item md={12} sm={6} sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }} xs={12}>
               {workflowCards.map((card) => (
-                <Grid item md={4} sm={6} sx={{ display: 'flex', flexDirection: 'column' }} xs={12}>
+                <Grid item key={card.title} md={4} sm={6} sx={{ display: 'flex', flexDirection: 'column' }} xs={12}>
                   <Card>
                     <CardHeader title={card.title} />
                     <Divider />

@@ -1,6 +1,7 @@
 import { Avatar, Box, Card, CardContent, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import 'src/css/Images.css';
+import { v4 as uuid } from 'uuid';
 import SubpageCards from '../../components/SubpageCards';
 
 const PsychometricTesting = () => {
@@ -84,7 +85,9 @@ const PsychometricTesting = () => {
               right and wrong answers and are multiple choice and timed. Many of the skills required for reasoning tests
               can be improved by regularly exercising brain with puzzles such as Sudoku or crosswords.
             </Typography>
-            <ul className="bullet-points">{testPoints.map((point) => (<li><Typography>{point}</Typography></li>))}</ul>
+            <ul className="bullet-points">{testPoints.map((point) => (
+              <li key={uuid()}><Typography>{point}</Typography></li>))}
+            </ul>
           </CardContent>
         </Card>
       </Box>
@@ -94,7 +97,7 @@ const PsychometricTesting = () => {
             <Typography color="textPrimary" variant="h2">Online Practice Tests</Typography><br />
             <div className="img-block">
               {resources.map((item) => (
-                <div>
+                <div key={item.caption}>
                   <a target="_blank" rel="noreferrer" href={item.path}>
                     <Avatar
                       alt={item.caption}

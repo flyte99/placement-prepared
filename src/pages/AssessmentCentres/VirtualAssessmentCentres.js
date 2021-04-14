@@ -1,5 +1,6 @@
-import { Helmet } from 'react-helmet';
 import { Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
+import { Helmet } from 'react-helmet';
+import { v4 as uuid } from 'uuid';
 
 const VirtualAssessmentCentres = () => {
   const pageTitle = 'Virtual Assessment Centres';
@@ -44,7 +45,7 @@ const VirtualAssessmentCentres = () => {
                   work experience programmes. Just as with an in-person assessment centre, activities could include:
                 </Typography>
                 <ul className="bullet-points">
-                  {centreActivities.map((activity) => (<li><Typography>{activity}</Typography></li>))}
+                  {centreActivities.map((activity) => (<li key={uuid()}><Typography>{activity}</Typography></li>))}
                 </ul>
               </CardContent>
             </Card>
@@ -81,7 +82,7 @@ const VirtualAssessmentCentres = () => {
               assessment centre to help you prepare and to put you at ease. For example:
             </Typography>
             <ul className="bullet-points">
-              {centreStructure.map((point) => (<li><Typography>{point}</Typography></li>))}
+              {centreStructure.map((point) => (<li key={uuid()}><Typography>{point}</Typography></li>))}
             </ul>
           </CardContent>
         </Card>
@@ -95,7 +96,7 @@ const VirtualAssessmentCentres = () => {
               for the technical elements of a virtual assessment centre, you should:
             </Typography>
             <ul className="bullet-points">
-              {technicalElements.map((element) => (<li><Typography>{element}</Typography></li>))}
+              {technicalElements.map((element) => (<li key={uuid()}><Typography>{element}</Typography></li>))}
             </ul>
           </CardContent>
         </Card>
