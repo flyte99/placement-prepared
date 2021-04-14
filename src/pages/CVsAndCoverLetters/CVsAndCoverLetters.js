@@ -29,25 +29,37 @@ const CVsAndCoverLetters = () => {
     {
       caption: 'TARGET Jobs',
       path: 'https://targetjobs.co.uk/career-sectors/it-and-technology/',
-      image: '/static/images/resources/target-jobs.png'
+      image: '/static/images/resources/job-opportunities/target-jobs.png'
     },
     {
       caption: 'Rate My Placement',
       path: 'https://www.ratemyplacement.co.uk/',
-      image: '/static/images/resources/ratemyplacement.jpg'
+      image: '/static/images/resources/job-opportunities/ratemyplacement.jpg'
     },
     {
       caption: 'Gradcracker',
       path: 'https://www.gradcracker.com/search/computing-technology/jobs/',
-      image: '/static/images/resources/gradcracker.jpg'
+      image: '/static/images/resources/job-opportunities/gradcracker.jpg'
     },
-    { caption: 'Indeed', path: 'https://www.indeed.co.uk/', image: '/static/images/resources/indeed.jpg' },
-    { caption: 'Prospects', path: 'https://www.prospects.ac.uk/', image: '/static/images/resources/prospects.png' },
-    { caption: 'Glassdoor', path: 'https://www.glassdoor.co.uk/', image: '/static/images/resources/glassdoor.png' },
+    {
+      caption: 'Indeed',
+      path: 'https://www.indeed.co.uk/',
+      image: '/static/images/resources/job-opportunities/indeed.jpg'
+    },
+    {
+      caption: 'Prospects',
+      path: 'https://www.prospects.ac.uk/',
+      image: '/static/images/resources/job-opportunities/prospects.png'
+    },
+    {
+      caption: 'Glassdoor',
+      path: 'https://www.glassdoor.co.uk/',
+      image: '/static/images/resources/job-opportunities/glassdoor.png'
+    },
     {
       caption: 'Work in Startups',
       path: 'https://workinstartups.com/',
-      image: '/static/images/resources/work-in-startups.jpg'
+      image: '/static/images/resources/job-opportunities/work-in-startups.jpg'
     }
   ];
 

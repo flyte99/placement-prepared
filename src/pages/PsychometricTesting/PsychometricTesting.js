@@ -23,31 +23,31 @@ const PsychometricTesting = () => {
     {
       caption: 'Practice Aptitude Tests',
       path: 'https://www.practiceaptitudetests.com/',
-      image: '/static/images/resources/practice-aptitude-tests.svg',
+      image: '/static/images/resources/practice-tests/practice-aptitude-tests.svg',
       width: 230
     },
     {
       caption: 'Test Partnership',
       path: 'https://www.testpartnership.com/psychometric-test.html',
-      image: '/static/images/resources/test-partnership.png',
+      image: '/static/images/resources/practice-tests/test-partnership.png',
       width: 170
     },
     {
       caption: 'Assessment Day',
       path: 'https://www.assessmentday.co.uk/',
-      image: '/static/images/resources/assessment-day.svg',
+      image: '/static/images/resources/practice-tests/assessment-day.svg',
       width: 220
     },
     {
       caption: 'Job Test Prep',
       path: 'https://www.jobtestprep.co.uk/',
-      image: '/static/images/resources/job-test-prep.webp',
+      image: '/static/images/resources/practice-tests/job-test-prep.webp',
       width: 230
     },
     {
       caption: 'Job Test Success',
       path: 'https://www.jobtestsuccess.com/',
-      image: '/static/images/resources/job-test-success.png',
+      image: '/static/images/resources/practice-tests/job-test-success.png',
       width: 150
     }
   ];

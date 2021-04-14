@@ -17,31 +17,31 @@ const UnitTesting = () => {
     {
       caption: 'Unit testing for Java code',
       path: 'https://junit.org/junit5/',
-      image: '/static/images/resources/junit.jpg',
+      image: '/static/images/resources/unit-testing/junit.jpg',
       width: 77
     },
     {
       caption: 'Unit testing for code in all .net languages',
       path: 'https://nunit.org/',
-      image: '/static/images/resources/nunit.png',
+      image: '/static/images/resources/unit-testing/nunit.png',
       width: 107
     },
     {
       caption: 'Open source unit testing tool',
       path: 'https://jmockit.github.io/',
-      image: '/static/images/resources/jmockit.JPG',
+      image: '/static/images/resources/unit-testing/jmockit.JPG',
       width: 180
     },
     {
       caption: 'Unit testing for Java code',
       path: 'http://emma.sourceforge.net/',
-      image: '/static/images/resources/emma.png',
+      image: '/static/images/resources/unit-testing/emma.png',
       width: 152
     },
     {
       caption: 'Unit testing for PHP code ',
       path: 'https://phpunit.de/',
-      image: '/static/images/resources/phpunit.svg',
+      image: '/static/images/resources/unit-testing/phpunit.svg',
       width: 175
     }
   ];
