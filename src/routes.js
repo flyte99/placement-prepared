@@ -2,6 +2,9 @@ import { Navigate } from 'react-router-dom';
 import HomeLayout from 'src/components/home/HomeLayout';
 import MainLayout from 'src/components/MainLayout';
 import Account from 'src/pages/Account/Account';
+import Login from 'src/pages/Account/Login';
+import Register from 'src/pages/Account/Register';
+import Settings from 'src/pages/Account/Settings';
 import AssessmentCentres from 'src/pages/AssessmentCentres/AssessmentCentres';
 import GroupExercises from 'src/pages/AssessmentCentres/GroupExercises';
 import Presentations from 'src/pages/AssessmentCentres/Presentations';
@@ -20,18 +23,15 @@ import FaceToFaceInterviews from 'src/pages/Interviews/FaceToFaceInterviews';
 import Interviews from 'src/pages/Interviews/Interviews';
 import TelephoneInterviews from 'src/pages/Interviews/TelephoneInterviews';
 import VideoInterviews from 'src/pages/Interviews/VideoInterviews';
-import Login from 'src/pages/Account/Login';
 import NotFound from 'src/pages/NotFound';
 import Podcasts from 'src/pages/Podcasts';
 import PersonalityAssessments from 'src/pages/PsychometricTesting/PersonalityAssessments';
 import PsychometricTesting from 'src/pages/PsychometricTesting/PsychometricTesting';
 import SituationalJudgementTests from 'src/pages/PsychometricTesting/SituationalJudgementTests';
-import Register from 'src/pages/Account/Register';
-import Settings from 'src/pages/Account/Settings';
 
 const routes = [
   {
-    path: 'app',
+    path: '/',
     element: <HomeLayout />,
     children: [
       { path: '/', element: <Home /> },
@@ -75,7 +75,7 @@ const routes = [
       { path: 'login', element: <Login /> },
       { path: 'register', element: <Register /> },
       { path: '404', element: <NotFound /> },
-      { path: '/', element: <Navigate to="/app/" /> },
+      { path: '/', element: <Navigate to="" /> },
       { path: '*', element: <Navigate to="/404" /> }
     ]
   }
