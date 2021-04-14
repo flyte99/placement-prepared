@@ -1,58 +1,17 @@
-import { useEffect } from 'react';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { Avatar, Box, Divider, Drawer, Hidden, List, Typography } from '@material-ui/core';
-import { Briefcase, Codesandbox, FileText, Home, Mic, PenTool, Settings, Users } from 'react-feather';
-import NavItem from './NavItem';
+import { ExpandLess, ExpandMore } from '@material-ui/icons';
+import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
+import pages from 'src/components/home/pages';
+import NavItem from 'src/components/NavItem';
+import 'src/css/Components.css';
 
 const user = {
   avatar: '', // TODO: fetch user avatar
   jobTitle: 'University of Reading', // TODO: fetch organisation
   name: 'Mollie Bourke' // TODO: fetch name
 };
-
-const items = [
-  {
-    href: '/app/',
-    icon: Home,
-    title: 'Home'
-  },
-  {
-    href: '/app/cvs_and_cover_letters',
-    icon: FileText,
-    title: 'CVs and Cover Letters'
-  },
-  {
-    href: '/app/psychometric_testing',
-    icon: PenTool,
-    title: 'Psychometric Testing'
-  },
-  {
-    href: '/app/assessment_centres',
-    icon: Briefcase,
-    title: 'Assessment Centres'
-  },
-  {
-    href: '/app/interviews',
-    icon: Users,
-    title: 'Interviews'
-  },
-  {
-    href: '/app/industry_skills',
-    icon: Codesandbox,
-    title: 'Industry Skills'
-  },
-  {
-    href: '/app/podcasts',
-    icon: Mic,
-    title: 'Podcasts'
-  },
-  {
-    href: '/app/settings',
-    icon: Settings,
-    title: 'Settings'
-  },
-];
 
 const HomeSidebar = ({ onMobileClose, openMobile }) => {
   const location = useLocation();
@@ -64,49 +23,43 @@ const HomeSidebar = ({ onMobileClose, openMobile }) => {
   }, [location.pathname]);
 
   const content = (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        height: '100%'
-      }}
-    >
-      <Box
-        sx={{
-          alignItems: 'center',
-          display: 'flex',
-          flexDirection: 'column',
-          p: 2
-        }}
-      >
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+      <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column', p: 2 }}>
         <Avatar
           component={RouterLink}
           src={user.avatar}
-          sx={{
-            cursor: 'pointer',
-            width: 64,
-            height: 64
-          }}
+          sx={{ cursor: 'pointer', width: 64, height: 64 }}
           to="/app/account"
         />
-        <Typography color="textPrimary" variant="h5">
-          {user.name}
-        </Typography>
-        <Typography color="textSecondary" variant="body2">
-          {user.jobTitle}
-        </Typography>
+        <Typography color="textPrimary" variant="h5">{user.name}</Typography>
+        <Typography color="textSecondary" variant="body2">{user.jobTitle}</Typography>
       </Box>
       <Divider />
       <Box sx={{ p: 2 }}>
         <List>
-          {items.map((item) => (
-            <NavItem
-              href={item.href}
-              key={item.title}
-              title={item.title}
-              icon={item.icon}
-            />
-          ))}
+          {pages.map(({ icon, path, subpages, title }) => {
+            const [subNav, setSubnav] = useState(false);
+            const showSubpages = () => setSubnav(!subNav);
+
+            if (subpages && subNav) {
+              return (
+                <div>
+                  <div key={title} className="sidebar-pages">
+                    <NavItem href={path} title={title} icon={icon} />
+                    <ExpandLess onClick={subpages && showSubpages} />
+                  </div>
+                  {subNav && subpages.map((subpage) => (
+                    <NavItem className="subpage" href={subpage.path} title={subpage.title} />))}
+                </div>
+              );
+            }
+            return (
+              <div key={title} className="sidebar-pages">
+                <NavItem href={path} title={title} icon={icon} />
+                {subpages ? <ExpandMore onClick={subpages && showSubpages} /> : null}
+              </div>
+            );
+          })}
         </List>
       </Box>
     </Box>
@@ -120,11 +73,7 @@ const HomeSidebar = ({ onMobileClose, openMobile }) => {
           onClose={onMobileClose}
           open={openMobile}
           variant="temporary"
-          PaperProps={{
-            sx: {
-              width: 256
-            }
-          }}
+          PaperProps={{ sx: { width: 256 } }}
         >
           {content}
         </Drawer>
@@ -134,13 +83,7 @@ const HomeSidebar = ({ onMobileClose, openMobile }) => {
           anchor="left"
           open
           variant="persistent"
-          PaperProps={{
-            sx: {
-              width: 256,
-              top: 64,
-              height: 'calc(100% - 64px)'
-            }
-          }}
+          PaperProps={{ sx: { width: 256, top: 64, height: 'calc(100% - 64px)' } }}
         >
           {content}
         </Drawer>
@@ -155,7 +98,8 @@ HomeSidebar.propTypes = {
 };
 
 HomeSidebar.defaultProps = {
-  onMobileClose: () => { },
+  onMobileClose: () => {
+  },
   openMobile: false
 };
 
