@@ -1,4 +1,4 @@
-import { Briefcase, Codesandbox, FileText, Home, PenTool, Settings, Users } from 'react-feather';
+import { Briefcase, Codesandbox, FileText, Home, Mic, PenTool, Settings, Users } from 'react-feather';
 
 export default [
   {
@@ -55,6 +55,11 @@ export default [
       { title: 'MySQL', path: 'industry_skills/mysql' },
       { title: 'Unit Testing', path: 'industry_skills/unit_testing' }
     ]
+  },
+  {
+    path: 'podcasts',
+    icon: Mic,
+    title: 'Podcasts'
   },
   {
     path: 'settings',
