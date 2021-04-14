@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import HomeLayout from 'src/components/HomeLayout';
+import HomeLayout from 'src/components/home/HomeLayout';
 import MainLayout from 'src/components/MainLayout';
 import Account from 'src/pages/Account/Account';
 import AssessmentCentres from 'src/pages/AssessmentCentres/AssessmentCentres';
