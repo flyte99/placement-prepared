@@ -1,4 +1,4 @@
-import { Avatar, Box, Card, CardContent, Typography } from '@material-ui/core';
+import { Avatar, Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import SubpageCards from 'src/components/SubpageCards';
@@ -88,7 +88,7 @@ const CVsAndCoverLetters = () => {
             <Typography>Organisations will post roles they are hiring for on their websites and on recruitment websites
               such as the following:
             </Typography>
-            <div className="img-block">
+            <Grid container className="img-block">
               {resources.map((item) => (
                 <div key={item.caption}>
                   <a target="_blank" rel="noreferrer" href={item.path}>
@@ -99,7 +99,7 @@ const CVsAndCoverLetters = () => {
                   </Box>
                 </div>
               ))}
-            </div>
+            </Grid>
           </CardContent>
         </Card>
       </Box>

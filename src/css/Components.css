@@ -8,12 +8,6 @@
     margin-left: 12%;
 }
 
-.grid-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 .git-workflows {
     display: flex;
     justify-content: center;
@@ -37,6 +31,12 @@
 .competency-grid {
     margin-top: 10px;
     justify-content: space-evenly;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .embedded-video {

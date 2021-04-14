@@ -104,7 +104,7 @@ const UnitTesting = () => {
         <Card>
           <CardContent>
             <Typography color="textPrimary" variant="h3">Automated Unit Testing Tools</Typography>
-            <div className="img-block">
+            <Grid container className="img-block">
               {testingTools.map((item) => (
                 <Box key={uuid()}>
                   <div className="img-centre">
@@ -120,7 +120,7 @@ const UnitTesting = () => {
                   <Typography className="tool-img-caption">{item.caption}</Typography>
                 </Box>
               ))}
-            </div>
+            </Grid>
           </CardContent>
         </Card>
       </Box>

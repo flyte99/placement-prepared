@@ -1,9 +1,9 @@
-.topic-card:hover{
+.topic-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
 }
 
-.question-card{
+.question-card {
     display: flex;
     height: 200px;
     width: 450px;
@@ -36,6 +36,11 @@
     align-items: center;
 }
 
+.workflow-card {
+    width: 500px;
+    margin: 5px;
+}
+
 .testing-pattern {
     display: flex;
     width: 250px;
@@ -54,19 +59,20 @@
 
 .perfect-cv-card {
     width: 500px;
+    margin: 10px;
 }
 
 .subpage-card {
     width: 300px;
-    margin: 0 25px 0;
+    margin: 10px 25px 10px;
 }
 
 .nerves-card {
     width: 450px;
-    margin: 0 15px 30px;
+    margin: 10px;
 }
 
-.subpage-card:hover{
+.subpage-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
 }

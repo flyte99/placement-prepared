@@ -62,27 +62,25 @@ const Git = () => {
             <Typography color="textPrimary" variant="h3">Applications in Industry</Typography> <br />
             <Typography>Git supports several different workflows due to its branching system:
             </Typography>
-            <Grid item md={12} sm={6} sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }} xs={12}>
+            <Grid container className="center-grid-container">
               {workflowCards.map((card) => (
-                <Grid item key={card.title} md={4} sm={6} sx={{ display: 'flex', flexDirection: 'column' }} xs={12}>
-                  <Card>
-                    <CardHeader title={card.title} />
-                    <Divider />
-                    <CardContent>
-                      <Flippy style={{ height: 300 }}>
-                        <FrontSide className="git-workflows"><Typography>{card.description}</Typography></FrontSide>
-                        <BackSide className="git-workflows">
-                          <Avatar
-                            alt={card.title}
-                            style={{ width: 450, height: card.height }}
-                            src={card.image}
-                            variant="square"
-                          />
-                        </BackSide>
-                      </Flippy>
-                    </CardContent>
-                  </Card>
-                </Grid>
+                <Card key={card.title} className="workflow-card">
+                  <CardHeader title={card.title} />
+                  <Divider />
+                  <CardContent>
+                    <Flippy style={{ height: 300 }}>
+                      <FrontSide className="git-workflows"><Typography>{card.description}</Typography></FrontSide>
+                      <BackSide className="git-workflows">
+                        <Avatar
+                          alt={card.title}
+                          style={{ width: 450, height: card.height }}
+                          src={card.image}
+                          variant="square"
+                        />
+                      </BackSide>
+                    </Flippy>
+                  </CardContent>
+                </Card>
               ))}
             </Grid>
           </CardContent>
