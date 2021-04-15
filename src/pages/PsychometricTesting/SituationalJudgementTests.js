@@ -3,6 +3,7 @@ import Flippy, { BackSide, FrontSide } from 'react-flippy';
 import { Helmet } from 'react-helmet';
 import 'src/css/Cards.css';
 import { v4 as uuid } from 'uuid';
+import PageFooter from '../../components/PageFooter';
 
 const SituationalJudgementTests = () => {
   const pageTitle = 'Situational Judgement Tests';
@@ -74,6 +75,9 @@ const SituationalJudgementTests = () => {
             </Flippy>
           )))}
         </Grid>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="situational_judgement" />
       </Box>
     </>
   );

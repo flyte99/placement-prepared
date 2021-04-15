@@ -12,6 +12,7 @@ import {
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
+import PageFooter from '../../components/PageFooter';
 
 const CVsAndCoverLetters = () => {
   const pageTitle = 'Writing a CV';
@@ -92,6 +93,9 @@ const CVsAndCoverLetters = () => {
             )))}
           </Grid>
         </Box>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="cv" />
       </Box>
     </>
   );

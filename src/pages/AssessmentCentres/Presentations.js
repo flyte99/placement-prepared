@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Components.css';
 import { v4 as uuid } from 'uuid';
+import PageFooter from '../../components/PageFooter';
 
 const Presentations = () => {
   const pageTitle = 'Presentations';
@@ -116,6 +117,9 @@ const Presentations = () => {
             </Grid>
           </CardContent>
         </Card>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="presentations" />
       </Box>
     </>
   );

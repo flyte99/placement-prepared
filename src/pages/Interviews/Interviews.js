@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
 import 'src/css/Components.css';
+import PageFooter from '../../components/PageFooter';
 import SubpageCards from '../../components/SubpageCards';
 
 const Interviews = () => {
@@ -89,6 +90,9 @@ const Interviews = () => {
             </Box>
           </CardContent>
         </Card>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="interviews" />
       </Box>
     </>
   );

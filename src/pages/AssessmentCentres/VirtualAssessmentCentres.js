@@ -1,6 +1,7 @@
 import { Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import { v4 as uuid } from 'uuid';
+import PageFooter from '../../components/PageFooter';
 
 const VirtualAssessmentCentres = () => {
   const pageTitle = 'Virtual Assessment Centres';
@@ -100,6 +101,9 @@ const VirtualAssessmentCentres = () => {
             </ul>
           </CardContent>
         </Card>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="virtual_assessment_centres" />
       </Box>
     </>
   );

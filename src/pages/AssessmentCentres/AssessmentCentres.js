@@ -2,6 +2,7 @@ import { Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Components.css';
+import PageFooter from '../../components/PageFooter';
 import SubpageCards from '../../components/SubpageCards';
 
 const AssessmentCentres = () => {
@@ -80,6 +81,9 @@ const AssessmentCentres = () => {
       </Box>
       <Box className="embedded-video" sx={{ m: 5 }}>
         <ReactPlayer url="https://youtu.be/DIR_rxusO8Q" />
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="assessment_centres" />
       </Box>
     </>
   );

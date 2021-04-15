@@ -5,6 +5,7 @@ import 'src/css/Cards.css';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
 import { v4 as uuid } from 'uuid';
+import PageFooter from '../../components/PageFooter';
 
 const MySQL = () => {
   const pageTitle = 'MySQL';
@@ -141,6 +142,9 @@ const MySQL = () => {
           </a>
         </div>
         <Typography className="img-caption">Download MySQL to get started</Typography>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="mysql" />
       </Box>
     </>
   );

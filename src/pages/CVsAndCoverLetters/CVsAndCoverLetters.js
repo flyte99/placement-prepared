@@ -4,6 +4,7 @@ import ReactPlayer from 'react-player';
 import SubpageCards from 'src/components/SubpageCards';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
+import PageFooter from '../../components/PageFooter';
 
 const CVsAndCoverLetters = () => {
   const pageTitle = 'CVs and Cover Letters';
@@ -106,6 +107,9 @@ const CVsAndCoverLetters = () => {
       </Box>
       <Box className="embedded-video" sx={{ m: 5 }}>
         <ReactPlayer url="https://youtu.be/NTIBXS7pbBs" />
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="cvs_and_cover_letters" />
       </Box>
     </>
   );

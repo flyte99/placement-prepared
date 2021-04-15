@@ -2,6 +2,7 @@ import { Avatar, Box, Card, CardContent, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Images.css';
+import PageFooter from '../../components/PageFooter';
 
 const VideoInterviews = () => {
   const pageTitle = 'Video Interviews';
@@ -67,6 +68,9 @@ const VideoInterviews = () => {
           </a>
         </div>
         <Typography className="img-caption">Practice and perfect your interview skills using Shortlist.me</Typography>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="video_interviews" />
       </Box>
     </>
   );

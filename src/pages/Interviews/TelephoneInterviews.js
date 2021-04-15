@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Components.css';
 import { v4 as uuid } from 'uuid';
+import PageFooter from '../../components/PageFooter';
 
 const TelephoneInterviews = () => {
   const pageTitle = 'Telephone Interviews';
@@ -76,6 +77,9 @@ const TelephoneInterviews = () => {
             </Box>
           </CardContent>
         </Card>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="telephone_interviews" />
       </Box>
     </>
   );

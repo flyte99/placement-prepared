@@ -2,6 +2,7 @@ import { Avatar, Box, Card, CardContent, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import 'src/css/Images.css';
 import { v4 as uuid } from 'uuid';
+import PageFooter from '../../components/PageFooter';
 import SubpageCards from '../../components/SubpageCards';
 
 const PsychometricTesting = () => {
@@ -112,6 +113,9 @@ const PsychometricTesting = () => {
             </div>
           </CardContent>
         </Card>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="psychometric_testing" />
       </Box>
     </>
   );

@@ -5,6 +5,7 @@ import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
 import 'src/css/Images.css';
 import { v4 as uuid } from 'uuid';
+import PageFooter from '../../components/PageFooter';
 
 const UnitTesting = () => {
   const pageTitle = 'Unit Testing';
@@ -133,6 +134,9 @@ const UnitTesting = () => {
             </ul>
           </CardContent>
         </Card>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="unit_testing" />
       </Box>
     </>
   );

@@ -12,6 +12,7 @@ import {
 } from '@material-ui/core';
 import ReactPlayer from 'react-player';
 import 'src/css/Components.css';
+import PageFooter from '../../components/PageFooter';
 
 const CoverLetters = () => {
   const pageTitle = 'Cover Letters';
@@ -99,6 +100,9 @@ const CoverLetters = () => {
             />
           </CardContent>
         </Card>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="cover_letters" />
       </Box>
     </>
   );

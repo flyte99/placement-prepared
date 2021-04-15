@@ -8,6 +8,7 @@ import 'src/css/Cards.css';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
 import { v4 as uuid } from 'uuid';
+import PageFooter from '../../components/PageFooter';
 
 const FaceToFaceInterviews = () => {
   const pageTitle = 'Face-to-Face Interviews';
@@ -125,6 +126,9 @@ const FaceToFaceInterviews = () => {
             </Box>
           </CardContent>
         </Card>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="face_to_face_interviews" />
       </Box>
     </>
   );

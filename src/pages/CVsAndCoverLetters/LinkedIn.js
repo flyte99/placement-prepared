@@ -6,6 +6,7 @@ import 'src/css/Cards.css';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
 import { v4 as uuid } from 'uuid';
+import PageFooter from '../../components/PageFooter';
 
 const LinkedIn = () => {
   const pageTitle = 'LinkedIn';
@@ -134,6 +135,9 @@ const LinkedIn = () => {
           </a>
         </div>
         <Typography className="img-caption">Create your LinkedIn account now</Typography>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="linkedin" />
       </Box>
     </>
   );

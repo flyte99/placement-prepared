@@ -4,6 +4,17 @@
     align-items: center;
 }
 
+.mark-as-completed {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.complete-button {
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+
 .subpage {
     margin-left: 12%;
 }

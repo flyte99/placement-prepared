@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import ScrumBoard from 'src/components/ScrumBoard';
 import 'src/css/Images.css';
 import { v4 as uuid } from 'uuid';
+import PageFooter from '../../components/PageFooter';
 
 const AgileDevelopment = () => {
   const pageTitle = 'Agile Development Methods';
@@ -91,6 +92,9 @@ const AgileDevelopment = () => {
             <ScrumBoard />
           </CardContent>
         </Card>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="agile_development" />
       </Box>
     </>
   );

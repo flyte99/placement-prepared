@@ -3,6 +3,7 @@ import Flippy, { BackSide, FrontSide } from 'react-flippy';
 import { Helmet } from 'react-helmet';
 import 'src/css/Images.css';
 import 'src/css/Components.css';
+import PageFooter from '../../components/PageFooter';
 
 const Git = () => {
   const pageTitle = 'Git';
@@ -98,6 +99,9 @@ const Git = () => {
           </a>
         </div>
         <Typography className="img-caption">Download Git to get started</Typography>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="git" />
       </Box>
     </>
   );

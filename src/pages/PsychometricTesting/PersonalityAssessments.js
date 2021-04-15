@@ -5,6 +5,7 @@ import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
+import PageFooter from '../../components/PageFooter';
 
 const PersonalityAssessments = () => {
   const pageTitle = 'Personality Assessments';
@@ -91,6 +92,9 @@ const PersonalityAssessments = () => {
             <ReactPlayer url="https://youtu.be/w3-dveTlgbw" />
           </Box>
         </Card>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <PageFooter pageComplete="personality_assessments" />
       </Box>
     </>
   );
