@@ -1,72 +1,32 @@
+import { Box, Card, CardContent, Typography } from '@material-ui/core';
 import moment from 'moment';
-import {
-  Avatar,
-  Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  Divider,
-  Typography
-} from '@material-ui/core';
+import Gravatar from 'react-gravatar';
 
 const user = {
-  avatar: '', // TODO: fetch avatar
-  city: 'Los Angeles',
-  country: 'USA',
-  jobTitle: 'Senior Developer',
-  name: 'Katarina Smith',
-  timezone: 'GTM-7'
+  avatar: <Gravatar
+    style={{ width: 100, height: 100, borderRadius: 100 }}
+    email={`${localStorage.getItem('username')} `}
+  />,
+  name: `${localStorage.getItem('firstName')} ${localStorage.getItem('lastName')}`,
+  institution: localStorage.getItem('institution')
 };
 
 const AccountProfile = (props) => (
   <Card {...props}>
     <CardContent>
-      <Box
-        sx={{
-          alignItems: 'center',
-          display: 'flex',
-          flexDirection: 'column'
-        }}
-      >
-        <Avatar
-          src={user.avatar}
-          sx={{
-            height: 100,
-            width: 100
-          }}
-        />
-        <Typography
-          color="textPrimary"
-          gutterBottom
-          variant="h3"
-        >
+      <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
+        {user.avatar}
+        <Typography color="textPrimary" gutterBottom variant="h3">
           {user.name}
         </Typography>
-        <Typography
-          color="textSecondary"
-          variant="body1"
-        >
+        <Typography color="textSecondary" variant="body1">
           {`${user.city} ${user.country}`}
         </Typography>
-        <Typography
-          color="textSecondary"
-          variant="body1"
-        >
+        <Typography color="textSecondary" variant="body1">
           {`${moment().format('hh:mm A')} ${user.timezone}`}
         </Typography>
       </Box>
     </CardContent>
-    <Divider />
-    <CardActions>
-      <Button
-        color="primary"
-        fullWidth
-        variant="text"
-      >
-        Upload picture
-      </Button>
-    </CardActions>
   </Card>
 );
 

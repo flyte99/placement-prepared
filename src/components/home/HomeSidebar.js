@@ -1,16 +1,16 @@
-import { Avatar, Box, Divider, Drawer, Hidden, List, Typography } from '@material-ui/core';
+import { Box, Button, Divider, Drawer, Hidden, List, Typography } from '@material-ui/core';
 import { ExpandLess, ExpandMore } from '@material-ui/icons';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
+import Gravatar from 'react-gravatar';
+import { useLocation } from 'react-router-dom';
 import pages from 'src/components/home/pages';
 import NavItem from 'src/components/NavItem';
 import 'src/css/Components.css';
 
 const user = {
-  avatar: '', // TODO: fetch user avatar
-  jobTitle: 'University of Reading', // TODO: fetch organisation
-  name: 'Mollie Bourke' // TODO: fetch name
+  name: `${localStorage.getItem('firstName')} ${localStorage.getItem('lastName')}`,
+  institution: localStorage.getItem('institution')
 };
 
 const HomeSidebar = ({ onMobileClose, openMobile }) => {
@@ -24,16 +24,28 @@ const HomeSidebar = ({ onMobileClose, openMobile }) => {
 
   const content = (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-      <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column', p: 2 }}>
-        <Avatar
-          component={RouterLink}
-          src={user.avatar}
-          sx={{ cursor: 'pointer', width: 64, height: 64 }}
-          to="account"
-        />
-        <Typography color="textPrimary" variant="h5">{user.name}</Typography>
-        <Typography color="textSecondary" variant="body2">{user.jobTitle}</Typography>
-      </Box>
+      {
+        localStorage.getItem('token')
+          ? (
+            <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column', p: 2 }}>
+              <Button href="account">
+                <Gravatar
+                  style={{ width: 70, height: 70, borderRadius: 70 }}
+                  email={`${localStorage.getItem('username')} `}
+                />
+              </Button>
+              <Typography color="textPrimary" variant="h5">{user.name}</Typography>
+              <Typography color="textSecondary" variant="body2">{user.institution}</Typography>
+            </Box>
+          )
+          : (
+            <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column', p: 2 }}>
+              <Button color="primary" fullWidth size="large" variant="contained" href="login">
+                Log In
+              </Button>
+            </Box>
+          )
+      }
       <Divider />
       <Box sx={{ p: 2 }}>
         <List>

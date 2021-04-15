@@ -1,17 +1,9 @@
-import { Link as RouterLink, useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
-import * as Yup from 'yup';
+import { Box, Button, Checkbox, Container, FormHelperText, Link, TextField, Typography } from '@material-ui/core';
+import axios from 'axios';
 import { Formik } from 'formik';
-import {
-  Box,
-  Button,
-  Checkbox,
-  Container,
-  FormHelperText,
-  Link,
-  TextField,
-  Typography
-} from '@material-ui/core';
+import { Helmet } from 'react-helmet';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
+import * as Yup from 'yup';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -32,48 +24,56 @@ const Register = () => {
       >
         <Container maxWidth="sm">
           <Formik
-            initialValues={{
-              email: '',
-              firstName: '',
-              lastName: '',
-              password: '',
-              policy: false
-            }}
+            initialValues={{ email: '', firstName: '', lastName: '', password: '', policy: false }}
             validationSchema={
               Yup.object().shape({
                 email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
                 firstName: Yup.string().max(255).required('First name is required'),
                 lastName: Yup.string().max(255).required('Last name is required'),
-                password: Yup.string().max(255).required('password is required'),
+                institution: Yup.string().max(255).required('Institution is required'),
+                password: Yup.string().required('Password is required')
+                  .min(8, 'Password is too short - should be 8 chars minimum.')
+                  .matches(/(?=.*[0-9])/, 'Password must contain a number.'),
                 policy: Yup.boolean().oneOf([true], 'This field must be checked')
               })
             }
             onSubmit={() => {
-              navigate('home', { replace: true });
+              axios.post('http://localhost:8000/api/users/', {
+                username: document.getElementsByName('email').value,
+                password: document.getElementsByName('password').value,
+                student: {
+                  firstName: document.getElementsByName('firstName').value,
+                  lastName: document.getElementsByName('lastName').value,
+                  institution: document.getElementsByName('institution').value
+                }
+              }, { headers: { 'Content-Type': 'application/json' } })
+                .then(() => {
+                  axios.post('http://localhost:8000/}api/auth/', {
+                    username: document.getElementsByName('email').value,
+                    password: document.getElementsByName('password').value,
+                  }, { headers: { 'Content-Type': 'application/json' } })
+                    .then(() => {
+                      navigate('/', { replace: true });
+                    })
+                    .catch((error) => {
+                      console.error(error);
+                    });
+                })
+                .catch((error) => {
+                  console.error(error);
+                });
             }}
           >
             {({
-              errors,
-              handleBlur,
-              handleChange,
-              handleSubmit,
-              isSubmitting,
-              touched,
-              values
+              errors, handleBlur, handleChange,
+              handleSubmit, isSubmitting, touched, values
             }) => (
               <form onSubmit={handleSubmit}>
                 <Box sx={{ mb: 3 }}>
-                  <Typography
-                    color="textPrimary"
-                    variant="h2"
-                  >
+                  <Typography color="textPrimary" variant="h2">
                     Create new account
                   </Typography>
-                  <Typography
-                    color="textSecondary"
-                    gutterBottom
-                    variant="body2"
-                  >
+                  <Typography color="textSecondary" gutterBottom variant="body2">
                     Use your email to create new account
                   </Typography>
                 </Box>
@@ -102,6 +102,18 @@ const Register = () => {
                   variant="outlined"
                 />
                 <TextField
+                  error={Boolean(touched.institution && errors.institution)}
+                  fullWidth
+                  helperText={touched.institution && errors.institution}
+                  label="Institution"
+                  margin="normal"
+                  name="institution"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.institution}
+                  variant="outlined"
+                />
+                <TextField
                   error={Boolean(touched.email && errors.email)}
                   fullWidth
                   helperText={touched.email && errors.email}
@@ -127,39 +139,17 @@ const Register = () => {
                   value={values.password}
                   variant="outlined"
                 />
-                <Box
-                  sx={{
-                    alignItems: 'center',
-                    display: 'flex',
-                    ml: -1
-                  }}
-                >
-                  <Checkbox
-                    checked={values.policy}
-                    name="policy"
-                    onChange={handleChange}
-                  />
-                  <Typography
-                    color="textSecondary"
-                    variant="body1"
-                  >
-                    I have read the
-                    {' '}
-                    <Link
-                      color="primary"
-                      component={RouterLink}
-                      to="#"
-                      underline="always"
-                      variant="h6"
-                    >
+                <Box sx={{ alignItems: 'center', display: 'flex', ml: -1 }}>
+                  <Checkbox checked={values.policy} name="policy" onChange={handleChange} />
+                  <Typography color="textSecondary" variant="body1">
+                    I have read the {' '}
+                    <Link color="primary" component={RouterLink} to="#" underline="always" variant="h6">
                       Terms and Conditions
                     </Link>
                   </Typography>
                 </Box>
                 {Boolean(touched.policy && errors.policy) && (
-                  <FormHelperText error>
-                    {errors.policy}
-                  </FormHelperText>
+                  <FormHelperText error>{errors.policy}</FormHelperText>
                 )}
                 <Box sx={{ py: 2 }}>
                   <Button
@@ -173,19 +163,9 @@ const Register = () => {
                     Sign up now
                   </Button>
                 </Box>
-                <Typography
-                  color="textSecondary"
-                  variant="body1"
-                >
-                  Have an account?
-                  {' '}
-                  <Link
-                    component={RouterLink}
-                    to="/login"
-                    variant="h6"
-                  >
-                    Sign in
-                  </Link>
+                <Typography color="textSecondary" variant="body1">
+                  Have an account? {' '}
+                  <Link component={RouterLink} to="/login" variant="h6">Sign in</Link>
                 </Typography>
               </form>
             )}
