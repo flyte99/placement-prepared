@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -70,6 +71,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'backendapi.wsgi.application'
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'https://zn011920.webs.act.reading.ac.uk'
+]
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
