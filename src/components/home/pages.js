@@ -1,4 +1,4 @@
-import { Briefcase, Codesandbox, FileText, Home, Mic, PenTool, Settings, Users } from 'react-feather';
+import { Briefcase, Codesandbox, FileText, Home, Mic, PenTool, Users } from 'react-feather';
 
 export default [
   {
@@ -60,10 +60,5 @@ export default [
     path: 'podcasts',
     icon: Mic,
     title: 'Podcasts'
-  },
-  {
-    path: 'settings',
-    icon: Settings,
-    title: 'Settings'
   }
 ];

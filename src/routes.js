@@ -4,7 +4,6 @@ import MainLayout from 'src/components/MainLayout';
 import Account from 'src/pages/Account/Account';
 import Login from 'src/pages/Account/Login';
 import Register from 'src/pages/Account/Register';
-import Settings from 'src/pages/Account/Settings';
 import AssessmentCentres from 'src/pages/AssessmentCentres/AssessmentCentres';
 import GroupExercises from 'src/pages/AssessmentCentres/GroupExercises';
 import Presentations from 'src/pages/AssessmentCentres/Presentations';
@@ -36,7 +35,6 @@ const routes = [
     children: [
       { path: '/', element: <Home /> },
       { path: 'account', element: <Account /> },
-      { path: 'settings', element: <Settings /> },
 
       { path: 'cvs_and_cover_letters', element: <CVsAndCoverLetters /> },
       { path: 'cvs_and_cover_letters/cv', element: <WritingACV /> },
