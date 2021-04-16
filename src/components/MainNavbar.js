@@ -1,5 +1,5 @@
 import { Link as RouterLink } from 'react-router-dom';
-import { AppBar, Toolbar } from '@material-ui/core';
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import Logo from './Logo';
 
 const MainNavbar = (props) => (
@@ -11,6 +11,7 @@ const MainNavbar = (props) => (
       <RouterLink to="/">
         <Logo />
       </RouterLink>
+      <Typography sx={{ ml: 2 }} variant="h2">Placement Prepared</Typography>
     </Toolbar>
   </AppBar>
 );

@@ -9,7 +9,7 @@ from .models import Student
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = ('first_name', 'last_name', 'institution', 'progress')
+        fields = ('firstName', 'lastName', 'institution', 'progress')
 
 
 class UserSerializer(serializers.ModelSerializer):

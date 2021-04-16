@@ -3,18 +3,17 @@ import { ExpandLess, ExpandMore } from '@material-ui/icons';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import Gravatar from 'react-gravatar';
-import { useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useLocation } from 'react-router-dom';
 import pages from 'src/components/home/pages';
 import NavItem from 'src/components/NavItem';
 import 'src/css/Components.css';
-
-const user = {
-  name: `${localStorage.getItem('firstName')} ${localStorage.getItem('lastName')}`,
-  institution: localStorage.getItem('institution')
-};
+import { signOutUser } from '../../features/user/usersSlice';
 
 const HomeSidebar = ({ onMobileClose, openMobile }) => {
   const location = useLocation();
+  const currentUser = useSelector((state) => state.users);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (openMobile && onMobileClose) {
@@ -25,23 +24,39 @@ const HomeSidebar = ({ onMobileClose, openMobile }) => {
   const content = (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       {
-        localStorage.getItem('token')
+        currentUser.token
           ? (
             <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column', p: 2 }}>
-              <Button href="account">
+              <Link to="account">
                 <Gravatar
                   style={{ width: 70, height: 70, borderRadius: 70 }}
-                  email={`${localStorage.getItem('username')} `}
+                  email={`${currentUser.username} `}
                 />
+              </Link>
+              <Typography color="textPrimary" variant="h5">
+                {`${currentUser.firstName} ${currentUser.lastName}`}
+              </Typography>
+              <Typography color="textSecondary" variant="body2">
+                {currentUser.institution}
+              </Typography>
+              <Button
+                color="primary"
+                size="small"
+                variant="contained"
+                onClick={() => {
+                  dispatch(signOutUser());
+                }}
+              >
+                Sign out
               </Button>
-              <Typography color="textPrimary" variant="h5">{user.name}</Typography>
-              <Typography color="textSecondary" variant="body2">{user.institution}</Typography>
             </Box>
           )
           : (
             <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column', p: 2 }}>
-              <Button color="primary" fullWidth size="large" variant="contained" href="login">
-                Log In
+              <Button color="primary" fullWidth size="large" variant="contained">
+                <Link to="login">
+                  Log In
+                </Link>
               </Button>
             </Box>
           )

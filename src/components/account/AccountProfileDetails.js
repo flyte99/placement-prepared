@@ -1,18 +1,19 @@
 import { Box, Button, Card, CardContent, CardHeader, Divider, Grid, TextField } from '@material-ui/core';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const AccountProfileDetails = (props) => {
+  const currentUser = useSelector((state) => state.users);
+
   const [values, setValues] = useState({
-    firstName: localStorage.getItem('firstName'),
-    lastName: localStorage.getItem('lastName'),
-    email: localStorage.getItem('username'),
+    firstName: currentUser.firstName,
+    lastName: currentUser.lastName,
+    email: currentUser.username,
+    institution: currentUser.institution,
   });
 
   const handleChange = (event) => {
-    setValues({
-      ...values,
-      [event.target.name]: event.target.value
-    });
+    setValues({ ...values, [event.target.name]: event.target.value });
   };
 
   return (
@@ -53,6 +54,17 @@ const AccountProfileDetails = (props) => {
                 onChange={handleChange}
                 required
                 value={values.email}
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item md={6} xs={12}>
+              <TextField
+                fullWidth
+                label="Institution"
+                name="institution"
+                onChange={handleChange}
+                required
+                value={values.institution}
                 variant="outlined"
               />
             </Grid>

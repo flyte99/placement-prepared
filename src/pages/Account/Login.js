@@ -2,12 +2,14 @@ import { Box, Button, Container, Link, TextField, Typography } from '@material-u
 import axios from 'axios';
 import { Formik } from 'formik';
 import { Helmet } from 'react-helmet';
+import { useDispatch } from 'react-redux';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
+import { loginUser } from '../../features/user/usersSlice';
 
 const Login = () => {
-  // eslint-disable-next-line no-unused-vars
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -33,38 +35,26 @@ const Login = () => {
             onSubmit={() => {
               axios.post('http://localhost:8000/api/auth/', {
                 username: document.getElementById('email').value,
-                password: document.getElementById('password').value
+                password: document.getElementById('password').value,
               }, { headers: { 'Content-Type': 'application/json' } })
                 .then((response) => {
-                  const { token } = response.data;
-                  const { username, student } = response.data.user;
-                  const firstName = student.first_name;
-                  const lastName = student.last_name;
-                  const { institution, progress } = student;
+                  const { token, user } = response.data;
+                  const { username, student } = user;
+                  const { firstName, lastName, institution, progress } = student;
 
-                  console.log(progress);
+                  const userInfo = { token, username, firstName, lastName, institution, progress };
+                  dispatch(loginUser(userInfo));
 
-                  localStorage.setItem('token', token);
-                  localStorage.setItem('username', username);
-                  localStorage.setItem('firstName', firstName);
-                  localStorage.setItem('lastName', lastName);
-                  localStorage.setItem('institution', institution);
-                  localStorage.setItem('progress', progress);
                   navigate('/', { replace: true });
                 })
-                .catch((error) => {
-                  console.error(error);
+                .catch(() => {
+                  navigate('/login', { replace: true });
                 });
             }}
           >
             {({
-              values,
-              touched,
-              errors,
-              isSubmitting,
-              handleChange,
-              handleBlur,
-              handleSubmit
+              values, touched, errors, isSubmitting,
+              handleChange, handleBlur, handleSubmit
             }) => (
               <form onSubmit={handleSubmit}>
                 <Box sx={{ mb: 1 }}><Typography color="textPrimary" variant="h2">Sign in</Typography></Box>

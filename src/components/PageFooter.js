@@ -2,30 +2,12 @@ import { Button } from '@material-ui/core';
 import * as PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Check } from 'react-feather';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateProgress } from '../features/user/usersSlice';
 
 const PageFooter = ({ pageComplete }) => {
-  // TODO: fetch progress from user state
-  const progress = [
-    { page: 'cvs_and_cover_letters', completed: true },
-    { page: 'cv', completed: false },
-    { page: 'cover_letters', completed: false },
-    { page: 'linkedin', completed: false },
-    { page: 'psychometric_testing', completed: false },
-    { page: 'situational_judgement', completed: false },
-    { page: 'personality_assessments', completed: false },
-    { page: 'assessment_centres', completed: false },
-    { page: 'group_exercises', completed: false },
-    { page: 'virtual_assessment_centres', completed: false },
-    { page: 'presentations', completed: false },
-    { page: 'interviews', completed: false },
-    { page: 'telephone_interviews', completed: false },
-    { page: 'video_interviews', completed: false },
-    { page: 'face_to_face_interviews', completed: false },
-    { page: 'agile_development', completed: false },
-    { page: 'git', completed: false },
-    { page: 'mysql', completed: false },
-    { page: 'unit_testing', completed: false }
-  ];
+  const dispatch = useDispatch();
+  const progress = useSelector((state) => state.users.progress);
 
   let initialState;
 
@@ -37,7 +19,12 @@ const PageFooter = ({ pageComplete }) => {
   }
 
   const [completed, setComplete] = useState(initialState);
-  const markComplete = () => setComplete(!completed);
+  const markComplete = () => {
+    const pageStatus = !completed;
+    setComplete(pageStatus);
+
+    dispatch(updateProgress(progress));
+  };
 
   return (
     <div className="mark-as-completed">

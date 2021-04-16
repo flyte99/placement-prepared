@@ -28,7 +28,7 @@ def pages():
 
 class Student(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='student')
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
+    firstName = models.CharField(max_length=50)
+    lastName = models.CharField(max_length=50)
     institution = models.CharField(max_length=100)
     progress = models.JSONField(default=pages)
