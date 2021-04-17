@@ -1,8 +1,8 @@
 import { Avatar, Box, Card, CardContent, CardHeader, Divider, Grid, Typography } from '@material-ui/core';
 import Flippy, { BackSide, FrontSide } from 'react-flippy';
 import { Helmet } from 'react-helmet';
-import 'src/css/Images.css';
 import 'src/css/Components.css';
+import 'src/css/Images.css';
 import PageFooter from '../../components/PageFooter';
 
 const Git = () => {

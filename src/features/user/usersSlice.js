@@ -6,27 +6,27 @@ const initialState = {
   firstName: '',
   lastName: '',
   institution: '',
-  progress: [
-    { page: 'cvs_and_cover_letters', completed: false },
-    { page: 'cv', completed: false },
-    { page: 'cover_letters', completed: false },
-    { page: 'linkedin', completed: false },
-    { page: 'psychometric_testing', completed: false },
-    { page: 'situational_judgement', completed: false },
-    { page: 'personality_assessments', completed: false },
-    { page: 'assessment_centres', completed: false },
-    { page: 'group_exercises', completed: false },
-    { page: 'virtual_assessment_centres', completed: false },
-    { page: 'presentations', completed: false },
-    { page: 'interviews', completed: false },
-    { page: 'telephone_interviews', completed: false },
-    { page: 'video_interviews', completed: false },
-    { page: 'face_to_face_interviews', completed: false },
-    { page: 'agile_development', completed: false },
-    { page: 'git', completed: false },
-    { page: 'mysql', completed: false },
-    { page: 'unit_testing', completed: false },
-  ]
+  progress: {
+    cvs_and_cover_letters: false,
+    cv: false,
+    cover_letters: false,
+    linkedin: false,
+    psychometric_testing: false,
+    situational_judgement: false,
+    personality_assessments: false,
+    assessment_centres: false,
+    group_exercises: false,
+    virtual_assessment_centres: false,
+    presentations: false,
+    interviews: false,
+    telephone_interviews: false,
+    video_interviews: false,
+    face_to_face_interviews: false,
+    agile_development: false,
+    git: false,
+    mysql: false,
+    unit_testing: false,
+  }
 };
 
 const usersSlice = createSlice({
@@ -43,7 +43,11 @@ const usersSlice = createSlice({
     }),
     signOutUser: () => initialState,
     updateProgress: (state, action) => ({
-      progress: action.payload
+      ...state,
+      progress: {
+        ...state.progress,
+        [`${action.payload.page}`]: action.payload.completed
+      }
     })
   }
 });

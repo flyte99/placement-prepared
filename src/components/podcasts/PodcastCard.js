@@ -1,15 +1,7 @@
-import PropTypes from 'prop-types';
-import {
-  Avatar,
-  Box,
-  Card,
-  CardContent,
-  Divider,
-  Grid,
-  Typography
-} from '@material-ui/core';
+import { Avatar, Box, Card, CardContent, Divider, Grid, Typography } from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import GetAppIcon from '@material-ui/icons/GetApp';
+import PropTypes from 'prop-types';
 
 const PodcastCard = ({ product, ...rest }) => (
   <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%' }} {...rest}>

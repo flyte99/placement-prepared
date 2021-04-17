@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet';
 import {
   Box,
   Card,
@@ -10,6 +9,7 @@ import {
   Grid,
   Typography
 } from '@material-ui/core';
+import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Components.css';
 import PageFooter from '../../components/PageFooter';

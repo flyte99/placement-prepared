@@ -1,5 +1,5 @@
-import { Helmet } from 'react-helmet';
 import { Box, Container, Grid } from '@material-ui/core';
+import { Helmet } from 'react-helmet';
 import TopicCards from 'src/components/home/TopicCards';
 
 const Home = () => (

@@ -76,7 +76,7 @@ const HomeSidebar = ({ onMobileClose, openMobile }) => {
                     <ExpandLess onClick={subpages && showSubpages} />
                   </div>
                   {subNav && subpages.map((subpage) => (
-                    <NavItem className="subpage" href={subpage.path} title={subpage.title} />))}
+                    <NavItem key={subpage.title} className="subpage" href={subpage.path} title={subpage.title} />))}
                 </div>
               );
             }

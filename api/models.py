@@ -3,27 +3,27 @@ from django.db import models
 
 
 def pages():
-    return [
-        {'page': 'cvs_and_cover_letters', 'completed': False},
-        {'page': 'cv', 'completed': False},
-        {'page': 'cover_letters', 'completed': False},
-        {'page': 'linkedin', 'completed': False},
-        {'page': 'psychometric_testing', 'completed': False},
-        {'page': 'situational_judgement', 'completed': False},
-        {'page': 'personality_assessments', 'completed': False},
-        {'page': 'assessment_centres', 'completed': False},
-        {'page': 'group_exercises', 'completed': False},
-        {'page': 'virtual_assessment_centres', 'completed': False},
-        {'page': 'presentations', 'completed': False},
-        {'page': 'interviews', 'completed': False},
-        {'page': 'telephone_interviews', 'completed': False},
-        {'page': 'video_interviews', 'completed': False},
-        {'page': 'face_to_face_interviews', 'completed': False},
-        {'page': 'agile_development', 'completed': False},
-        {'page': 'git', 'completed': False},
-        {'page': 'mysql', 'completed': False},
-        {'page': 'unit_testing', 'completed': False},
-    ]
+    return {
+        'cvs_and_cover_letters': False,
+        'cv': False,
+        'cover_letters': False,
+        'linkedin': False,
+        'psychometric_testing': False,
+        'situational_judgement': False,
+        'personality_assessments': False,
+        'assessment_centres': False,
+        'group_exercises': False,
+        'virtual_assessment_centres': False,
+        'presentations': False,
+        'interviews': False,
+        'telephone_interviews': False,
+        'video_interviews': False,
+        'face_to_face_interviews': False,
+        'agile_development': False,
+        'git': False,
+        'mysql': False,
+        'unit_testing': False,
+    }
 
 
 class Student(models.Model):

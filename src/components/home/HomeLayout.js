@@ -1,6 +1,6 @@
+import { experimentalStyled } from '@material-ui/core';
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import { experimentalStyled } from '@material-ui/core';
 import HomeNavbar from './HomeNavbar';
 import HomeSidebar from './HomeSidebar';
 
