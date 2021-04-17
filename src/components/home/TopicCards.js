@@ -1,10 +1,12 @@
 import { Box, Card, CardContent, Grid, List, Typography } from '@material-ui/core';
+import { useNavigate } from 'react-router-dom';
 import pages from 'src/components/home/pages';
 import NavItem from 'src/components/NavItem';
 import 'src/css/Cards.css';
 import { v4 as uuid } from 'uuid';
 
 const TopicCards = () => {
+  const navigate = useNavigate();
   const cards = [];
 
   for (let i = 0; i < pages.length; i++) {
@@ -15,8 +17,8 @@ const TopicCards = () => {
 
   return (
     cards.map((card) => (
-      <Grid key={uuid()} item lg={3} sm={6} xl={3} xs={12}>
-        <Card className="topic-card" sx={{ height: '100%' }}>
+      <Grid key={uuid()} item lg={4} sm={6} xl={4} xs={12}>
+        <Card className="topic-card" onClick={() => navigate(`${card.path}`, { replace: true })}>
           <CardContent>
             <Grid item>
               <Typography color="textPrimary" variant="h3">

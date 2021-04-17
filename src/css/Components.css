@@ -4,6 +4,28 @@
     align-items: center;
 }
 
+.progress-diagram {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.progress-circle {
+    position: relative;
+    display: inline-flex;
+}
+
+.progress-percentage {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .mark-as-completed {
     display: flex;
     justify-content: flex-end;

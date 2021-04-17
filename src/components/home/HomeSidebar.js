@@ -8,7 +8,7 @@ import { Link, useLocation } from 'react-router-dom';
 import pages from 'src/components/home/pages';
 import NavItem from 'src/components/NavItem';
 import 'src/css/Components.css';
-import { signOutUser } from '../../features/user/usersSlice';
+import { signOutUser } from '../../app/usersSlice';
 
 const HomeSidebar = ({ onMobileClose, openMobile }) => {
   const location = useLocation();
@@ -54,9 +54,7 @@ const HomeSidebar = ({ onMobileClose, openMobile }) => {
           : (
             <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column', p: 2 }}>
               <Button color="primary" fullWidth size="large" variant="contained">
-                <Link to="login">
-                  Log In
-                </Link>
+                <Link to="login">Log In</Link>
               </Button>
             </Box>
           )

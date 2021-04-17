@@ -4,7 +4,7 @@ import * as PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Check } from 'react-feather';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateProgress } from '../features/user/usersSlice';
+import { updateProgress } from '../app/usersSlice';
 
 const PageFooter = ({ pageComplete }) => {
   const dispatch = useDispatch();

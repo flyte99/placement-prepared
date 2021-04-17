@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import { useDispatch } from 'react-redux';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
-import { loginUser } from '../../features/user/usersSlice';
+import { loginUser } from '../../app/usersSlice';
 
 const Login = () => {
   const navigate = useNavigate();
