@@ -1,4 +1,5 @@
 import { Button } from '@material-ui/core';
+import axios from 'axios';
 import * as PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Check } from 'react-feather';
@@ -7,7 +8,8 @@ import { updateProgress } from '../features/user/usersSlice';
 
 const PageFooter = ({ pageComplete }) => {
   const dispatch = useDispatch();
-  const progress = useSelector((state) => state.users.progress);
+  const currentUser = useSelector((state) => state.users);
+  const { progress } = currentUser;
 
   const initialState = progress[`${pageComplete}`];
 
@@ -16,11 +18,17 @@ const PageFooter = ({ pageComplete }) => {
     const pageStatus = !completed;
     setComplete(pageStatus);
 
-    const updatePageProgress = {
+    axios.post('http://localhost:8000/api/update-progress/', {
+      token: currentUser.token,
       page: pageComplete,
       completed: pageStatus
-    };
-    dispatch(updateProgress(updatePageProgress));
+    }, { headers: { 'Content-Type': 'application/json' } })
+      .then((response) => {
+        dispatch(updateProgress(response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (

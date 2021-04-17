@@ -44,10 +44,7 @@ const usersSlice = createSlice({
     signOutUser: () => initialState,
     updateProgress: (state, action) => ({
       ...state,
-      progress: {
-        ...state.progress,
-        [`${action.payload.page}`]: action.payload.completed
-      }
+      progress: action.payload
     })
   }
 });
