@@ -75,8 +75,8 @@ const HomeSidebar = ({ onMobileClose, openMobile }) => {
 
             if (subpages && subNav) {
               return (
-                <div>
-                  <div key={title} className="align-row">
+                <div key={title}>
+                  <div className="align-row">
                     <NavItem href={path} title={title} icon={icon} />
                     <ExpandLess onClick={subpages && showSubpages} />
                   </div>
