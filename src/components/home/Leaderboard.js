@@ -32,7 +32,7 @@ const Leaderboard = () => {
 
   return (
     <>
-      {users ? (
+      {users === [] ? (
         <Card>
           <CardContent>
             {users.map((user) => (
