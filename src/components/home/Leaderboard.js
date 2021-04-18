@@ -7,7 +7,7 @@ import 'src/css/Components.css';
 import getProgressScore from '../../utils/getProgressScore';
 
 const Leaderboard = () => {
-  const { firstName, lastName, } = useSelector((state) => state.users);
+  const { firstName, lastName } = useSelector((state) => state.users);
   const currentUser = `${firstName} ${lastName}`;
   const [users, setUsers] = useState([]);
 
