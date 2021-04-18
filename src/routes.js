@@ -1,7 +1,6 @@
 import { Navigate } from 'react-router-dom';
 import HomeLayout from 'src/components/home/HomeLayout';
 import MainLayout from 'src/components/MainLayout';
-import Account from 'src/pages/Account/Account';
 import Login from 'src/pages/Account/Login';
 import Register from 'src/pages/Account/Register';
 import AssessmentCentres from 'src/pages/AssessmentCentres/AssessmentCentres';
@@ -34,7 +33,6 @@ const routes = [
     element: <HomeLayout />,
     children: [
       { path: '/', element: <Home /> },
-      { path: 'account', element: <Account /> },
 
       { path: 'cvs_and_cover_letters', element: <CVsAndCoverLetters /> },
       { path: 'cvs_and_cover_letters/cv', element: <WritingACV /> },

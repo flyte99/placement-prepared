@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import Gravatar from 'react-gravatar';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import pages from 'src/components/home/pages';
 import NavItem from 'src/components/NavItem';
 import 'src/css/Components.css';
@@ -12,6 +12,7 @@ import { signOutUser } from '../../app/usersSlice';
 
 const HomeSidebar = ({ onMobileClose, openMobile }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const currentUser = useSelector((state) => state.users);
   const dispatch = useDispatch();
 
@@ -27,12 +28,10 @@ const HomeSidebar = ({ onMobileClose, openMobile }) => {
         currentUser.token
           ? (
             <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column', p: 2 }}>
-              <Link to="account">
-                <Gravatar
-                  style={{ width: 70, height: 70, borderRadius: 70 }}
-                  email={`${currentUser.username} `}
-                />
-              </Link>
+              <Gravatar
+                style={{ width: 70, height: 70, borderRadius: 70 }}
+                email={`${currentUser.username} `}
+              />
               <Typography color="textPrimary" variant="h5">
                 {`${currentUser.firstName} ${currentUser.lastName}`}
               </Typography>
@@ -53,8 +52,16 @@ const HomeSidebar = ({ onMobileClose, openMobile }) => {
           )
           : (
             <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column', p: 2 }}>
-              <Button color="primary" fullWidth size="large" variant="contained">
-                <Link to="login">Log In</Link>
+              <Button
+                color="primary"
+                fullWidth
+                size="large"
+                variant="contained"
+                onClick={() => {
+                  navigate('/login', { replace: true });
+                }}
+              >
+                Log In
               </Button>
             </Box>
           )
