@@ -9,4 +9,4 @@ RewriteRule . /index.html [L]
 </IfModule>
 
 Options +ExecCGI
-AddHandler cgi-script .py
+AddHandler cgi-bin .py
