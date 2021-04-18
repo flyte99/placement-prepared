@@ -1,10 +1,14 @@
 import { Box, Card, CardContent, CircularProgress, Container, Divider, Grid, Typography } from '@material-ui/core';
+import React from 'react';
 import { Award, BarChart2 } from 'react-feather';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import TopicCards from 'src/components/home/TopicCards';
 import 'src/css/Components.css';
 import Leaderboard from '../components/home/Leaderboard';
+import externalResources from '../components/resources/externalResources';
+import ResourcePagination from '../components/resources/ResourcePagination';
+import universityResources from '../components/resources/universityResources';
 import getProgressScore from '../utils/getProgressScore';
 
 const Home = () => {
@@ -74,6 +78,26 @@ const Home = () => {
             </Grid>
           </Grid>
         </Container>
+      </Box>
+      {currentUser.token ? (
+        <Box sx={{ m: 5 }}>
+          <Card>
+            <CardContent>
+              <Typography variant="h3">Resources from {currentUser.institution}</Typography>
+              <Divider />
+              <ResourcePagination resources={universityResources(currentUser.institution)} numPerPage={3} />
+            </CardContent>
+          </Card>
+        </Box>
+      ) : null}
+      <Box sx={{ m: 5 }}>
+        <Card>
+          <CardContent>
+            <Typography variant="h3">External Resources</Typography>
+            <Divider />
+            <ResourcePagination resources={externalResources} numPerPage={3} />
+          </CardContent>
+        </Card>
       </Box>
     </>
   );

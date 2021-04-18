@@ -26,7 +26,6 @@ const CVsAndCoverLetters = () => {
     }
   ];
 
-  // noinspection SpellCheckingInspection,SpellCheckingInspection,SpellCheckingInspection,SpellCheckingInspection,SpellCheckingInspection
   const resources = [
     {
       caption: 'TARGET Jobs',
