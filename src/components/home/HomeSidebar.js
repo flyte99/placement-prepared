@@ -69,7 +69,7 @@ const HomeSidebar = ({ onMobileClose, openMobile }) => {
             if (subpages && subNav) {
               return (
                 <div>
-                  <div key={title} className="sidebar-pages">
+                  <div key={title} className="align-row">
                     <NavItem href={path} title={title} icon={icon} />
                     <ExpandLess onClick={subpages && showSubpages} />
                   </div>
@@ -79,7 +79,7 @@ const HomeSidebar = ({ onMobileClose, openMobile }) => {
               );
             }
             return (
-              <div key={title} className="sidebar-pages">
+              <div key={title} className="align-row">
                 <NavItem href={path} title={title} icon={icon} />
                 {subpages ? <ExpandMore onClick={subpages && showSubpages} /> : null}
               </div>

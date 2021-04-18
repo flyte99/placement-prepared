@@ -4,18 +4,12 @@ import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import TopicCards from 'src/components/home/TopicCards';
 import 'src/css/Components.css';
+import Leaderboard from '../components/home/Leaderboard';
+import getProgressScore from '../utils/getProgressScore';
 
 const Home = () => {
   const currentUser = useSelector((state) => state.users);
-
-  let score = 0;
-
-  // eslint-disable-next-line no-restricted-syntax
-  for (const page in currentUser.progress) {
-    if (currentUser.progress[page]) {
-      score++;
-    }
-  }
+  const score = getProgressScore(currentUser.progress);
 
   return (
     <>
@@ -74,6 +68,7 @@ const Home = () => {
                 <CardContent>
                   <Typography variant="h3"><BarChart2 /> Leaderboard</Typography>
                   <Divider />
+                  <Leaderboard />
                 </CardContent>
               </Card>
             </Grid>
