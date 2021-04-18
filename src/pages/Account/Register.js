@@ -2,11 +2,14 @@ import { Box, Button, Container, Link, TextField, Typography } from '@material-u
 import axios from 'axios';
 import { Formik } from 'formik';
 import { Helmet } from 'react-helmet';
+import { useDispatch } from 'react-redux';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
+import { loginUser } from '../../app/usersSlice';
 
 const Register = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -47,7 +50,23 @@ const Register = () => {
                 }
               }, { headers: { 'Content-Type': 'application/json' } })
                 .then(() => {
-                  navigate('/login', { replace: true });
+                  axios.post('http://localhost:8000/api/auth/', {
+                    username: document.getElementById('email').value,
+                    password: document.getElementById('password').value,
+                  }, { headers: { 'Content-Type': 'application/json' } })
+                    .then((response) => {
+                      const { token, user } = response.data;
+                      const { username, student } = user;
+                      const { firstName, lastName, institution, progress } = student;
+
+                      const userInfo = { token, username, firstName, lastName, institution, progress };
+                      dispatch(loginUser(userInfo));
+
+                      navigate('/', { replace: true });
+                    })
+                    .catch(() => {
+                      navigate('/login', { replace: true });
+                    });
                 })
                 .catch(() => {
                   navigate('/register', { replace: true });
