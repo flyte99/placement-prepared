@@ -2,9 +2,5 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/zn011920/public_html/
     - /bin/rm -Rf $DEPLOYPATH/static
-    - /bin/rm -Rf $DEPLOYPATH/cgi-bin/*
     - /bin/cp -Rf build/* $DEPLOYPATH
-    - /bin/cp -Rf backend/* $DEPLOYPATH/cgi-bin/
-    - chmod +x $DEPLOYPATH/cgi-bin/manage.py
     - /bin/cp .htaccess $DEPLOYPATH
-    - /bin/python $DEPLOYPATH/cgi-bin/manage.py runserver
