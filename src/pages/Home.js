@@ -46,7 +46,7 @@ const Home = () => {
             <Grid item lg={3} md={6} xs={12}>
               {currentUser.token
                 ? (
-                  <Card sx={{ height: '30%' }}>
+                  <Card>
                     <CardContent>
                       <Typography variant="h3"><Award /> Progress</Typography>
                       <Divider />
@@ -68,7 +68,7 @@ const Home = () => {
                     </CardContent>
                   </Card>
                 ) : null}
-              <Card sx={{ mt: currentUser.token ? 2 : 0, height: currentUser.token ? '80%' : '100%' }}>
+              <Card sx={{ mt: currentUser.token ? 2 : 0 }}>
                 <CardContent>
                   <Typography variant="h3"><BarChart2 /> Leaderboard</Typography>
                   <Divider />
