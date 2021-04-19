@@ -19,7 +19,7 @@ const Leaderboard = () => {
           if (userResponse.data[i].student) {
             const { username, student } = userResponse.data[i];
             const name = `${student.firstName} ${student.lastName}`;
-            const score = getProgressScore(student.progress) * 100;
+            const score = (getProgressScore(student.progress) * 100) + student.score;
             const userInfo = { username, name, score };
             allUsers.push(userInfo);
           }
