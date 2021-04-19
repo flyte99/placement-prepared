@@ -41,7 +41,7 @@ const ResourcePagination = ({ podcasts, resources, numPerPage }) => {
 
 ResourcePagination.propTypes = {
   podcasts: PropTypes.bool,
-  resources: PropTypes.object.isRequired,
+  resources: PropTypes.array.isRequired,
   numPerPage: PropTypes.number.isRequired
 };
 

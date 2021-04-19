@@ -1,6 +1,6 @@
 import { Box, Card, CardContent, CircularProgress, Typography } from '@material-ui/core';
 import axios from 'axios';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Gravatar from 'react-gravatar';
 import { useSelector } from 'react-redux';
 import 'src/css/Components.css';
@@ -11,28 +11,30 @@ const Leaderboard = () => {
   const currentUser = `${firstName} ${lastName}`;
   const [users, setUsers] = useState([]);
 
-  const allUsers = [];
-  axios.get('http://localhost:8000/api/users/', { headers: { 'Content-Type': 'application/json' } })
-    .then((userResponse) => {
-      for (let i = 0; i < userResponse.data.length; i++) {
-        if (userResponse.data[i].student) {
-          const { username, student } = userResponse.data[i];
-          const name = `${student.firstName} ${student.lastName}`;
-          const score = getProgressScore(student.progress) * 100;
-          const userInfo = { username, name, score };
-          allUsers.push(userInfo);
+  useEffect(() => {
+    const allUsers = [];
+    axios.get('http://localhost:8000/api/users/', { headers: { 'Content-Type': 'application/json' } })
+      .then((userResponse) => {
+        for (let i = 0; i < userResponse.data.length; i++) {
+          if (userResponse.data[i].student) {
+            const { username, student } = userResponse.data[i];
+            const name = `${student.firstName} ${student.lastName}`;
+            const score = getProgressScore(student.progress) * 100;
+            const userInfo = { username, name, score };
+            allUsers.push(userInfo);
+          }
         }
-      }
 
-      const sortedUsers = allUsers.sort((a, b) => ((a.score < b.score) ? 1 : -1)).slice(0, 10);
-      setUsers(sortedUsers);
-    }).catch((error) => {
-      console.log(error);
-    });
+        const sortedUsers = allUsers.sort((a, b) => ((a.score < b.score) ? 1 : -1)).slice(0, 10);
+        setUsers(sortedUsers);
+      }).catch((error) => {
+        console.log(error);
+      });
+  }, [setUsers]);
 
   return (
     <>
-      {users === [] ? (
+      {users[0] ? (
         <Card>
           <CardContent>
             {users.map((user) => (
