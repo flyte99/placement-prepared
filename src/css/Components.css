@@ -100,3 +100,24 @@
     display: flex;
     justify-content: center
 }
+
+.quiz {
+    margin: 10px;
+    background-color: #5664d2;
+    border-radius: 10px;
+    padding: 40px;
+    width: 80%;
+}
+
+.quiz-answer-block {
+    margin-top: 2%;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.quiz-answer {
+    width: 40%;
+    margin: 10px 15px 10px;
+    text-align: center;
+    justify-content: center;
+}

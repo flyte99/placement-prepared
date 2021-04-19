@@ -57,9 +57,9 @@ const Register = () => {
                     .then((response) => {
                       const { token, user } = response.data;
                       const { username, student } = user;
-                      const { firstName, lastName, institution, progress } = student;
+                      const { firstName, lastName, institution, progress, score } = student;
 
-                      const userInfo = { token, username, firstName, lastName, institution, progress };
+                      const userInfo = { token, username, firstName, lastName, institution, progress, score };
                       dispatch(loginUser(userInfo));
 
                       navigate('/', { replace: true });

@@ -32,3 +32,4 @@ class Student(models.Model):
     lastName = models.CharField(max_length=50)
     institution = models.CharField(max_length=100)
     progress = models.JSONField(default=pages)
+    score = models.IntegerField(default=0)

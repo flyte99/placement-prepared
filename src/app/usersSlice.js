@@ -26,7 +26,8 @@ const initialState = {
     git: false,
     mysql: false,
     unit_testing: false,
-  }
+  },
+  score: 0
 };
 
 const usersSlice = createSlice({
@@ -39,14 +40,19 @@ const usersSlice = createSlice({
       firstName: action.payload.firstName,
       lastName: action.payload.lastName,
       institution: action.payload.institution,
-      progress: action.payload.progress
+      progress: action.payload.progress,
+      score: action.payload.score
     }),
     signOutUser: () => initialState,
     updateProgress: (state, action) => ({
       ...state,
       progress: action.payload
+    }),
+    updateScore: (state, action) => ({
+      ...state,
+      score: action.payload
     })
   }
 });
-export const { loginUser, signOutUser, updateProgress } = usersSlice.actions;
+export const { loginUser, signOutUser, updateProgress, updateScore } = usersSlice.actions;
 export default usersSlice.reducer;

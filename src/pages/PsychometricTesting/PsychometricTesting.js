@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 import 'src/css/Images.css';
 import { v4 as uuid } from 'uuid';
 import PageFooter from '../../components/PageFooter';
+import numericalReasoningQuestions from '../../components/quiz/numericalReasoningQuestions';
+import Quiz from '../../components/quiz/Quiz';
 import SubpageCards from '../../components/SubpageCards';
 
 const PsychometricTesting = () => {
@@ -59,6 +61,15 @@ const PsychometricTesting = () => {
     'Logical reasoning tests assess your ability to spot rules or consistencies in sets of objects and your logical thinking. They focus on your ability to work quickly and accurately'
   ];
 
+  function formatQuestions(questions) {
+    const randomisedQuestions = questions.sort(() => Math.random() - 0.5).slice(0, 10);
+    for (let i = 0; i < randomisedQuestions.length; i++) {
+      randomisedQuestions[i].answerOptions.sort(() => Math.random() - 0.5);
+    }
+
+    return randomisedQuestions;
+  }
+
   return (
     <>
       <Helmet><title>{pageTitle} | Placement Prepared</title></Helmet>
@@ -95,6 +106,16 @@ const PsychometricTesting = () => {
       <Box sx={{ m: 5 }}>
         <Card>
           <CardContent>
+            <Typography color="textPrimary" variant="h3">Example Numerical Reasoning Test</Typography> <br />
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+              <Quiz questions={formatQuestions(numericalReasoningQuestions)} />
+            </Box>
+          </CardContent>
+        </Card>
+      </Box>
+      <Box sx={{ m: 5 }}>
+        <Card>
+          <CardContent>
             <Typography color="textPrimary" variant="h2">Online Practice Tests</Typography><br />
             <div className="img-block">
               {resources.map((item) => (
@@ -120,5 +141,4 @@ const PsychometricTesting = () => {
     </>
   );
 };
-
 export default PsychometricTesting;

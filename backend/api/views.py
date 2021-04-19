@@ -40,3 +40,22 @@ def update_student_progress(request):
         serializer.save()
         return Response(status=status.HTTP_200_OK, data=serializer.data['progress'])
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+def update_student_score(request):
+    try:
+        user = User.objects.get(auth_token=request.data['token'])
+        student = Student.objects.get(user=user)
+    except:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    data = StudentSerializer(student, many=False).data
+    data['score'] =  data['score'] + request.data['updatedScore']
+
+    serializer = StudentSerializer(student, data=data, context={'request': request})
+
+    if serializer.is_valid():
+        serializer.save()
+        return Response(status=status.HTTP_200_OK, data=serializer.data['score'])
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
