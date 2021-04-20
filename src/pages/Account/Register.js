@@ -40,7 +40,7 @@ const Register = () => {
               })
             }
             onSubmit={() => {
-              axios.post('api/users/', {
+              axios.post('https://placement-prepared-backend.herokuapp.com/api/users/', {
                 username: document.getElementById('email').value,
                 password: document.getElementById('password').value,
                 student: {
@@ -50,7 +50,7 @@ const Register = () => {
                 }
               }, { headers: { 'Content-Type': 'application/json' } })
                 .then(() => {
-                  axios.post('api/auth/', {
+                  axios.post('https://placement-prepared-backend.herokuapp.com/api/auth/', {
                     username: document.getElementById('email').value,
                     password: document.getElementById('password').value,
                   }, { headers: { 'Content-Type': 'application/json' } })

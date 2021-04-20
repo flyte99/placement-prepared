@@ -33,7 +33,7 @@ const Login = () => {
               password: Yup.string().max(255).required('Password is required')
             })}
             onSubmit={() => {
-              axios.post('api/auth/', {
+              axios.post('https://placement-prepared-backend.herokuapp.com/api/auth/', {
                 username: document.getElementById('email').value,
                 password: document.getElementById('password').value,
               }, { headers: { 'Content-Type': 'application/json' } })

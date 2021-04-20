@@ -18,7 +18,7 @@ const PageFooter = ({ pageComplete }) => {
     const pageStatus = !completed;
     setComplete(pageStatus);
 
-    axios.post('api/update-progress/', {
+    axios.post('https://placement-prepared-backend.herokuapp.com/api/update-progress/', {
       token: currentUser.token,
       page: pageComplete,
       completed: pageStatus
