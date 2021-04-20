@@ -18,7 +18,7 @@ const PageFooter = ({ pageComplete }) => {
     const pageStatus = !completed;
     setComplete(pageStatus);
 
-    axios.post('http://localhost:8000/api/update-progress/', {
+    axios.post('api/update-progress/', {
       token: currentUser.token,
       page: pageComplete,
       completed: pageStatus

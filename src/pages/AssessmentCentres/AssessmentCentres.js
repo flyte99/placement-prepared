@@ -10,17 +10,17 @@ const AssessmentCentres = () => {
   const subpages = [
     {
       title: 'Group Exercises',
-      path: 'assessment_centres/group_exercises',
+      path: 'group_exercises',
       summary: 'Applicants are placed into groups and expected to solve a problem by working together and agreeing on a solution within a set time limit'
     },
     {
       title: 'Virtual Assessment Centres',
-      path: 'assessment_centres/virtual',
+      path: 'virtual',
       summary: 'During the coronavirus pandemic, some graduate employers moved to running virtual or digital assessment centres instead'
     },
     {
       title: 'Presentations',
-      path: 'assessment_centres/presentations',
+      path: 'presentations',
       summary: 'Recruiters can ask applicants to prepare presentations individually or as a group'
     }
   ];

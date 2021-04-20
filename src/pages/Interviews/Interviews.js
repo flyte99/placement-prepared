@@ -11,17 +11,17 @@ const Interviews = () => {
   const subpages = [
     {
       title: 'Telephone Interviews',
-      path: 'interviews/telephone',
+      path: 'telephone',
       summary: 'Typically focused on the competencies that the recruiter is looking for and used to determine which applicants to invite to a face-to-face interview'
     },
     {
       title: 'Video Interviews',
-      path: 'interviews/video',
+      path: 'video',
       summary: 'Applicants are presented with questions and asked to record their response, often within a time limit'
     },
     {
       title: 'Face-to-Face Interviews',
-      path: 'interviews/face-to-face',
+      path: 'face-to-face',
       summary: 'During Face-to-Face interviews employers explain the job and ask the applicant questions to determine their fit for the role'
     }
   ];

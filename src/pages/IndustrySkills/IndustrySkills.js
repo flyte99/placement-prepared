@@ -7,22 +7,22 @@ const IndustrySkills = () => {
   const subpages = [
     {
       title: 'Agile Development Methods',
-      path: 'industry_skills/agile_development',
+      path: 'agile_development',
       summary: 'Used in software development cycles to aid productivity by collaboration and constant reassessment'
     },
     {
       title: 'Git',
-      path: 'industry_skills/git',
+      path: 'git',
       summary: 'Git is a popular version control system used for tracking changes in repositories'
     },
     {
       title: 'MySQL',
-      path: 'industry_skills/mysql',
+      path: 'mysql',
       summary: 'MySQL is a relational database management system'
     },
     {
       title: 'Unit Testing',
-      path: 'industry_skills/unit_testing',
+      path: 'unit_testing',
       summary: 'A testing method where individual units of source code are tested to determine whether they are fit for use'
     }
   ];

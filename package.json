@@ -5,6 +5,7 @@
   "private": true,
   "description": "eLearning System to Prepare Computer Science Students for Industry",
   "main": "index.js",
+  "proxy": "https://placement-prepared-backend.herokuapp.com/",
   "repository": {
     "type": "git",
     "url": "https://csgitlab.reading.ac.uk/zn011920/e-learning-system.git"

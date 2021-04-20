@@ -11,17 +11,17 @@ const CVsAndCoverLetters = () => {
   const subpages = [
     {
       title: 'Writing a CV',
-      path: 'cvs_and_cover_letters/cv',
+      path: 'cv',
       summary: "Employers ask for a Curriculum Vitae (CV) as a summary of an applicant's background, qualifications and extracurricular interests."
     },
     {
       title: 'Cover Letters',
-      path: 'cvs_and_cover_letters/cover-letters',
+      path: 'cover-letters',
       summary: 'Cover letters accompany a CV to emphasise why an applicant is applying to a particular role and how they are suitable.'
     },
     {
       title: 'LinkedIn',
-      path: 'cvs_and_cover_letters/LinkedIn',
+      path: 'LinkedIn',
       summary: 'LinkedIn is an employment-orientated social media that many companies are now using to recruit employees.'
     }
   ];

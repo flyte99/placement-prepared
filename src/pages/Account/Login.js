@@ -33,7 +33,7 @@ const Login = () => {
               password: Yup.string().max(255).required('Password is required')
             })}
             onSubmit={() => {
-              axios.post('http://localhost:8000/api/auth/', {
+              axios.post('api/auth/', {
                 username: document.getElementById('email').value,
                 password: document.getElementById('password').value,
               }, { headers: { 'Content-Type': 'application/json' } })

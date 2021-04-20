@@ -13,12 +13,12 @@ const PsychometricTesting = () => {
   const subpages = [
     {
       title: 'Situational Judgement',
-      path: 'psychometric_testing/situational_judgement',
+      path: 'situational_judgement',
       summary: 'Situational judgement tests assess how an applicant would behave in a variety of work-based situations'
     },
     {
       title: 'Personality Assessments',
-      path: 'psychometric_testing/personality',
+      path: 'personality',
       summary: 'Personality assessments examine how likely an applicant is to fit into the role and company culture'
     }
   ];

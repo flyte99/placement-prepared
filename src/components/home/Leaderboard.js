@@ -13,7 +13,7 @@ const Leaderboard = () => {
 
   useEffect(() => {
     const allUsers = [];
-    axios.get('http://localhost:8000/api/users/', { headers: { 'Content-Type': 'application/json' } })
+    axios.get('api/users/', { headers: { 'Content-Type': 'application/json' } })
       .then((userResponse) => {
         for (let i = 0; i < userResponse.data.length; i++) {
           if (userResponse.data[i].student) {

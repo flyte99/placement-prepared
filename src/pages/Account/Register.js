@@ -40,7 +40,7 @@ const Register = () => {
               })
             }
             onSubmit={() => {
-              axios.post('http://localhost:8000/api/users/', {
+              axios.post('api/users/', {
                 username: document.getElementById('email').value,
                 password: document.getElementById('password').value,
                 student: {
@@ -50,7 +50,7 @@ const Register = () => {
                 }
               }, { headers: { 'Content-Type': 'application/json' } })
                 .then(() => {
-                  axios.post('http://localhost:8000/api/auth/', {
+                  axios.post('api/auth/', {
                     username: document.getElementById('email').value,
                     password: document.getElementById('password').value,
                   }, { headers: { 'Content-Type': 'application/json' } })

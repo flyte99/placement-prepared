@@ -38,7 +38,7 @@ const Quiz = ({ questions }) => {
     const nextQuestion = currentQuestion + 1;
 
     if (questions.length <= nextQuestion) {
-      axios.post('http://localhost:8000/api/update-score/', {
+      axios.post('api/update-score/', {
         token: currentUser.token,
         updatedScore: score * 10
       }, { headers: { 'Content-Type': 'application/json' } })
