@@ -389,8 +389,8 @@ export default [
     answerOptions: [
       { answerText: '£124 million', isCorrect: false },
       { answerText: '£142 million', isCorrect: false },
-      { answerText: '£142 million', isCorrect: false },
-      { answerText: '£142 million', isCorrect: true },
+      { answerText: '£161 million', isCorrect: false },
+      { answerText: '£619 million', isCorrect: true },
       { answerText: '£620 million', isCorrect: false },
     ],
     solution: [
