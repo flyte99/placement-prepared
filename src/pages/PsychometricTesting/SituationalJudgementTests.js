@@ -1,8 +1,8 @@
-import { Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
-import Flippy, { BackSide, FrontSide } from 'react-flippy';
+import { Box, Card, CardContent, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import 'src/css/Cards.css';
 import { v4 as uuid } from 'uuid';
+import InteractiveCard from '../../components/cards/InteractiveCard';
 import PageFooter from '../../components/PageFooter';
 
 const SituationalJudgementTests = () => {
@@ -59,22 +59,7 @@ const SituationalJudgementTests = () => {
       </Box>
       <Box sx={{ m: 5 }}>
         <Typography color="textPrimary" variant="h3">Competencies Recruiters are Looking for</Typography> <br />
-        <Grid container className="center-grid-container" spacing={2} wrap="wrap">
-          {competencyCards.map(((card) => (
-            <Flippy key={card.front}>
-              <FrontSide>
-                <Card>
-                  <CardContent><Typography className="competency-card">{card.front}</Typography></CardContent>
-                </Card>
-              </FrontSide>
-              <BackSide>
-                <Card>
-                  <CardContent><Typography className="competency-card">{card.back}</Typography></CardContent>
-                </Card>
-              </BackSide>
-            </Flippy>
-          )))}
-        </Grid>
+        <InteractiveCard styling="competency-card" cards={competencyCards} />
       </Box>
       <Box sx={{ m: 5 }}>
         <PageFooter pageComplete="situational_judgement" />

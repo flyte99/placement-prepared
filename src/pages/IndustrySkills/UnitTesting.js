@@ -1,10 +1,10 @@
 import { Avatar, Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
-import Flippy, { BackSide, FrontSide } from 'react-flippy';
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
 import 'src/css/Images.css';
 import { v4 as uuid } from 'uuid';
+import InteractiveCard from '../../components/cards/InteractiveCard';
 import PageFooter from '../../components/PageFooter';
 
 const UnitTesting = () => {
@@ -82,22 +82,7 @@ const UnitTesting = () => {
               unit testing. The AAA (Arrange, Act, Assert) pattern is a common way of writing unit tests for a method
               under test:
             </Typography><br />
-            <Grid container className="center-grid-container" spacing={2} wrap="wrap">
-              {testPattern.map(((card) => (
-                <Flippy key={card.front}>
-                  <FrontSide>
-                    <Card>
-                      <CardContent><Typography className="testing-pattern">{card.front}</Typography></CardContent>
-                    </Card>
-                  </FrontSide>
-                  <BackSide>
-                    <Card>
-                      <CardContent><Typography className="testing-pattern">{card.back}</Typography></CardContent>
-                    </Card>
-                  </BackSide>
-                </Flippy>
-              )))}
-            </Grid>
+            <InteractiveCard styling="testing-pattern" cards={testPattern} />
           </CardContent>
         </Card>
       </Box>

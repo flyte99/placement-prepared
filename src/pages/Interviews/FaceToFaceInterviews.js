@@ -1,6 +1,5 @@
-import { Avatar, Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
+import { Avatar, Box, Card, CardContent, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import Flippy, { BackSide, FrontSide } from 'react-flippy';
 import { Helmet } from 'react-helmet';
 import Carousel from 'react-material-ui-carousel';
 import ReactPlayer from 'react-player';
@@ -8,6 +7,7 @@ import 'src/css/Cards.css';
 import 'src/css/Components.css';
 import 'src/css/Images.css';
 import { v4 as uuid } from 'uuid';
+import InteractiveCard from '../../components/cards/InteractiveCard';
 import PageFooter from '../../components/PageFooter';
 
 const FaceToFaceInterviews = () => {
@@ -72,22 +72,7 @@ const FaceToFaceInterviews = () => {
               some preparation can assist with presenting your suitability for the role.
             </Typography>
             <Box sx={{ m: 3 }}>
-              <Grid container className="center-grid-container" spacing={2} wrap="wrap">
-                {interviewTipCards.map(((card) => (
-                  <Flippy key={card.front}>
-                    <FrontSide>
-                      <Card>
-                        <CardContent><Typography className="interview-card">{card.front}</Typography></CardContent>
-                      </Card>
-                    </FrontSide>
-                    <BackSide>
-                      <Card>
-                        <CardContent><Typography className="interview-card">{card.back}</Typography></CardContent>
-                      </Card>
-                    </BackSide>
-                  </Flippy>
-                )))}
-              </Grid>
+              <InteractiveCard styling="interview-card" cards={interviewTipCards} />
             </Box>
           </CardContent>
         </Card>

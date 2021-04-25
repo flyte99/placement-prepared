@@ -1,4 +1,5 @@
-import { Box, Card, CardContent, Grid, List, Typography } from '@material-ui/core';
+import { Box, Card, CardContent, Grid, IconButton, List, Typography } from '@material-ui/core';
+import { Launch } from '@material-ui/icons';
 import { useNavigate } from 'react-router-dom';
 import pages from 'src/components/home/pages';
 import NavItem from 'src/components/NavItem';
@@ -18,11 +19,11 @@ const TopicCards = () => {
   return (
     cards.map((card) => (
       <Grid key={uuid()} item lg={4} sm={6} xl={4} xs={12}>
-        <Card className="topic-card" onClick={() => navigate(`${card.path}`, { replace: true })}>
+        <Card className="topic-card">
           <CardContent>
             <Grid item>
               <Typography color="textPrimary" variant="h3">
-                {card.title}
+                {card.title}<IconButton onClick={() => navigate(`${card.path}`, { replace: true })}><Launch /></IconButton>
               </Typography>
             </Grid>
             <Box sx={{ p: 1 }}>
