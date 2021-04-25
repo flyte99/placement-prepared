@@ -1,21 +1,19 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  CardHeader,
-  Checkbox,
-  Divider,
-  FormControlLabel,
-  Grid,
-  Typography
-} from '@material-ui/core';
+import { Box, Card, CardContent, CardHeader, Divider, Grid, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import 'src/css/Cards.css';
+import { v4 as uuid } from 'uuid';
 import PageFooter from '../../components/PageFooter';
 
 const CVsAndCoverLetters = () => {
   const pageTitle = 'Writing a CV';
+  const cvSections = [
+    'Name - Use your name as the heading, include the name you like to be known as if this is different from your official name.  Use capital letters for the first letter of your first name and surname',
+    'Contact details – you can include your full address, or if you prefer, your location e.g. Reading. Include your contact phone number and a professional looking email address, which includes your name. You can add a link to your LinkedIn account if it is up to date or creative portfolio/website link',
+    'Employment history (if applicable ) - start with your current or most recent job and include how long you were employed. Also add information about the role and the responsibilities you had',
+    'Education – start with your current course and include the full course title and date you started to present and university e.g. September 2019-Present BSc Computer Science with Industrial Year, University of Reading and include results if required.  Many internship, placements and graduate roles require certain grades',
+    'Interests - list interests or relevant experience you have related to the job that does not fit within the other sections. This could include volunteering, certifications and achievements'
+  ];
   const perfectCV = [
     {
       title: '1. Choose the story you want to tell',
@@ -52,26 +50,9 @@ const CVsAndCoverLetters = () => {
           <CardHeader title="Things to Include" />
           <Divider />
           <CardContent>
-            <FormControlLabel
-              control={(<Checkbox color="primary" />)}
-              label="Name - Use your name as the heading, include the name you like to be known as if this is different from your official name.  Use capital letters for the first letter of your first name and surname"
-            />
-            <FormControlLabel
-              control={(<Checkbox color="primary" />)}
-              label="Contact details – you can include your full address, or if you prefer, your location e.g. Reading. Include your contact phone number and a professional looking email address, which includes your name. You can add a link to your LinkedIn account if it is up to date or creative portfolio/website link"
-            />
-            <FormControlLabel
-              control={(<Checkbox color="primary" />)}
-              label="Employment history (if applicable ) - start with your current or most recent job and include how long you were employed. Also add information about the role and the responsibilities you had"
-            />
-            <FormControlLabel
-              control={(<Checkbox color="primary" />)}
-              label="Education – start with your current course and include the full course title and date you started to present and university e.g. September 2019-Present BSc Computer Science with Industrial Year, University of Reading and include results if required.  Many internship, placements and graduate roles require certain grades"
-            />
-            <FormControlLabel
-              control={(<Checkbox color="primary" />)}
-              label="Interests - list interests or relevant experience you have related to the job that does not fit within the other sections. This could include volunteering, certifications and achievements"
-            />
+            <ul className="bullet-points">
+              {cvSections.map((section) => (<li key={uuid()}><Typography>{section}</Typography></li>))}
+            </ul>
           </CardContent>
         </Card>
       </Box>
