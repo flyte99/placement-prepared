@@ -32,6 +32,22 @@ const Leaderboard = () => {
       });
   }, [setUsers]);
 
+  let userPosition = 1;
+
+  for (let i = 0; i < users.length; i++) {
+    if (users[i - 1] && users[i].score === users[i - 1].score) {
+      userPosition--;
+      users[i].placing = `${userPosition} =`;
+    } else if (users[i + 1] && users[i].score === users[i + 1].score) {
+      users[i].placing = `${userPosition} =`;
+    } else {
+      users[i].placing = `${userPosition}.`;
+    }
+    userPosition++;
+  }
+
+  console.log(users);
+
   return (
     <>
       {users[0] ? (
@@ -44,7 +60,7 @@ const Leaderboard = () => {
                     color={user.name === currentUser ? 'primary' : 'default'}
                     sx={{ width: 40 }}
                   >
-                    {users.indexOf(user) + 1}.
+                    {user.placing}
                   </Typography>
                   <div className="leaderboard-user">
                     <Gravatar
