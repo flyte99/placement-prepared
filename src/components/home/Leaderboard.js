@@ -35,9 +35,9 @@ const Leaderboard = () => {
   return (
     <>
       {users[0] ? (
-        <Card>
-          <CardContent>
-            {users.map((user) => (
+        <>
+          {
+            users.map((user) => (
               <Card key={user.username} className="leaderboard-entry" variant="outlined">
                 <CardContent className="align-row">
                   <Typography
@@ -64,9 +64,9 @@ const Leaderboard = () => {
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </CardContent>
-        </Card>
+            ))
+          }
+        </>
       ) : <Box className="leaderboard-loading"><CircularProgress /></Box>}
     </>
   );
