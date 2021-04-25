@@ -32,19 +32,24 @@ const PageFooter = ({ pageComplete }) => {
   };
 
   return (
-    <div className="mark-as-completed">
-      {
-        completed ? (
-          <Button className="complete-button" variant="contained" onClick={changeStatus}>
-            <Check size={50} />
-          </Button>
-        ) : (
-          <Button className="complete-button" variant="outlined" onClick={changeStatus}>
-            <span>Mark as<br /> Complete</span>
-          </Button>
-        )
-      }
-    </div>
+    <>
+      {currentUser.token ? (
+        <div className="mark-as-completed">
+          {
+            completed ? (
+              <Button className="complete-button" variant="contained" onClick={changeStatus}>
+                <Check size={50} />
+              </Button>
+            ) : (
+              <Button className="complete-button" variant="outlined" onClick={changeStatus}>
+                <span>Mark as<br /> Complete</span>
+              </Button>
+            )
+          }
+        </div>
+      ) : null}
+    </>
+
   );
 };
 PageFooter.propTypes = {
