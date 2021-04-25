@@ -2,14 +2,11 @@ import { Box, Button, Container, Link, TextField, Typography } from '@material-u
 import axios from 'axios';
 import { Formik } from 'formik';
 import { Helmet } from 'react-helmet';
-import { useDispatch } from 'react-redux';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
-import { loginUser } from '../../app/usersSlice';
 
 const Register = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   return (
     <>
@@ -39,37 +36,28 @@ const Register = () => {
                   .matches(/(?=.*[0-9])/, 'Password must contain a number.')
               })
             }
-            onSubmit={() => {
+            onSubmit={(values, FormikHelpers) => {
               axios.post('https://placement-prepared-backend.herokuapp.com/api/users/', {
-                username: document.getElementById('email').value,
-                password: document.getElementById('password').value,
+                username: values.email,
+                password: values.password,
                 student: {
-                  firstName: document.getElementById('firstName').value,
-                  lastName: document.getElementById('lastName').value,
-                  institution: document.getElementById('institution').value
+                  firstName: values.firstName,
+                  lastName: values.lastName,
+                  institution: values.institution
                 }
               }, { headers: { 'Content-Type': 'application/json' } })
                 .then(() => {
-                  axios.post('https://placement-prepared-backend.herokuapp.com/api/auth/', {
-                    username: document.getElementById('email').value,
-                    password: document.getElementById('password').value,
-                  }, { headers: { 'Content-Type': 'application/json' } })
-                    .then((response) => {
-                      const { token, user } = response.data;
-                      const { username, student } = user;
-                      const { firstName, lastName, institution, progress, score } = student;
-
-                      const userInfo = { token, username, firstName, lastName, institution, progress, score };
-                      dispatch(loginUser(userInfo));
-
-                      navigate('/', { replace: true });
-                    })
-                    .catch(() => {
-                      navigate('/login', { replace: true });
-                    });
+                  navigate('/login', { replace: true });
                 })
                 .catch(() => {
-                  navigate('/register', { replace: true });
+                  FormikHelpers.setSubmitting(false);
+                  FormikHelpers.setErrors({
+                    email: 'Invalid Credentials',
+                    password: 'Invalid Credentials',
+                    firstName: 'Invalid Credentials',
+                    lastName: 'Invalid Credentials',
+                    institution: 'Invalid Credentials'
+                  });
                 });
             }}
           >

@@ -32,10 +32,10 @@ const Login = () => {
               email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
               password: Yup.string().max(255).required('Password is required')
             })}
-            onSubmit={() => {
+            onSubmit={(values, FormikHelpers) => {
               axios.post('https://placement-prepared-backend.herokuapp.com/api/auth/', {
-                username: document.getElementById('email').value,
-                password: document.getElementById('password').value,
+                username: values.email,
+                password: values.password,
               }, { headers: { 'Content-Type': 'application/json' } })
                 .then((response) => {
                   const { token, user } = response.data;
@@ -48,7 +48,11 @@ const Login = () => {
                   navigate('/', { replace: true });
                 })
                 .catch(() => {
-                  navigate('/login', { replace: true });
+                  FormikHelpers.setSubmitting(false);
+                  FormikHelpers.setErrors({
+                    email: 'Invalid Credentials',
+                    password: 'Invalid Credentials'
+                  });
                 });
             }}
           >
