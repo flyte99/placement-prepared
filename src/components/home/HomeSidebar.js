@@ -77,8 +77,8 @@ const HomeSidebar = ({ onMobileClose, openMobile }) => {
               return (
                 <div key={title}>
                   <div className="align-row">
-                    <NavItem href={path} title={title} icon={icon} />
                     <ExpandLess onClick={subpages && showSubpages} />
+                    <NavItem href={path} title={title} icon={icon} />
                   </div>
                   {subNav && subpages.map((subpage) => (
                     <NavItem key={subpage.title} className="subpage" href={subpage.path} title={subpage.title} />))}
@@ -87,8 +87,8 @@ const HomeSidebar = ({ onMobileClose, openMobile }) => {
             }
             return (
               <div key={title} className="align-row">
-                <NavItem href={path} title={title} icon={icon} />
                 {subpages ? <ExpandMore onClick={subpages && showSubpages} /> : null}
+                <NavItem href={path} title={title} icon={icon} />
               </div>
             );
           })}
