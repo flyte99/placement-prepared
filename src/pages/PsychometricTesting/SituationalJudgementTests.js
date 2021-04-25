@@ -44,7 +44,7 @@ const SituationalJudgementTests = () => {
         <Card>
           <CardContent>
             <Typography color="textPrimary" variant="h3">Basics</Typography> <br />
-            <Typography>Situational judgement tests present candidates with a range of different situations they might
+            <Typography>Situational Judgement Tests present candidates with a range of different situations they might
               experience in the job they are applying for. For each situation, a number of possible actions are
               suggested that the candidate must choose between and judge which is the most effective course of action to
               take. They are always multiple choice and there is no option to add your own answer so the candidate must

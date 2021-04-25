@@ -25,7 +25,7 @@ const VirtualAssessmentCentres = () => {
   const technicalElements = [
     'Ask that people who share your WiFi signal avoid using it if possible to give yourself the best chance of connecting',
     'Make sure your device is fully charged before you begin and have your charger handy',
-    'Practice positioning yourself in front of the camera so that you care seen in the best light - If seeing your face in the corner of the screen makes you self-conscious, see if the video platform functionality allows you to "hide" your picture. If not, consider putting a post-it or similar over your picture',
+    'Practice positioning yourself in front of the camera so that you are seen in the best light - If seeing your face in the corner of the screen makes you self-conscious, see if the video platform functionality allows you to "hide" your picture. If not, consider putting a post-it or similar over your picture',
     'Do a sound check well in advance to check for any issues with audio',
     'Make sure you are comfortable and sitting upright'
   ];
