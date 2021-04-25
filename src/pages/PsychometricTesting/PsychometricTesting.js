@@ -70,9 +70,9 @@ const PsychometricTesting = () => {
         <Card>
           <CardContent>
             <Typography>Online tests are used early in the recruitment process to filter through large volumes of
-              applications. These tests can take many forms and are all designed to assess different qualities but there
-              are lots of sites that provide practice tests. The focus of psychometric tests is not on what you answer
-              but how you answer the question so they vary for each application.
+              applications. These tests can take many forms and are all designed to assess different qualities. There
+              are also lots of sites that provide practice tests. The focus of psychometric tests is not on what you
+              answer but how you answer the question so they vary for each application.
             </Typography>
           </CardContent>
         </Card>

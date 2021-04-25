@@ -39,9 +39,9 @@ const Git = () => {
             <Typography>Git is one of the most popular SCM (Source Code Management) tools, that keeps a history of
               changes to files so you can undo changes or work on a local branch and then merge the results into the
               main repository. Many IDEs (Integrated Development Environments) are integrated with Git providing a UI
-              (User Interface) but understanding how to use Git from the command line prepares you for all situations.
-              Git has an intermediate area where commits can be formatted and reviewed before completing the commit,
-              which is called the &quot;staging area&ldquo; or &quot;index&ldquo;.
+              (User Interface), however, understanding how to use Git from the command line prepares you for all
+              situations. Git has an intermediate area where commits can be formatted and reviewed before completing the
+              commit, which is called the &quot;staging area&ldquo; or &quot;index&ldquo;.
             </Typography>
             <Box sx={{ m: 2 }}>
               <div className="img-centre">

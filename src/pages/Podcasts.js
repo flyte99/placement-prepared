@@ -15,7 +15,7 @@ const Podcasts = () => {
         <Card>
           <CardContent>
             <Typography align="center">Podcasts provide different perspectives on various topics, which can improve
-              employability but most importantly can broaden your knowledge and help you keep up with evolving
+              employability and most importantly broaden your knowledge helping you keep up with evolving
               technologies.
             </Typography>
           </CardContent>

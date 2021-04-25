@@ -18,7 +18,7 @@ const TelephoneInterviews = () => {
     "If you're the one making the call, take a couple of deep breaths before you dial and remember to smile",
     'Stay calm - Answer clearly and at a reasonable pace',
     'Answer the phone professionally - Address your interviewer as Miss, Mrs or Mr unless invited to use his or her first name',
-    'Do ask questions at the end, but this is not the time for a discussion about salary, training and start dates'
+    'Do ask questions at the end, however, this is not the time for a discussion about salary, training and start dates'
   ];
 
   return (

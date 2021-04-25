@@ -226,7 +226,7 @@ export default [
     solution: [
       'Step 1 - Calculate the required gross profit increase. 36,521 x 1.5% = £547.82. Given that costs are constant, this means the Net Turnover needs to increase By £547.8 too. So the Net Turnover needs to be £547.8 + £238,521 = £239,068.8.',
       '',
-      'Step 2-We have worked out the Net Turnover, but the question asks for Sales Turnover (i.e. before the sales tax of 14.0% is deducted). So Sales Turnover = 239,068.8 ÷ 86.0% = £277,986.98.'
+      'Step 2 - We have worked out the Net Turnover, but the question asks for Sales Turnover (i.e. before the sales tax of 14.0% is deducted). So Sales Turnover = 239,068.8 ÷ 86.0% = £277,986.98.'
     ]
   },
   {

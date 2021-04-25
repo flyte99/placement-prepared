@@ -48,8 +48,8 @@ const SituationalJudgementTests = () => {
               experience in the job they are applying for. For each situation, a number of possible actions are
               suggested that the candidate must choose between and judge which is the most effective course of action to
               take. They are always multiple choice and there is no option to add your own answer so the candidate must
-              select the most applicable answer. The questions asked about each situation can very but the principle
-              remains the same of ensuring you answer it using your personal judgement:
+              select the most applicable answer. The questions asked about each situation can very with the principle
+              remaining the same of ensuring you answer it using your personal judgement:
             </Typography>
             <ul className="bullet-points">{testTypes.map((type) => (
               <li key={uuid()}><Typography>{type}</Typography></li>))}

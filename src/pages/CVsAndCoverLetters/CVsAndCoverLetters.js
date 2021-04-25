@@ -55,7 +55,7 @@ const CVsAndCoverLetters = () => {
           <CardContent>
             <Typography>The first stage of any job application is to send your CV to an employer or recruiter. This is
               often accompanied by a CV, however, some organisations have online application portals, which simply ask
-              for your details and a CV. LinkedIn is a great tool for finding opportunities but also for recruiters to
+              for your details and a CV. LinkedIn is a great tool for finding opportunities and also for recruiters to
               headhunt applicants.
             </Typography>
           </CardContent>
