@@ -6,13 +6,6 @@
     justify-content: space-evenly;
 }
 
-.flippy-scrum-board.flippy-container {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 5px;
-    min-height: 600px;
-}
-
 .flippy-scrum-board.flippy-front, .flippy-scrum-board.flippy-back {
     padding: 0;
     width: 175px;
@@ -50,7 +43,8 @@
     margin-right: 5px;
     width: 65px;
     height: 25px;
-    background-color: #8a8a8a;
+    background-color: #5664d2;
+    color: white;
     border-radius: 4px;
 }
 

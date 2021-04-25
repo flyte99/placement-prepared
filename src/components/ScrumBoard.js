@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@material-ui/core';
+import { Box, Grid, Typography } from '@material-ui/core';
 import React, { useState } from 'react';
 import Flippy, { BackSide, FrontSide } from 'react-flippy';
 import 'src/css/ScrumBoard.css';
@@ -117,27 +117,29 @@ const ScrumBoard = () => {
       {columns.map((column) => {
         const columnScrumCards = scrumCards.filter((project) => parseInt(project.ticket_stage, 10) === column.stage);
         return (
-          <Flippy key={column.stage} className="flippy-scrum-board">
-            <FrontSide className="flippy-scrum-board">
-              <div
-                className="scrum-column"
-                onDragEnter={(e) => {
-                  handleOnDragEnter(e, column.stage);
-                }}
-              >
-                <Typography className="centre-scrum-text">{column.stage}. {column.name} ({columnScrumCards.length})
-                </Typography>
-                {generateScrumCards(columnScrumCards)}
-              </div>
-            </FrontSide>
-            <BackSide className="flippy-scrum-board">
-              <div key={column.stage} className="scrum-column">
-                <Typography className="centre-scrum-text">{column.stage}. {column.name} ({columnScrumCards.length})
-                </Typography>
-                <Typography className="centre-column-text">{column.description}</Typography>
-              </div>
-            </BackSide>
-          </Flippy>
+          <Box sx={{ m: 1 }}>
+            <Flippy key={column.stage}>
+              <FrontSide className="flippy-scrum-board">
+                <div
+                  className="scrum-column"
+                  onDragEnter={(e) => {
+                    handleOnDragEnter(e, column.stage);
+                  }}
+                >
+                  <Typography className="centre-scrum-text">{column.stage}. {column.name} ({columnScrumCards.length})
+                  </Typography>
+                  {generateScrumCards(columnScrumCards)}
+                </div>
+              </FrontSide>
+              <BackSide className="flippy-scrum-board">
+                <div key={column.stage} className="scrum-column">
+                  <Typography className="centre-scrum-text">{column.stage}. {column.name} ({columnScrumCards.length})
+                  </Typography>
+                  <Typography className="centre-column-text">{column.description}</Typography>
+                </div>
+              </BackSide>
+            </Flippy>
+          </Box>
         );
       })}
     </Grid>
