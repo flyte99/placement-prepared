@@ -1,7 +1,7 @@
-import { Button, Card, CardContent, Grid, Typography } from '@material-ui/core';
+import { Card, CardContent, Grid, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import 'src/css/Cards.css';
 import { useNavigate } from 'react-router-dom';
+import 'src/css/Cards.css';
 import { v4 as uuid } from 'uuid';
 import pages from './home/pages';
 
@@ -18,14 +18,9 @@ const SubpageCards = ({ topic }) => {
   return (
     <Grid container className="center-grid-container">
       {subpages.map((page) => (
-        <Card key={uuid()} className="subpage-card">
+        <Card key={uuid()} className="subpage-card" onClick={() => navigate(`/${page.path}`, { replace: true })}>
           <CardContent>
-            <Button
-              sx={{ justifyContent: 'center', width: '100%' }}
-              onClick={() => navigate(`/${page.path}`, { replace: true })}
-            >
-              {page.title}
-            </Button>
+            <Typography align="center" variant="h5" color="primary">{page.title}</Typography><br />
             <Typography>{page.summary}</Typography>
           </CardContent>
         </Card>
