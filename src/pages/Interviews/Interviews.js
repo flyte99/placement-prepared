@@ -8,23 +8,6 @@ import SubpageCards from '../../components/SubpageCards';
 
 const Interviews = () => {
   const pageTitle = 'Interviews';
-  const subpages = [
-    {
-      title: 'Telephone Interviews',
-      path: 'telephone',
-      summary: 'Typically focused on the competencies that the recruiter is looking for and used to determine which applicants to invite to a face-to-face interview'
-    },
-    {
-      title: 'Video Interviews',
-      path: 'video',
-      summary: 'Applicants are presented with questions and asked to record their response, often within a time limit'
-    },
-    {
-      title: 'Face-to-Face Interviews',
-      path: 'face-to-face',
-      summary: 'During Face-to-Face interviews employers explain the job and ask the applicant questions to determine their fit for the role'
-    }
-  ];
   const managingNerves = [
     {
       title: 'Reflection',
@@ -66,7 +49,7 @@ const Interviews = () => {
         </Card>
       </Box>
       <Box sx={{ m: 5 }}>
-        <SubpageCards subpages={subpages} />
+        <SubpageCards topic={pageTitle} />
       </Box>
       <Box className="embedded-video" sx={{ m: 5 }}>
         <ReactPlayer url="https://youtu.be/l0OBCtzk_oM" />

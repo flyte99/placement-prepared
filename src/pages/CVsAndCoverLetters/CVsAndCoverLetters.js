@@ -8,24 +8,6 @@ import PageFooter from '../../components/PageFooter';
 
 const CVsAndCoverLetters = () => {
   const pageTitle = 'CVs and Cover Letters';
-  const subpages = [
-    {
-      title: 'Writing a CV',
-      path: 'cv',
-      summary: "Employers ask for a Curriculum Vitae (CV) as a summary of an applicant's background, qualifications and extracurricular interests."
-    },
-    {
-      title: 'Cover Letters',
-      path: 'cover-letters',
-      summary: 'Cover letters accompany a CV to emphasise why an applicant is applying to a particular role and how they are suitable.'
-    },
-    {
-      title: 'LinkedIn',
-      path: 'LinkedIn',
-      summary: 'LinkedIn is an employment-orientated social media that many companies are now using to recruit employees.'
-    }
-  ];
-
   const resources = [
     {
       caption: 'TARGET Jobs',
@@ -80,7 +62,7 @@ const CVsAndCoverLetters = () => {
         </Card>
       </Box>
       <Box sx={{ m: 5 }}>
-        <SubpageCards subpages={subpages} />
+        <SubpageCards topic={pageTitle} />
       </Box>
       <Box sx={{ m: 5 }}>
         <Card>

@@ -10,18 +10,6 @@ import SubpageCards from '../../components/SubpageCards';
 
 const PsychometricTesting = () => {
   const pageTitle = 'Psychometric Tests';
-  const subpages = [
-    {
-      title: 'Situational Judgement',
-      path: 'situational_judgement',
-      summary: 'Situational judgement tests assess how an applicant would behave in a variety of work-based situations'
-    },
-    {
-      title: 'Personality Assessments',
-      path: 'personality',
-      summary: 'Personality assessments examine how likely an applicant is to fit into the role and company culture'
-    }
-  ];
 
   const resources = [
     {
@@ -90,7 +78,7 @@ const PsychometricTesting = () => {
         </Card>
       </Box>
       <Box sx={{ m: 5 }}>
-        <SubpageCards subpages={subpages} />
+        <SubpageCards topic={pageTitle} />
       </Box>
       <Box sx={{ m: 5 }}>
         <Card>

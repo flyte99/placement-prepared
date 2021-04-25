@@ -3,9 +3,17 @@ import PropTypes from 'prop-types';
 import 'src/css/Cards.css';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
+import pages from './home/pages';
 
-const SubpageCards = ({ subpages }) => {
+const SubpageCards = ({ topic }) => {
   const navigate = useNavigate();
+  let subpages;
+
+  for (let idx = 0; idx < pages.length; idx++) {
+    if (pages[idx].title === topic) {
+      subpages = pages[idx].subpages;
+    }
+  }
 
   return (
     <Grid container className="center-grid-container">
@@ -14,7 +22,7 @@ const SubpageCards = ({ subpages }) => {
           <CardContent>
             <Button
               sx={{ justifyContent: 'center', width: '100%' }}
-              onClick={() => navigate(`${page.path}`, { replace: true })}
+              onClick={() => navigate(`/${page.path}`, { replace: true })}
             >
               {page.title}
             </Button>
@@ -27,7 +35,7 @@ const SubpageCards = ({ subpages }) => {
 };
 
 SubpageCards.propTypes = {
-  subpages: PropTypes.array
+  topic: PropTypes.string.isRequired
 };
 
 export default SubpageCards;
