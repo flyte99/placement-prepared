@@ -62,7 +62,7 @@ const SituationalJudgementTests = () => {
         <InteractiveCard styling="competency-card" cards={competencyCards} />
       </Box>
       <Box sx={{ m: 5 }}>
-        <PageFooter pageComplete="situational_judgement" />
+        <PageFooter pageComplete="situational_judgement_tests" />
       </Box>
     </>
   );

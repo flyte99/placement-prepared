@@ -46,8 +46,6 @@ const Leaderboard = () => {
     userPosition++;
   }
 
-  console.log(users);
-
   return (
     <>
       {users[0] ? (

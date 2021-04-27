@@ -76,7 +76,7 @@ const CVsAndCoverLetters = () => {
         </Box>
       </Box>
       <Box sx={{ m: 5 }}>
-        <PageFooter pageComplete="cv" />
+        <PageFooter pageComplete="writing_a_cv" />
       </Box>
     </>
   );

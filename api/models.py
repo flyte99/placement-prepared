@@ -5,11 +5,11 @@ from django.db import models
 def pages():
     return {
         'cvs_and_cover_letters': False,
-        'cv': False,
+        'writing_a_cv': False,
         'cover_letters': False,
         'linkedin': False,
         'psychometric_testing': False,
-        'situational_judgement': False,
+        'situational_judgement_tests': False,
         'personality_assessments': False,
         'assessment_centres': False,
         'group_exercises': False,
@@ -19,7 +19,7 @@ def pages():
         'telephone_interviews': False,
         'video_interviews': False,
         'face_to_face_interviews': False,
-        'agile_development': False,
+        'agile_development_methods': False,
         'git': False,
         'mysql': False,
         'unit_testing': False,

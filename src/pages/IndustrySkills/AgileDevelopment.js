@@ -94,7 +94,7 @@ const AgileDevelopment = () => {
         </Card>
       </Box>
       <Box sx={{ m: 5 }}>
-        <PageFooter pageComplete="agile_development" />
+        <PageFooter pageComplete="agile_development_methods" />
       </Box>
     </>
   );
