@@ -18,28 +18,34 @@ const TopicCards = () => {
 
   return (
     cards.map((card) => (
-      <Grid key={uuid()} item lg={4} sm={6} xl={4} xs={12}>
-        <Card className="topic-card">
-          <CardContent>
-            <Grid item>
-              <Typography color="textPrimary" variant="h3">
-                {card.title}<IconButton onClick={() => navigate(`${card.path}`, { replace: true })}><Launch /></IconButton>
-              </Typography>
-            </Grid>
-            <Box sx={{ p: 1 }}>
-              <List>
-                {card.subpages.map((page) => (
-                  <NavItem
-                    href={page.path}
-                    key={page.title}
-                    title={page.title}
-                  />
-                ))}
-              </List>
-            </Box>
-          </CardContent>
-        </Card>
-      </Grid>
+      <Box sx={{ m: 2 }}>
+        <Grid key={uuid()} item lg={4} sm={6} xl={4} xs={12}>
+          <Card className="topic-card">
+            <CardContent>
+              <Grid item>
+                <Typography color="textPrimary" variant="h3">
+                  {card.title}
+                  <IconButton onClick={() => navigate(`${card.path}`, { replace: true })}>
+                    <Launch />
+                  </IconButton>
+                </Typography>
+              </Grid>
+              <Box sx={{ p: 1 }}>
+                <List>
+                  {card.subpages.map((page) => (
+                    <NavItem
+                      href={page.path}
+                      key={page.title}
+                      title={page.title}
+                    />
+                  ))}
+                </List>
+              </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Box>
+
     ))
   );
 };

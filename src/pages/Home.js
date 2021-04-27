@@ -39,7 +39,7 @@ const Home = () => {
         <Container maxWidth={false}>
           <Grid container spacing={3}>
             <Grid item lg={9} md={6} xs={12}>
-              <Grid container spacing={4} sx={{ justifyContent: 'center' }}>
+              <Grid container sx={{ justifyContent: 'center' }}>
                 <TopicCards />
               </Grid>
             </Grid>

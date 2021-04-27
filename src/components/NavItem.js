@@ -4,7 +4,6 @@ import { matchPath, NavLink as RouterLink, useLocation } from 'react-router-dom'
 
 const NavItem = ({ href, icon: Icon, title, ...rest }) => {
   const location = useLocation();
-
   const active = href ? !!matchPath({ path: href, end: false }, location.pathname) : false;
 
   return (
